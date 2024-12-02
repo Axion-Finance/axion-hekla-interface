@@ -1,0 +1,99 @@
+.ClaimEsLiq input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: var(--font-base);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ClaimEsLiq label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.ClaimEsLiq-content {
+  padding: 4.65rem;
+  padding-top: 1.5rem;
+  max-width: 38.75rem;
+}
+
+.ClaimEsLiq-row {
+  margin-bottom: 1.5rem;
+}
+
+.ClaimEsLiq button {
+  margin-top: 0.8rem;
+}
+
+.ClaimEsLiq-vesting-options .Checkbox.btn-lg {
+  font-size: 1.85rem;
+  margin-bottom: 0.8rem;
+  display: block;
+  width: 35.65rem;
+  padding-left: 1.85rem;
+  padding-top: 0.465rem;
+}
+
+.ClaimEsLiq-vesting-options .Checkbox.btn-lg.selected.arbitrum {
+  background: rgba(41, 160, 240, 0.2);
+}
+
+.ClaimEsLiq-vesting-options .Checkbox.btn-lg.selected.avalanche {
+  background: rgba(232, 65, 65, 0.2);
+}
+
+.ClaimEsLiq-vesting-options .Checkbox img {
+  height: 1.5rem;
+}
+
+.ClaimEsLiq-option-label {
+  display: inline-block;
+  width: 27.9rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.ClaimEsLiq-vesting-options .Checkbox.selected .ClaimEsLiq-option-label {
+  opacity: 1;
+}
+
+.ClaimEsLiq-vesting-options .Checkbox.arbitrum .Checkbox-icon.active {
+  color: #29a0f0;
+}
+
+.ClaimEsLiq-vesting-options .Checkbox.avalanche .Checkbox-icon.active {
+  color: #e84141;
+}
+
+.ClaimEsLiq button {
+  max-width: 35.65rem;
+}
+
+.ClaimEsLiq-input-label {
+  margin-bottom: 0.8rem;
+}
+
+.ClaimEsLiq input {
+  width: 35.65rem;
+}
+
+.ClaimEsLiq-input-container {
+  position: relative;
+}
+
+.ClaimEsLiq-max-button {
+  position: absolute;
+  padding: 0.465rem 0.8rem;
+  background: var(--dark-primary);
+  left: 29.75rem;
+  top: 0.93rem;
+  font-size: var(--font-sm);
+  border-radius: 3px;
+  z-index: 1;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ClaimEsLiq-max-button:hover {
+  color: rgba(255, 255, 255, 1);
+  background: var(--dark-primary);
+}

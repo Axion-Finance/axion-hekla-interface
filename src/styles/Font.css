@@ -1,0 +1,60 @@
+/* Font NeueHaasDisplay */
+
+@font-face {
+  font-family: "NeueHaasDisplay-Black";
+  src: local("NeueHaasDisplay-Black"), url(fonts/neue-haas/NeueHaasDisplay-Black.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "NeueHaasDisplay-BlackItalic";
+  src: local("NeueHaasDisplay-BlackItalic"), url(fonts/neue-haas/NeueHaasDisplay-BlackItalic.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "NeueHaasDisplay-Bold";
+  src: local("NeueHaasDisplay-Bold"), url(fonts/neue-haas/NeueHaasDisplay-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NeueHaasDisplay-BoldItalic";
+  src: local("NeueHaasDisplay-BoldItalic"), url(fonts/neue-haas/NeueHaasDisplay-BoldItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NeueHaasDisplay-Light";
+  src: local("NeueHaasDisplay-Light"), url(fonts/neue-haas/NeueHaasDisplay-Light.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NeueHaasDisplay-LightItalic";
+  src: local("NeueHaasDisplay-LightItalic"), url(fonts/neue-haas/NeueHaasDisplay-LightItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NeueHaasDisplay-Medium";
+  src: local("NeueHaasDisplay-Medium"), url(fonts/neue-haas/NeueHaasDisplay-Medium.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NeueHaasDisplay-MediumItalic";
+  src: local("NeueHaasDisplay-MediumItalic"), url(fonts/neue-haas/NeueHaasDisplay-MediumItalic.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Neue Haas Grotesk Display Pro";
+  src: local("Neue Haas Grotesk Display Pro"), url(fonts/neue-haas/NeueHaasDisplay-Thin.ttf) format("truetype");
+}
+@font-face {
+  font-family: "NeueHaasDisplay-MediumItalic";
+  src: local("NeueHaasDisplay-MediumItalic"), url(fonts/neue-haas/NeueHaasDisplay-ThinItalic.ttf) format("truetype");
+}
+
+/* Font Sequel 100 */
+
+@font-face {
+  font-family: "Sequel100Black-45";
+  src: local("Sequel100Black-45"), url(fonts/sequel/Sequel100Black-45.ttf) format("truetype");
+}
+
+@font-face {
+  font-family: "Sequel100Black-55";
+  src: local("Sequel100Black-55"), url(fonts/sequel/Sequel100Black-55.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Sequel100Black-65";
+  src: local("Sequel100Black-65"), url(fonts/sequel/Sequel100Black-65.ttf) format("truetype");
+}

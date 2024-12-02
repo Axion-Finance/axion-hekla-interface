@@ -1,0 +1,25 @@
+.input-form {
+  max-width: 38.75rem;
+}
+
+.input-row {
+  margin-bottom: 1.5rem;
+}
+
+.input-label {
+  display: block;
+  margin-bottom: 0.8rem;
+  font-size: var(--font-base);
+}
+
+.text-input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: var(--font-base);
+  width: 100%;
+  box-sizing: border-box;
+  padding: 1.5rem;
+  margin-bottom: 1.05rem;
+  border-radius: var(--radii-card);
+  background: var(--dark-input);
+  box-shadow: inset 0px 0px 3rem 0.5rem rgba(255, 255, 255, 0.01);
+}
