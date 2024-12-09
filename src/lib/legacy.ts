@@ -815,7 +815,6 @@ export function getLiquidationPrice(data) {
     isLong,
   });
 
-
   if (!liquidationPriceForFees) {
     return liquidationPriceForMaxLeverage;
   }
@@ -1123,7 +1122,7 @@ export function getBalanceAndSupplyData(balances) {
     return {};
   }
 
-  const keys = ["liq", "esLiq", "glp", "stakedLiqTracker"];
+  const keys = ["axion", "esLiq", "glp", "stakedLiqTracker"];
   const balanceData = {};
   const supplyData = {};
   const propsLength = 2;
@@ -1225,7 +1224,7 @@ export function getProcessedData(
   aum,
   nativeTokenPrice,
   stakedLiqSupply
-  // liqPrice,
+  // axionPrice,
   // liqSupply
 ) {
   if (
@@ -1238,7 +1237,7 @@ export function getProcessedData(
     !nativeTokenPrice ||
     !stakedLiqSupply
     //||
-    // !liqPrice ||
+    // !axionPrice ||
     // !liqSupply
   ) {
     return {};
@@ -1246,35 +1245,35 @@ export function getProcessedData(
 
   const data: any = {};
 
-  // data.liqBalance = balanceData.liq;
-  // data.liqBalanceUsd = balanceData.liq.mul(liqPrice).div(expandDecimals(1, 18));
+  // data.liqBalance = balanceData.axion;
+  // data.liqBalanceUsd = balanceData.axion.mul(axionPrice).div(expandDecimals(1, 18));
 
   // data.liqSupply = bigNumberify(liqSupply);
 
-  // data.liqSupplyUsd = data.liqSupply.mul(liqPrice).div(expandDecimals(1, 18));
+  // data.liqSupplyUsd = data.liqSupply.mul(axionPrice).div(expandDecimals(1, 18));
   // data.stakedLiqSupply = stakedLiqSupply;
-  // data.stakedLiqSupplyUsd = stakedLiqSupply.mul(liqPrice).div(expandDecimals(1, 18));
+  // data.stakedLiqSupplyUsd = stakedLiqSupply.mul(axionPrice).div(expandDecimals(1, 18));
   // data.liqInStakedLiq = depositBalanceData.liqInStakedLiq;
-  // data.liqInStakedLiqUsd = depositBalanceData.liqInStakedLiq.mul(liqPrice).div(expandDecimals(1, 18));
+  // data.liqInStakedLiqUsd = depositBalanceData.liqInStakedLiq.mul(axionPrice).div(expandDecimals(1, 18));
 
   // data.esLiqBalance = balanceData.esLiq;
-  // data.esLiqBalanceUsd = balanceData.esLiq.mul(liqPrice).div(expandDecimals(1, 18));
+  // data.esLiqBalanceUsd = balanceData.esLiq.mul(axionPrice).div(expandDecimals(1, 18));
 
   // data.stakedLiqTrackerSupply = supplyData.stakedLiqTracker;
-  // data.stakedLiqTrackerSupplyUsd = supplyData.stakedLiqTracker.mul(liqPrice).div(expandDecimals(1, 18));
+  // data.stakedLiqTrackerSupplyUsd = supplyData.stakedLiqTracker.mul(axionPrice).div(expandDecimals(1, 18));
   // data.stakedEsLiqSupply = data.stakedLiqTrackerSupply.sub(data.stakedLiqSupply);
-  // data.stakedEsLiqSupplyUsd = data.stakedEsLiqSupply.mul(liqPrice).div(expandDecimals(1, 18));
+  // data.stakedEsLiqSupplyUsd = data.stakedEsLiqSupply.mul(axionPrice).div(expandDecimals(1, 18));
 
   // data.esLiqInStakedLiq = depositBalanceData.esLiqInStakedLiq;
-  // data.esLiqInStakedLiqUsd = depositBalanceData.esLiqInStakedLiq.mul(liqPrice).div(expandDecimals(1, 18));
+  // data.esLiqInStakedLiqUsd = depositBalanceData.esLiqInStakedLiq.mul(axionPrice).div(expandDecimals(1, 18));
 
   // data.bnLiqInFeeLiq = depositBalanceData.bnLiqInFeeLiq;
   // data.bonusLiqInFeeLiq = depositBalanceData.bonusLiqInFeeLiq;
   // data.feeLiqSupply = stakingData.feeLiqTracker.totalSupply;
-  // data.feeLiqSupplyUsd = data.feeLiqSupply.mul(liqPrice).div(expandDecimals(1, 18));
+  // data.feeLiqSupplyUsd = data.feeLiqSupply.mul(axionPrice).div(expandDecimals(1, 18));
 
   // data.stakedLiqTrackerRewards = stakingData.stakedLiqTracker.claimable;
-  // data.stakedLiqTrackerRewardsUsd = stakingData.stakedLiqTracker.claimable.mul(liqPrice).div(expandDecimals(1, 18));
+  // data.stakedLiqTrackerRewardsUsd = stakingData.stakedLiqTracker.claimable.mul(axionPrice).div(expandDecimals(1, 18));
 
   // data.bonusLiqTrackerRewards = stakingData.bonusLiqTracker.claimable;
 
@@ -1288,7 +1287,7 @@ export function getProcessedData(
 
   // data.stakedLiqTrackerAnnualRewardsUsd = stakingData.stakedLiqTracker.tokensPerInterval
   //   .mul(SECONDS_PER_YEAR)
-  //   .mul(liqPrice)
+  //   .mul(axionPrice)
   //   .div(expandDecimals(1, 18));
   // data.liqAprForEsLiq =
   //   data.stakedLiqTrackerSupplyUsd && data.stakedLiqTrackerSupplyUsd.gt(0)
@@ -1309,7 +1308,7 @@ export function getProcessedData(
 
   // data.totalLiqRewardsUsd = data.stakedLiqTrackerRewardsUsd.add(data.feeLiqTrackerRewardsUsd);
 
-  data.liqBalance = balanceData.liq;
+  data.liqBalance = balanceData.axion;
   data.glpSupply = supplyData.glp;
   data.glpPrice =
     data.glpSupply && data.glpSupply.gt(0)
@@ -1322,14 +1321,14 @@ export function getProcessedData(
   data.glpBalanceUsd = depositBalanceData.glpInStakedGlp.mul(data.glpPrice).div(expandDecimals(1, GLP_DECIMALS));
 
   // data.stakedGlpTrackerRewards = stakingData.stakedGlpTracker.claimable;
-  // data.stakedGlpTrackerRewardsUsd = stakingData.stakedGlpTracker.claimable.mul(liqPrice).div(expandDecimals(1, 18));
+  // data.stakedGlpTrackerRewardsUsd = stakingData.stakedGlpTracker.claimable.mul(axionPrice).div(expandDecimals(1, 18));
 
   data.feeGlpTrackerRewards = stakingData.feeGlpTracker.claimable;
   data.feeGlpTrackerRewardsUsd = stakingData.feeGlpTracker.claimable.mul(nativeTokenPrice).div(expandDecimals(1, 18));
 
   // data.stakedGlpTrackerAnnualRewardsUsd = stakingData.stakedGlpTracker.tokensPerInterval
   //   .mul(SECONDS_PER_YEAR)
-  //   .mul(liqPrice)
+  //   .mul(axionPrice)
   //   .div(expandDecimals(1, 18));
   // data.glpAprForEsLiq =
   //   data.glpSupplyUsd && data.glpSupplyUsd.gt(0)
@@ -1354,7 +1353,7 @@ export function getProcessedData(
   // data.liqVesterRewards = vestingData.liqVester.claimable;
   // data.glpVesterRewards = vestingData.glpVester.claimable;
   // data.totalVesterRewards = data.liqVesterRewards.add(data.glpVesterRewards);
-  // data.totalVesterRewardsUsd = data.totalVesterRewards.mul(liqPrice).div(expandDecimals(1, 18));
+  // data.totalVesterRewardsUsd = data.totalVesterRewards.mul(axionPrice).div(expandDecimals(1, 18));
 
   // data.totalNativeTokenRewards = data.feeLiqTrackerRewards.add(data.feeGlpTrackerRewards);
   // data.totalNativeTokenRewardsUsd = data.feeLiqTrackerRewardsUsd.add(data.feeGlpTrackerRewardsUsd);
@@ -1376,7 +1375,7 @@ export function isAddressZero(value) {
 }
 
 export function isDevelopment() {
-  return !window.location.host?.includes("liq.io") && !window.location.host?.includes("ipfs.io");
+  return !window.location.host?.includes("axion.io") && !window.location.host?.includes("ipfs.io");
 }
 
 export function isLocal() {
@@ -1388,7 +1387,7 @@ export function getHomeUrl() {
     return "http://localhost:3010";
   }
 
-  return "https://liq.markets";
+  return "https://axion.markets";
 }
 
 export function getAppBaseUrl() {
@@ -1396,15 +1395,15 @@ export function getAppBaseUrl() {
     return "http://localhost:3011/#";
   }
 
-  return "https://liq.markets/#";
+  return "https://axion.markets/#";
 }
 
 export function getRootShareApiUrl() {
   if (isLocal()) {
-    return "https://liqs.vercel.app";
+    return "https://axion.vercel.app";
   }
 
-  return "https://share.liq.io";
+  return "https://share.axion.io";
 }
 
 export function getTradePageUrl() {
@@ -1412,7 +1411,7 @@ export function getTradePageUrl() {
     return "http://localhost:3011/#/trade";
   }
 
-  return "https://liq.markets/#/trade";
+  return "https://axion.markets/#/trade";
 }
 
 export function importImage(name) {

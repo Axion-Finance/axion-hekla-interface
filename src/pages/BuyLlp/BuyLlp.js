@@ -35,7 +35,7 @@ export default function BuyLlp(props) {
           </div>
           <div className="Page-description">
             <Trans>
-              Purchase <ExternalLink href="docs.liq.markets/llp">LLP tokens</ExternalLink> to earn {nativeTokenSymbol}{" "}
+              Purchase <ExternalLink href="docs.axion.markets/llp">LLP tokens</ExternalLink> to earn {nativeTokenSymbol}{" "}
               fees from swaps and leverages trading.
             </Trans>
             <br />

@@ -41,7 +41,7 @@ export default function PositionsOverview() {
               <Trans>fee</Trans>
             </th>
             <th>
-              <Trans>time to liq</Trans>
+              <Trans>time to axion</Trans>
             </th>
           </tr>
         </thead>

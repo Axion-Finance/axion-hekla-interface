@@ -27,13 +27,13 @@ export function RedirectPopupModal({
     >
       <Trans>
         {/* Alternative links can be found in the{" "}
-        <ExternalLink href="docs.liq.markets">docs</ExternalLink>
+        <ExternalLink href="docs.axion.markets">docs</ExternalLink>
         . */}
         <br />
         <br />
         By clicking Agree you accept the{" "}
-        <ExternalLink href="https://liq.markets/#/terms-and-conditions">T&Cs</ExternalLink> and{" "}
-        <ExternalLink href="https://liq.markets/#/referral-terms">Referral T&Cs</ExternalLink>.
+        <ExternalLink href="https://axion.markets/#/terms-and-conditions">T&Cs</ExternalLink> and{" "}
+        <ExternalLink href="https://axion.markets/#/referral-terms">Referral T&Cs</ExternalLink>.
         <br />
         <br />
       </Trans>

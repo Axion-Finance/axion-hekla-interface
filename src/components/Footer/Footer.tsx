@@ -68,7 +68,7 @@ function Footer() {
               fontWeight={400}
               lineHeight="28px"
             >
-              Copyright © LIQ , 2024. All rights reserved
+              Copyright © AXION , 2024. All rights reserved
             </Text>
           )}
         </Column>
@@ -143,7 +143,7 @@ function Footer() {
             fontWeight={400}
             lineHeight="24px"
           >
-            Copyright © LIQ , 2024. All rights reserved
+            Copyright © AXION , 2024. All rights reserved
           </Text>
         )}
       </AutoRow>

@@ -201,10 +201,10 @@ export default function PositionEditor(props) {
 
     if (!isDeposit && fromAmount && nextLiquidationPrice) {
       if (position.isLong && position.markPrice.lt(nextLiquidationPrice)) {
-        return t`Invalid liq. price`;
+        return t`Invalid axion. price`;
       }
       if (!position.isLong && position.markPrice.gt(nextLiquidationPrice)) {
-        return t`Invalid liq. price`;
+        return t`Invalid axion. price`;
       }
     }
 
@@ -562,7 +562,7 @@ export default function PositionEditor(props) {
                   </div>
                   <div className="Exchange-info-row">
                     <div className="Exchange-info-label">
-                      <Trans>Liq. Price</Trans>
+                      <Trans>Axion. Price</Trans>
                     </div>
                     <div className="align-right">
                       {!nextLiquidationPrice && (
@@ -626,7 +626,7 @@ export default function PositionEditor(props) {
                                 This is the network cost required to execute the {depositOrWithdrawalText}.
                                 <br />
                                 <br />
-                                <ExternalLink href="docs.liq.markets/trading#execution-fee">More Info</ExternalLink>
+                                <ExternalLink href="docs.axion.markets/trading#execution-fee">More Info</ExternalLink>
                               </Trans>
                             </>
                           );

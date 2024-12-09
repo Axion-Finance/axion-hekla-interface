@@ -8,7 +8,7 @@ import ExternalLink from "components/ExternalLink/ExternalLink";
 import StatsTooltipRow from "components/StatsTooltip/StatsTooltipRow";
 import TooltipComponent from "components/Tooltip/Tooltip";
 import { getStatsAPIUrl } from "config/backend";
-import { ARBITRUM, AVALANCHE, MODE_MAINNET, getChainName } from "config/chains";
+import { ARBITRUM, AVALANCHE, TAIKO_MAINNET, getChainName } from "config/chains";
 import { getContract } from "config/contracts";
 import { GLP_POOL_COLORS, /*getTokenBySymbol,*/ getWhitelistedTokens } from "config/tokens";
 //import { useLiqPrice, useTotalLiqInLiquidity, useTotalLiqStaked } from "domain/legacy";
@@ -21,7 +21,7 @@ import {
   default as avalanche24Icon,
   default as ftm24Icon,
   default as modeIcon,
-} from "img/34443.png";
+} from "img/167000.png";
 import avalanche16Icon from "img/ic_avalanche_16.svg";
 import llp40Icon from "img/ic_llp_40.svg";
 import { useChainId } from "lib/chains";
@@ -44,7 +44,7 @@ import useSWR from "swr";
 import AssetDropdown from "./AssetDropdown";
 import "./DashboardV2.css";
 
-// const ACTIVE_CHAIN_IDS = [MODE_MAINNET];
+// const ACTIVE_CHAIN_IDS = [TAIKO_MAINNET];
 
 const { AddressZero } = ethers.constants;
 
@@ -163,7 +163,7 @@ export default function DashboardV2() {
   const vaultAddress = getContract(chainId, "Vault");
   const glpManagerAddress = getContract(chainId, "LlpManager");
 
-  //const liqAddress = getContract(chainId, "LIQ");
+  //const liqAddress = getContract(chainId, "AXION");
   const llpAddress = getContract(chainId, "LLP");
   const usdfAddress = getContract(chainId, "USDG");
 
@@ -188,12 +188,12 @@ export default function DashboardV2() {
   );
   // let { total: totalLiqSupply } = useTotalLiqSupply();
   // let totalLiqSupply = mmyInfo BigNumber.from("10000000000000000000000000")
-  // const { liqPrice } = useLiqPrice(chainId, {}, active);
+  // const { axionPrice } = useLiqPrice(chainId, {}, active);
   // let totalLiqSupply;
   // if (totalSupplies && totalSupplies[1]) {
   //   totalLiqSupply = totalSupplies[1];
   // }
-  // const { totalLiqSupply: totalLiqSupply2, liqPrice:liqPrice2, totalSupply } = useFMXInfo();
+  // const { totalLiqSupply: totalLiqSupply2, axionPrice:liqPrice2, totalSupply } = useFMXInfo();
   // console.log('###',totalLiqSupply,totalLiqSupply2);
   const { infoTokens } = useInfoTokens(library, chainId, active, undefined, undefined);
   // const { infoTokens: infoTokensArbitrum } = useInfoTokens(null, ARBITRUM, active, undefined, undefined);
@@ -264,20 +264,20 @@ export default function DashboardV2() {
   //   { arbitrum: chainId === ARBITRUM ? library : undefined },
   //   active
   // );
-  // const liqPrice = BigNumber.from("1000000000000000000000000000000")
+  // const axionPrice = BigNumber.from("1000000000000000000000000000000")
 
   // let { total: totalLiqInLiquidity } = useTotalLiqInLiquidity(chainId, active);
 
   // let { avax: avaxStakedLiq, arbitrum: arbitrumStakedLiq, total: totalStakedLiq } = useTotalLiqStaked();
 
   // let liqMarketCap;
-  // if (liqPrice && totalLiqSupply) {
-  //   liqMarketCap = liqPrice.mul(totalLiqSupply).div(expandDecimals(1, LIQ_DECIMALS));
+  // if (axionPrice && totalLiqSupply) {
+  //   liqMarketCap = axionPrice.mul(totalLiqSupply).div(expandDecimals(1, LIQ_DECIMALS));
   // }
 
   // let stakedLiqSupplyUsd;
-  // if (liqPrice && totalStakedLiq) {
-  //   stakedLiqSupplyUsd = totalStakedLiq.mul(liqPrice).div(expandDecimals(1, LIQ_DECIMALS));
+  // if (axionPrice && totalStakedLiq) {
+  //   stakedLiqSupplyUsd = totalStakedLiq.mul(axionPrice).div(expandDecimals(1, LIQ_DECIMALS));
   // }
 
   let aum;
@@ -298,8 +298,8 @@ export default function DashboardV2() {
   }
 
   let tvl;
-  // if (glpMarketCap && liqPrice && totalStakedLiq) {
-  //   tvl = glpMarketCap.add(liqPrice.mul(totalStakedLiq).div(expandDecimals(1, LIQ_DECIMALS)));
+  // if (glpMarketCap && axionPrice && totalStakedLiq) {
+  //   tvl = glpMarketCap.add(axionPrice.mul(totalStakedLiq).div(expandDecimals(1, LIQ_DECIMALS)));
   // }
 
   if (glpMarketCap) {
@@ -403,7 +403,7 @@ export default function DashboardV2() {
               )}
               <br />
               <div>
-                <ExternalLink href="docs.liq.markets/llp">
+                <ExternalLink href="docs.axion.markets/llp">
                   <Trans>More Info</Trans>
                 </ExternalLink>
               </div>
@@ -446,7 +446,7 @@ export default function DashboardV2() {
   //   },
   // ];
 
-  const totalStatsStartDate = chainId === MODE_MAINNET ? t`06 Sep 2023` : t`10 Sep 2023`;
+  const totalStatsStartDate = chainId === TAIKO_MAINNET ? t`06 Sep 2023` : t`10 Sep 2023`;
 
   let stableGlp = 0;
   let totalGlp = 0;
@@ -526,13 +526,16 @@ export default function DashboardV2() {
             <div className="Page-title">
               <Trans>Stats</Trans>{" "}
               {chainId === AVALANCHE && <img src={avalanche24Icon} alt="avalanche24Icon" style={{ height: "24px" }} />}
-              {chainId === MODE_MAINNET && <img src={ftm24Icon} alt="ftm24Icon" style={{ height: "24px" }} />}
+              {chainId === TAIKO_MAINNET && <img src={ftm24Icon} alt="ftm24Icon" style={{ height: "24px" }} />}
             </div>
             <div className="Page-description">
               <Trans>
                 {chainName} Total Stats start from {totalStatsStartDate}.<br /> For detailed stats:
               </Trans>{" "}
-              {chainId === MODE_MAINNET && <ExternalLink href="https://stats.liq.markets">https://stats.liq.markets</ExternalLink>}.
+              {chainId === TAIKO_MAINNET && (
+                <ExternalLink href="https://stats.axion.markets">https://stats.axion.markets</ExternalLink>
+              )}
+              .
             </div>
           </div>
         </div>
@@ -717,7 +720,7 @@ export default function DashboardV2() {
               <Trans>Tokens</Trans>{" "}
               {chainId === AVALANCHE && <img src={avalanche24Icon} alt="avalanche24Icon" style={{ height: "24px" }} />}
               {chainId === ARBITRUM && <img src={arbitrum24Icon} alt="arbitrum24Icon" style={{ height: "24px" }} />}
-              {chainId === MODE_MAINNET && <img src={ftm24Icon} alt="ftm24Icon" style={{ height: "24px" }} />}
+              {chainId === TAIKO_MAINNET && <img src={ftm24Icon} alt="ftm24Icon" style={{ height: "24px" }} />}
             </div>
             <div className="Page-description">
               <Trans>Platform and LLP index tokens.</Trans>
@@ -830,7 +833,7 @@ export default function DashboardV2() {
                   <img src={avalanche16Icon} alt={t`Avalanche Icon`} style={{ height: "24px" }} />
                 )}
                 {chainId === ARBITRUM && <img src={arbitrum16Icon} alt={t`Arbitrum Icon`} style={{ height: "24px" }} />}
-                {chainId === MODE_MAINNET && <img src={modeIcon} alt={t`Mode Icon`} style={{ height: "24px" }} />}
+                {chainId === TAIKO_MAINNET && <img src={modeIcon} alt={t`Mode Icon`} style={{ height: "24px" }} />}
               </div>
               <div className="App-card-divider"></div>
               <table className="token-table">

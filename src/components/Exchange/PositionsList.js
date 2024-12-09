@@ -449,7 +449,7 @@ export default function PositionsList(props) {
                     </div>
                     <div className="App-card-row">
                       <div className="label">
-                        <Trans>Liq. Price</Trans>
+                        <Trans>Axion. Price</Trans>
                       </div>
                       <div>
                         $
@@ -512,7 +512,7 @@ export default function PositionsList(props) {
               <Trans>Entry Price</Trans>
             </th>
             <th>
-              <Trans>Liq. Price</Trans>
+              <Trans>Axion. Price</Trans>
             </th>
             <th></th>
             <th></th>

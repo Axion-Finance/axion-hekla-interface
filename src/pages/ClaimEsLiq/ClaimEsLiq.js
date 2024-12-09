@@ -195,7 +195,7 @@ export default function ClaimEsLiq({ setPendingTxns }) {
   let initialStakingAmount;
   let nextStakingAmount;
 
-  let stakingToken = "staked LIQ";
+  let stakingToken = "staked AXION";
 
   const shouldShowStakingAmounts = false;
 
@@ -321,7 +321,7 @@ export default function ClaimEsLiq({ setPendingTxns }) {
       successMsg: t`Claim completed!`,
       setPendingTxns,
     })
-      .then(async (res) => { })
+      .then(async (res) => {})
       .finally(() => {
         setIsClaiming(false);
       });
@@ -380,7 +380,7 @@ export default function ClaimEsLiq({ setPendingTxns }) {
                 setIsChecked={() => setSelectedOption(VEST_WITH_LIQ_ARB)}
               >
                 <div className="ClaimEsLiq-option-label">
-                  <Trans>Vest with Liq on Arbitrum</Trans>
+                  <Trans>Vest with Axion on Arbitrum</Trans>
                 </div>
                 <img src={arbitrumIcon} alt="Arbitrum" />
               </Checkbox>
@@ -400,7 +400,7 @@ export default function ClaimEsLiq({ setPendingTxns }) {
                 setIsChecked={() => setSelectedOption(VEST_WITH_LIQ_AVAX)}
               >
                 <div className="ClaimEsLiq-option-label">
-                  <Trans>Vest with Liq on Avalanche</Trans>
+                  <Trans>Vest with Axion on Avalanche</Trans>
                 </div>
                 <img src={avaIcon} alt="Avalanche" />
               </Checkbox>

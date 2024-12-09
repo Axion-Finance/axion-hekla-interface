@@ -1,7 +1,7 @@
 import { Trans } from "@lingui/macro";
 import { useWeb3React } from "@web3-react/core";
 import ExternalLink from "components/ExternalLink/ExternalLink";
-import { MODE_MAINNET } from "config/chains";
+import { TAIKO_MAINNET } from "config/chains";
 import llpBigIcon from "img/ic_llp_custom.svg";
 import { useChainId } from "lib/chains";
 //import { isHomeSite } from "lib/legacy";
@@ -67,17 +67,17 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           </div>
           <div className="Home-token-card-option-apr">
             {/* <Trans>Arbitrum APR:</Trans> <APRLabel chainId={ARBITRUM} label="glpAprTotal" key="ARBITRUM" />,{" "} */}
-            <Trans>APR:</Trans> <APRLabel chainId={MODE_MAINNET} label="glpAprTotal" key="MODE_MAINNET" />
+            <Trans>APR:</Trans> <APRLabel chainId={TAIKO_MAINNET} label="glpAprTotal" key="TAIKO_MAINNET" />
             {/* <Trans>APR:</Trans> --% */}
           </div>
           <div className="Home-token-card-option-action">
             <div className="buy">
               {isLanding ? (
-                <ExternalLink href="https://liq.markets/#/liquidity" className="default-btn read-more">
+                <ExternalLink href="https://axion.markets/#/liquidity" className="default-btn read-more">
                   <Trans>Buy</Trans>
                 </ExternalLink>
               ) : (
-                <BuyLink to="/liquidity" className="default-btn" network={MODE_MAINNET}>
+                <BuyLink to="/liquidity" className="default-btn" network={TAIKO_MAINNET}>
                   <Trans>Buy</Trans>
                 </BuyLink>
               )}
@@ -89,7 +89,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
                 <Trans>Buy on Avalanche</Trans>
               </BuyLink> */}
             </div>
-            <a href="docs.liq.markets/llp" target="_blank" rel="noreferrer" className="secondary-btn read-more">
+            <a href="docs.axion.markets/llp" target="_blank" rel="noreferrer" className="secondary-btn read-more">
               <Trans>Read more</Trans>
             </a>
           </div>

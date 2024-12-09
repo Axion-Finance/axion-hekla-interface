@@ -16,32 +16,32 @@ export type EventData = {
 export const homeEventsData: EventData[] = [
   // {
   //   id: "avax-norush-contest",
-  //   title: "Liq Trading Contest",
+  //   title: "Axion Trading Contest",
   //   isActive: true,
   //   validTill: "23 Nov 2022, 12:00",
   //   bodyText: [
-  //     "The #Liq Trading Contest is active on #Avalanche from November 16 12:00 UTC to November 23 12:00 UTC.",
+  //     "The #Axion Trading Contest is active on #Avalanche from November 16 12:00 UTC to November 23 12:00 UTC.",
   //     "Showcase your trading abilities transparently on-chain, and win big prizes.",
   //   ],
   //   buttons: [
   //     {
   //       text: "Learn More",
-  //       link: "https://medium.com/@liq.io/sign-up-for-the-liqrush-avalanche-trading-contest-win-100-000-usd-in-prizes-546b1ab2e416",
+  //       link: "https://medium.com/@axion.io/sign-up-for-the-liqrush-avalanche-trading-contest-win-100-000-usd-in-prizes-546b1ab2e416",
   //       newTab: true,
   //     },
   //   ],
   // },
   // {
-  //   id: "app-liq-io-launch",
+  //   id: "app-axion-io-launch",
   //   title: "Frontend Updates",
   //   isActive: true,
   //   validTill: "10 Jul 2022, 12:00",
   //   bodyText:
-  //     "Updates have been applied to the Liq frontend to inform users of the separation between liq.io and perp.testnet.liq.markets",
+  //     "Updates have been applied to the Axion frontend to inform users of the separation between axion.io and perp.testnet.axion.markets",
   //   buttons: [
   //     {
   //       text: "Read More",
-  //       link: "https://medium.com/@liq.io/liq-frontend-updates-8d13f2346e1e",
+  //       link: "https://medium.com/@axion.io/axion-frontend-updates-8d13f2346e1e",
   //       newTab: true,
   //     },
   //   ],
@@ -55,7 +55,7 @@ export const homeEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Read More",
-  //       link: "https://medium.com/@liq.io/arbitrum-nitro-5f88c03a46fe",
+  //       link: "https://medium.com/@axion.io/arbitrum-nitro-5f88c03a46fe",
   //       newTab: true,
   //     },
   //   ],
@@ -65,17 +65,17 @@ export const homeEventsData: EventData[] = [
 export const appEventsData: EventData[] = [
   // {
   //   id: "avax-norush-contest",
-  //   title: "Liq Trading Contest",
+  //   title: "Axion Trading Contest",
   //   isActive: true,
   //   validTill: "23 Nov 2022, 12:00",
   //   bodyText: [
-  //     "The #Liq Trading Contest is active on #Avalanche from November 16 12:00 UTC to November 23 12:00 UTC.",
+  //     "The #Axion Trading Contest is active on #Avalanche from November 16 12:00 UTC to November 23 12:00 UTC.",
   //     "Showcase your trading abilities transparently on-chain, and win big prizes.",
   //   ],
   //   buttons: [
   //     {
   //       text: "Learn More",
-  //       link: "https://medium.com/@liq.io/sign-up-for-the-liqrush-avalanche-trading-contest-win-100-000-usd-in-prizes-546b1ab2e416",
+  //       link: "https://medium.com/@axion.io/sign-up-for-the-liqrush-avalanche-trading-contest-win-100-000-usd-in-prizes-546b1ab2e416",
   //       newTab: true,
   //     },
   //   ],
@@ -89,12 +89,12 @@ export const appEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Read more",
-  //       link: "docs.liq.markets/roadmap#30-march-2022",
+  //       link: "docs.axion.markets/roadmap#30-march-2022",
   //       newTab: true,
   //     },
   //     {
   //       text: "Trade Now",
-  //       link: "https://liq.markets/trade",
+  //       link: "https://axion.markets/trade",
   //     },
   //   ],
   // },
@@ -107,7 +107,7 @@ export const appEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Trade Now",
-  //       link: "https://liq.markets/trade",
+  //       link: "https://axion.markets/trade",
   //     },
   //   ],
   // },
@@ -120,7 +120,7 @@ export const appEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Learn More",
-  //       link: "docs.liq.markets/trading#backup-rpc-urls",
+  //       link: "docs.axion.markets/trading#backup-rpc-urls",
   //       newTab: true,
   //     },
   //   ],
@@ -130,29 +130,29 @@ export const appEventsData: EventData[] = [
   //   title: "Referral Program Launch",
   //   isActive: true,
   //   validTill: "4 May 2022, 12:00",
-  //   bodyText: "The Liq referral program is now live! Get fee discounts and refer traders to earn rewards.",
+  //   bodyText: "The Axion referral program is now live! Get fee discounts and refer traders to earn rewards.",
   //   buttons: [
   //     {
   //       text: "Read More",
-  //       link: "https://liq.markets/referrals",
+  //       link: "https://axion.markets/referrals",
   //     },
   //     {
   //       text: "Join Now",
-  //       link: "https://liq.markets/referrals",
+  //       link: "https://axion.markets/referrals",
   //     },
   //   ],
   // },
   // {
-  //   id: "liq-arbitrum-odyssey",
-  //   title: "LIQ Arbitrum Odyssey",
+  //   id: "axion-arbitrum-odyssey",
+  //   title: "AXION Arbitrum Odyssey",
   //   isActive: true,
   //   validTill: "3 Jul 2022, 12:00",
   //   bodyText:
-  //     "The LIQ Arbitrum Odyssey is taking place this week, all participants will receive prizes. Read on to find out more.",
+  //     "The AXION Arbitrum Odyssey is taking place this week, all participants will receive prizes. Read on to find out more.",
   //   buttons: [
   //     {
   //       text: "Read More",
-  //       link: "https://medium.com/@liq.io/liq-arbitrum-odyssey-fc12cba2d10d",
+  //       link: "https://medium.com/@axion.io/axion-arbitrum-odyssey-fc12cba2d10d",
   //     },
   //   ],
   // },
@@ -166,17 +166,17 @@ export const appEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Learn More",
-  //       link: "docs.liq.markets/trading#backup-rpc-urls",
+  //       link: "docs.axion.markets/trading#backup-rpc-urls",
   //       newTab: true,
   //     },
   //   ],
   // },
   // {
-  //   id: "liq-arbitrum-odyssey-paused",
-  //   title: "LIQ Arbitrum Odyssey Paused",
+  //   id: "axion-arbitrum-odyssey-paused",
+  //   title: "AXION Arbitrum Odyssey Paused",
   //   isActive: true,
   //   validTill: "3 Jul 2022, 12:00",
-  //   bodyText: "The LIQ Arbitrum Odyssey has been paused. Please read the linked post for more information.",
+  //   bodyText: "The AXION Arbitrum Odyssey has been paused. Please read the linked post for more information.",
   //   buttons: [
   //     {
   //       text: "Read More",
@@ -186,16 +186,16 @@ export const appEventsData: EventData[] = [
   //   ],
   // },
   // {
-  //   id: "app-liq-io",
+  //   id: "app-axion-io",
   //   title: "Frontend Updates",
   //   isActive: true,
   //   validTill: "6 Jul 2022, 12:00",
   //   bodyText:
-  //     "On 6 Jul 2022, updates will be applied to the LIQ frontend to inform users of the separation between liq.io and perp.testnet.liq.markets",
+  //     "On 6 Jul 2022, updates will be applied to the AXION frontend to inform users of the separation between axion.io and perp.testnet.axion.markets",
   //   buttons: [
   //     {
   //       text: "Read More",
-  //       link: "https://medium.com/@liq.io/liq-frontend-updates-8d13f2346e1e",
+  //       link: "https://medium.com/@axion.io/axion-frontend-updates-8d13f2346e1e",
   //       newTab: true,
   //     },
   //   ],
@@ -221,16 +221,16 @@ export const appEventsData: EventData[] = [
   //   ],
   // },
   // {
-  //   id: "app-liq-io-settings",
+  //   id: "app-axion-io-settings",
   //   title: "Frontend Updates",
   //   isActive: true,
   //   validTill: "10 Jul 2022, 12:00",
   //   bodyText:
-  //     "You are currently using perp.testnet.liq.markets. Customized settings have been reset, you may need to adjust your settings by clicking on the menu in the top right after connecting your wallet.",
+  //     "You are currently using perp.testnet.axion.markets. Customized settings have been reset, you may need to adjust your settings by clicking on the menu in the top right after connecting your wallet.",
   //   buttons: [
   //     {
   //       text: "Read More",
-  //       link: "https://medium.com/@liq.io/liq-frontend-updates-8d13f2346e1e",
+  //       link: "https://medium.com/@axion.io/axion-frontend-updates-8d13f2346e1e",
   //       newTab: true,
   //     },
   //   ],
@@ -245,7 +245,7 @@ export const appEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Learn More",
-  //       link: "docs.liq.markets/trading#backup-rpc-urls",
+  //       link: "docs.axion.markets/trading#backup-rpc-urls",
   //       newTab: true,
   //     },
   //   ],
@@ -259,7 +259,7 @@ export const appEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Read More",
-  //       link: "https://medium.com/@liq.io/arbitrum-nitro-5f88c03a46fe",
+  //       link: "https://medium.com/@axion.io/arbitrum-nitro-5f88c03a46fe",
   //       newTab: true,
   //     },
   //   ],
@@ -273,7 +273,7 @@ export const appEventsData: EventData[] = [
     buttons: [
       {
         text: "Read More",
-        link: "https://medium.com/@liq.io/liq-deployment-updates-a6a470df445f",
+        link: "https://medium.com/@axion.io/axion-deployment-updates-a6a470df445f",
         newTab: true,
       },
     ],

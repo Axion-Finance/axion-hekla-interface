@@ -583,7 +583,7 @@ export default function ConfirmationBox(props) {
             {!toAmount && leverage && leverage.gt(0) && `-`}
             {leverage && leverage.eq(0) && `-`}
           </ExchangeInfoRow>
-          <ExchangeInfoRow label={t`Liq. Price`}>
+          <ExchangeInfoRow label={t`Axion. Price`}>
             {hasExistingPosition && toAmount && toAmount.gt(0) && (
               <div className="inline-block muted">
                 ${formatAmount(existingLiquidationPrice, USD_DECIMALS, 2, true)}
@@ -666,7 +666,7 @@ export default function ConfirmationBox(props) {
                         <br />
                         <Trans>
                           This is the network cost required to execute the postion.{" "}
-                          <ExternalLink href="docs.liq.markets/trading#execution-fee">More Info</ExternalLink>
+                          <ExternalLink href="docs.axion.markets/trading#execution-fee">More Info</ExternalLink>
                         </Trans>
                       </>
                     );

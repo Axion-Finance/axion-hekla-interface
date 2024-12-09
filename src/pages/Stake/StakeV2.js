@@ -15,7 +15,7 @@ import Vault from "abis/Vault.json";
 // import Vester from "abis/Vester.json";
 import { ethers } from "ethers";
 
-import { /*MODE_MAINNET,*/ getChainName, getConstant } from "config/chains";
+import { /*TAIKO_MAINNET,*/ getChainName, getConstant } from "config/chains";
 // import { useLiqPrice, /*useTotalLiqStaked*/ } from "domain/legacy";
 import {
   PLACEHOLDER_ACCOUNT,
@@ -357,7 +357,7 @@ export default function StakeV2({ setPendingTxns, connectWallet, rewardTokens })
                 >
                   {getClaimPrimaryText(rewardToken)}
                 </button>
-                {rewardToken.token.symbol !== "LIQ" && (
+                {rewardToken.token.symbol !== "AXION" && (
                   <button
                     className="default-btn button-compound-stake-action"
                     disabled={!active || !isClaimable(rewardToken)}

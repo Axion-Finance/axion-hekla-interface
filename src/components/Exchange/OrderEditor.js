@@ -169,10 +169,10 @@ export default function OrderEditor(props) {
     if (position) {
       if (order.type === DECREASE) {
         if (position.isLong && triggerPrice.lte(liquidationPrice)) {
-          return t`Price below Liq. Price`;
+          return t`Price below Axion. Price`;
         }
         if (!position.isLong && triggerPrice.gte(liquidationPrice)) {
-          return t`Price above Liq. Price`;
+          return t`Price above Axion. Price`;
         }
       }
 
@@ -280,7 +280,7 @@ export default function OrderEditor(props) {
         {liquidationPrice && (
           <div className="Exchange-info-row">
             <div className="Exchange-info-label">
-              <Trans>Liq. Price</Trans>
+              <Trans>Axion. Price</Trans>
             </div>
             <div className="align-right">{`$${formatAmount(liquidationPrice, USD_DECIMALS, 3, true)}`}</div>
           </div>

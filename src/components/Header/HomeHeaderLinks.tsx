@@ -14,11 +14,11 @@ type Props = {
 const HOME_MENUS = [
   {
     label: t`App`,
-    link: "https://liq.markets/#/trade",
+    link: "https://axion.markets/#/trade",
   },
   {
     label: t`Protocol`,
-    link: "https://github.com/liq-markets/",
+    link: "https://github.com/axion-markets/",
   },
   // {
   //   label: t`Governance`,
@@ -30,7 +30,7 @@ const HOME_MENUS = [
   // },
   {
     label: t`Docs`,
-    link: "docs.liq.markets/",
+    link: "docs.axion.markets/",
   },
 ];
 
@@ -40,7 +40,7 @@ export function HomeHeaderLinks({ small, clickCloseIcon }: Props) {
       {small && (
         <div className="App-header-links-header">
           <Link className="App-header-link-main" to="/">
-            <img src={logoImg} alt="Liq Logo" />
+            <img src={logoImg} alt="Axion Logo" />
           </Link>
 
           <div

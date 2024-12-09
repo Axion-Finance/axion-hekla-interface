@@ -47,7 +47,7 @@ function TradeOnLiq() {
               lineHeight={isTablet ? "36px" : "53px"}
               textTransform="uppercase"
             >
-              Why Trade On LIQ?
+              Why Trade On AXION?
             </Text>
             <Text
               fontSize="20px"
@@ -58,8 +58,8 @@ function TradeOnLiq() {
               letterSpacing="1.2px"
               color="#8D8D8D"
             >
-              LIQ Finance aims to provide a permissionless, decentralized manner of trading perpetuals on-chain. Without
-              KYC and giving up custody, traders can enjoy superior security while trading perpetuals completely
+              AXION Finance aims to provide a permissionless, decentralized manner of trading perpetuals on-chain.
+              Without KYC and giving up custody, traders can enjoy superior security while trading perpetuals completely
               on-chain.
             </Text>
           </Column>

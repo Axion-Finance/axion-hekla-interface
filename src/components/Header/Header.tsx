@@ -92,9 +92,9 @@ export function Header({
       <header>
         <div className="App-header large">
           <div className="App-header-container-left">
-            <a className="App-header-link-main" href="https://liq.markets/">
-              <img src={logoImg} className="big" alt="Liq Logo" />
-              <img src={logoSmallImg} className="small" alt="Liq Logo" />
+            <a className="App-header-link-main" href="https://axion.markets/">
+              <img src={logoImg} className="big" alt="Axion Logo" />
+              <img src={logoSmallImg} className="small" alt="Axion Logo" />
             </a>
             {isLanding ? (
               <HomeHeaderLinks />

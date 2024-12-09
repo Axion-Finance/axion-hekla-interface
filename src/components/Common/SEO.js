@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet";
 function SEO(props) {
   const { children, ...customMeta } = props;
   const meta = {
-    title: "Liq | The SuperDEX for Perpetual Trading",
+    title: "Axion | The SuperDEX for Perpetual Trading",
     description: "Bring unparalleled and effortless Swap and Perpetual Trading experience to Mode.",
     image: "",
     type: "exchange",
@@ -16,7 +16,7 @@ function SEO(props) {
         <meta name="robots" content="follow, index" />
         <meta content={meta.description} name="description" />
         <meta property="og:type" content={meta.type} />
-        <meta property="og:site_name" content="Liq" />
+        <meta property="og:site_name" content="Axion" />
         <meta property="og:description" content={meta.description} />
         <meta property="og:title" content={meta.title} />
         <meta property="og:image" content={meta.image} />

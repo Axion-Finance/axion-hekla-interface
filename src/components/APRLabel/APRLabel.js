@@ -34,7 +34,7 @@ export default function APRLabel({ chainId, label }) {
 
   const vaultAddress = getContract(chainId, "Vault");
   const nativeTokenAddress = getContract(chainId, "NATIVE_TOKEN");
-  const liqAddress = getContract(chainId, "LIQ");
+  const liqAddress = getContract(chainId, "AXION");
   const esLIQAddress = getContract(chainId, "ES_LIQ");
   const bnLIQAddress = getContract(chainId, "BN_LIQ");
   const llpAddress = getContract(chainId, "LLP");
@@ -132,7 +132,7 @@ export default function APRLabel({ chainId, label }) {
       fetcher: contractFetcher(undefined, ReaderV2, [tokensForSupplyQuery]),
     }
   );
-  const { liqPrice } = useLiqPrice(chainId, {}, active);
+  const { axionPrice } = useLiqPrice(chainId, {}, active);
   // const { totalSupply: liqSupply} = useLIQLIQnfo();
   let liqSupply;
   if (totalSupplies && totalSupplies[1]) {
@@ -161,7 +161,7 @@ export default function APRLabel({ chainId, label }) {
     aum,
     nativeTokenPrice,
     stakedLIQSupply,
-    liqPrice,
+    axionPrice,
     liqSupply
   );
 

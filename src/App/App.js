@@ -67,7 +67,7 @@ import { I18nProvider } from "@lingui/react";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 import { Header } from "components/Header/Header";
 import Footer from "components/Footer/Footer";
-import { ARBITRUM, getExplorerUrl, MODE_MAINNET } from "config/chains";
+import { ARBITRUM, getExplorerUrl, TAIKO_MAINNET } from "config/chains";
 import {
   CURRENT_PROVIDER_LOCALSTORAGE_KEY,
   DISABLE_ORDER_VALIDATION_KEY,
@@ -119,7 +119,7 @@ const Zoom = cssTransition({
 
 // const avaxWsProvider = new ethers.providers.JsonRpcProvider("https://api.avax.network/ext/bc/C/rpc");
 // avaxWsProvider.pollingInterval = 2000;
-const modeTestnetWsProvider = new ethers.providers.JsonRpcProvider("https://mainnet.mode.network");
+const modeTestnetWsProvider = new ethers.providers.JsonRpcProvider("https://rpc.mainnet.taiko.xyz");
 
 function getWsProvider(active, chainId) {
   if (!active) {
@@ -129,7 +129,7 @@ function getWsProvider(active, chainId) {
   //   return arbWsProvider;
   // }
 
-  if (chainId === MODE_MAINNET) {
+  if (chainId === TAIKO_MAINNET) {
     return modeTestnetWsProvider;
   }
 }
@@ -208,12 +208,12 @@ function FullApp() {
           <br />
           {userOnMobileDevice ? (
             <Trans>
-              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink>, and use Liq with its built-in
+              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink>, and use Axion with its built-in
               browser
             </Trans>
           ) : (
             <Trans>
-              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink> to start using Liq
+              <ExternalLink href="https://metamask.io">Install MetaMask</ExternalLink> to start using Axion
             </Trans>
           )}
         </div>
@@ -231,13 +231,13 @@ function FullApp() {
           <br />
           {userOnMobileDevice ? (
             <Trans>
-              <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink>, and use Liq
+              <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink>, and use Axion
               with its built-in browser
             </Trans>
           ) : (
             <Trans>
               <ExternalLink href="https://www.coinbase.com/wallet">Install Coinbase Wallet</ExternalLink> to start using
-              Liq
+              Axion
             </Trans>
           )}
         </div>

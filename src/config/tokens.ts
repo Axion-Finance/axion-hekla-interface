@@ -1,6 +1,6 @@
 import { ethers } from "ethers";
 import { getContract } from "./contracts";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, MAINNET, TESTNET, MODE_MAINNET, MUMBAI } from "./chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, MAINNET, TESTNET, TAIKO_MAINNET, MUMBAI } from "./chains";
 import { Token } from "domain/tokens";
 
 export const TOKENS: { [chainId: number]: Token[] } = {
@@ -382,7 +382,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
   //   }
   // ],
   //
-  [MODE_MAINNET]: [
+  [TAIKO_MAINNET]: [
     {
       name: "ETH",
       symbol: "ETH",
@@ -398,7 +398,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       symbol: "WETH",
       decimals: 18,
       displayDecimals: 3,
-      address: "0x4200000000000000000000000000000000000006",
+      address: "0xa51894664a773981c6c112c43ce576f315d5b1b6",
       isWrapped: true,
       baseSymbol: "WETH",
       imageUrl: "https://ftmscan.com/token/images/wFtm_32.png",
@@ -498,9 +498,9 @@ export const TOKENS: { [chainId: number]: Token[] } = {
 export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
   [ARBITRUM]: [
     {
-      name: "LIQ",
-      symbol: "LIQ",
-      address: getContract(ARBITRUM, "LIQ"),
+      name: "AXION",
+      symbol: "AXION",
+      address: getContract(ARBITRUM, "AXION"),
       decimals: 18,
       imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
     },
@@ -511,18 +511,18 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
       decimals: 18,
     },
     {
-      name: "Liq LP",
+      name: "Axion LP",
       symbol: "LLP",
       address: getContract(ARBITRUM, "LLP"),
       decimals: 18,
-      imageUrl: "https://github.com/liq-io/liq-assets/blob/main/LIQ-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
+      imageUrl: "https://github.com/axion-io/axion-assets/blob/main/AXION-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
     },
   ],
   [AVALANCHE]: [
     {
-      name: "LIQ",
-      symbol: "LIQ",
-      address: getContract(AVALANCHE, "LIQ"),
+      name: "AXION",
+      symbol: "AXION",
+      address: getContract(AVALANCHE, "AXION"),
       decimals: 18,
       imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
     },
@@ -533,18 +533,18 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
       decimals: 18,
     },
     {
-      name: "Liq LP",
+      name: "Axion LP",
       symbol: "LLP",
       address: getContract(ARBITRUM, "LLP"),
       decimals: 18,
-      imageUrl: "https://github.com/liq-io/liq-assets/blob/main/LIQ-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
+      imageUrl: "https://github.com/axion-io/axion-assets/blob/main/AXION-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
     },
   ],
   // [KAVA]: [
   //   {
-  //     name: "LIQ",
-  //     symbol: "LIQ",
-  //     address: getContract(KAVA, "LIQ"),
+  //     name: "AXION",
+  //     symbol: "AXION",
+  //     address: getContract(KAVA, "AXION"),
   //     decimals: 18,
   //     imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
   //   },
@@ -555,33 +555,33 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
   //     decimals: 18,
   //   },
   //   {
-  //     name: "Liq LP",
+  //     name: "Axion LP",
   //     symbol: "LLP",
   //     address: getContract(KAVA, "LLP"),
   //     decimals: 18,
-  //     imageUrl: "https://github.com/liq-io/liq-assets/blob/main/LIQ-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
+  //     imageUrl: "https://github.com/axion-io/axion-assets/blob/main/AXION-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
   //   },
   // ],
-  [MODE_MAINNET]: [
+  [TAIKO_MAINNET]: [
     {
-      name: "LIQ",
-      symbol: "LIQ",
-      address: getContract(MODE_MAINNET, "LIQ"),
+      name: "AXION",
+      symbol: "AXION",
+      address: getContract(TAIKO_MAINNET, "AXION"),
       decimals: 18,
       imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
     },
     // {
     //   name: "Escrowed LIQLIQ",
     //   symbol: "esLIQ",
-    //   address: getContract(MODE_MAINNET, "ES_LIQ"),
+    //   address: getContract(TAIKO_MAINNET, "ES_LIQ"),
     //   decimals: 18,
     // },
     {
-      name: "Liq LP",
+      name: "Axion LP",
       symbol: "LLP",
-      address: getContract(MODE_MAINNET, "LLP"),
+      address: getContract(TAIKO_MAINNET, "LLP"),
       decimals: 18,
-      imageUrl: "https://github.com/liq-io/liq-assets/blob/main/LIQ-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
+      imageUrl: "https://github.com/axion-io/axion-assets/blob/main/AXION-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
     },
   ],
 };
@@ -589,45 +589,45 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
 export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } } = {
   [ARBITRUM]: {
     // arbitrum
-    LIQ: {
-      name: "LIQ",
-      symbol: "LIQ",
+    AXION: {
+      name: "AXION",
+      symbol: "AXION",
       decimals: 18,
-      address: getContract(ARBITRUM, "LIQ"),
+      address: getContract(ARBITRUM, "AXION"),
       imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
     },
     GLP: {
-      name: "Liq LP",
+      name: "Axion LP",
       symbol: "LLP",
       decimals: 18,
       address: getContract(ARBITRUM, "StakedLlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://github.com/liq-io/liq-assets/blob/main/LIQ-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
+      imageUrl: "https://github.com/axion-io/axion-assets/blob/main/AXION-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
     },
   },
   [AVALANCHE]: {
     // avalanche
-    LIQ: {
-      name: "LIQ",
-      symbol: "LIQ",
+    AXION: {
+      name: "AXION",
+      symbol: "AXION",
       decimals: 18,
-      address: getContract(AVALANCHE, "LIQ"),
+      address: getContract(AVALANCHE, "AXION"),
       imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
     },
     GLP: {
-      name: "Liq LP",
+      name: "Axion LP",
       symbol: "LLP",
       decimals: 18,
       address: getContract(AVALANCHE, "StakedLlpTracker"), // address of fsGLP token because user only holds fsGLP
-      imageUrl: "https://github.com/liq-io/liq-assets/blob/main/LIQ-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
+      imageUrl: "https://github.com/axion-io/axion-assets/blob/main/AXION-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
     },
   },
   // [KAVA]: {
   //   // avalanche
-  //   LIQ: {
+  //   AXION: {
   //     name: "LIQLIQ",
   //     symbol: "LIQLIQ",
   //     decimals: 18,
-  //     address: getContract(KAVA, "LIQ"),
+  //     address: getContract(KAVA, "AXION"),
   //     imageUrl: "https://assets.coingecko.com/coins/images/28547/small/Logo_KMX.png?1671599329",
   //   },
   //   GLP: {
@@ -637,28 +637,28 @@ export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } }
   //     address: getContract(KAVA, "StakedLlpTracker"), // address of fsGLP token because user only holds fsGLP
   //   },
   // },
-  [MODE_MAINNET]: {
+  [TAIKO_MAINNET]: {
     // avalanche
-    LIQ: {
-      name: "LIQ",
-      symbol: "LIQ",
+    AXION: {
+      name: "AXION",
+      symbol: "AXION",
       decimals: 18,
-      address: getContract(MODE_MAINNET, "LIQ"),
+      address: getContract(TAIKO_MAINNET, "AXION"),
       imageUrl: "https://assets.coingecko.com/coins/images/28547/small/Logo_LIQ.png?1671599329",
     },
     GLP: {
       name: "LIQ_LP",
       symbol: "LLP",
       decimals: 18,
-      address: getContract(MODE_MAINNET, "FeeLlpTracker"), // address of fsGLP token because user only holds fsGLP
+      address: getContract(TAIKO_MAINNET, "FeeLlpTracker"), // address of fsGLP token because user only holds fsGLP
     },
   },
 };
 
 export const ICONLINKS = {
   [ARBITRUM_TESTNET]: {
-    LIQ: {
-      coingecko: "https://www.coingecko.com/en/coins/liq",
+    AXION: {
+      coingecko: "https://www.coingecko.com/en/coins/axion",
       arbitrum: "https://arbiscan.io/address/0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
     },
     GLP: {
@@ -666,7 +666,7 @@ export const ICONLINKS = {
     },
   },
   // [KAVA]: {
-  //   LIQ: {
+  //   AXION: {
   //     coingecko: "https://www.coingecko.com/en/coins/mummy-markets",
   //     fantom: "https://ftmscan.com/address/0x9CB7beAEcdE90a682BDb86AaA32EF032bD9e4079",
   //   },
@@ -701,8 +701,8 @@ export const ICONLINKS = {
   //     fantom: "https://ftmscan.com/address/0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
   //   },
   // },
-  [MODE_MAINNET]: {
-    LIQ: {
+  [TAIKO_MAINNET]: {
+    AXION: {
       coingecko: "https://www.coingecko.com/en/coins/mummy-markets",
       fantom: "https://ftmscan.com/address/0x9CB7beAEcdE90a682BDb86AaA32EF032bD9e4079",
     },
@@ -738,8 +738,8 @@ export const ICONLINKS = {
     },
   },
   [ARBITRUM]: {
-    LIQ: {
-      coingecko: "https://www.coingecko.com/en/coins/liq",
+    AXION: {
+      coingecko: "https://www.coingecko.com/en/coins/axion",
       arbitrum: "https://arbiscan.io/address/0xfc5a1a6eb076a2c7ad06ed22c90d7e710e35ad0a",
     },
     GLP: {
@@ -783,8 +783,8 @@ export const ICONLINKS = {
     },
   },
   [AVALANCHE]: {
-    LIQ: {
-      coingecko: "https://www.coingecko.com/en/coins/liq",
+    AXION: {
+      coingecko: "https://www.coingecko.com/en/coins/axion",
       avalanche: "https://snowtrace.io/address/0x62edc0692bd897d2295872a9ffcac5425011c661",
     },
     GLP: {
@@ -842,7 +842,7 @@ export const TOKENS_BY_SYMBOL_MAP: { [chainId: number]: { [symbol: string]: Toke
 export const WRAPPED_TOKENS_MAP: { [chainId: number]: Token } = {};
 export const NATIVE_TOKENS_MAP: { [chainId: number]: Token } = {};
 
-const CHAIN_IDS = [MAINNET, TESTNET, ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, MODE_MAINNET];
+const CHAIN_IDS = [MAINNET, TESTNET, ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, TAIKO_MAINNET];
 
 for (let j = 0; j < CHAIN_IDS.length; j++) {
   const chainId = CHAIN_IDS[j];

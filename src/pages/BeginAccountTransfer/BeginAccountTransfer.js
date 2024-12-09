@@ -49,7 +49,7 @@ export default function BeginAccountTransfer(props) {
     parsedReceiver = receiver;
   }
 
-  const liqAddress = getContract(chainId, "LIQ");
+  const liqAddress = getContract(chainId, "AXION");
   const liqVesterAddress = getContract(chainId, "LiqVester");
   const glpVesterAddress = getContract(chainId, "LlpVester");
 

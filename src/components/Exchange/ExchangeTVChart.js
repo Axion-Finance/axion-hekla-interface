@@ -151,7 +151,7 @@ export default function ExchangeTVChart(props) {
           },
           liquidation: {
             price: parseFloat(formatAmount(liquidationPrice, USD_DECIMALS, priceDecimal)),
-            title: t`Liq. ${position.indexToken.symbol} ${longOrShortText}`,
+            title: t`Axion. ${position.indexToken.symbol} ${longOrShortText}`,
           },
         };
       });
@@ -203,8 +203,9 @@ export default function ExchangeTVChart(props) {
           if (indexToken && indexToken.symbol) {
             tokenSymbol = indexToken.isWrapped ? indexToken.baseSymbol : indexToken.symbol;
           }
-          const title = `${order.type === INCREASE ? "Inc." : "Dec."} ${tokenSymbol} ${order.isLong ? "Long" : "Short"
-            }`;
+          const title = `${order.type === INCREASE ? "Inc." : "Dec."} ${tokenSymbol} ${
+            order.isLong ? "Long" : "Short"
+          }`;
           const color = "#3a3e5e";
           lines.push(
             currentSeries.createPriceLine({
@@ -242,7 +243,7 @@ export default function ExchangeTVChart(props) {
             currentSeries.createPriceLine({
               price: parseFloat(formatAmount(liquidationPrice, USD_DECIMALS, 2)),
               color,
-              title: `Liq. ${position.indexToken.symbol} ${position.isLong ? "Long" : "Short"}`.padEnd(
+              title: `Axion. ${position.indexToken.symbol} ${position.isLong ? "Long" : "Short"}`.padEnd(
                 PRICE_LINE_TEXT_WIDTH,
                 " "
               ),

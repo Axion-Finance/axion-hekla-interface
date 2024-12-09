@@ -27,7 +27,7 @@ function TradeOverview() {
     <TradeOverviewWrapper>
       <Row width="100%" justify="center" align="center">
         <Column padding="148px 10%" gap="38px">
-          <Button>IN LIQ WE TRUST</Button>
+          <Button>IN AXION WE TRUST</Button>
           <Text
             fontSize="48px"
             textAlign="center"

@@ -32,9 +32,9 @@ export function AppHeaderLinks({
     <div className="App-header-links">
       {small && (
         <div className="App-header-links-header">
-          <a className="App-header-link-main" href="https://liq.markets/">
-            <img src={logoImg} alt="LIQ Logo" />
-            LIQ<span style={{ color: "orange" }}></span>
+          <a className="App-header-link-main" href="https://axion.markets/">
+            <img src={logoImg} alt="AXION Logo" />
+            AXION<span style={{ color: "orange" }}></span>
           </a>
           <div
             className="App-header-menu-icon-block mobile-cross-menu"
@@ -96,7 +96,7 @@ export function AppHeaderLinks({
         </HeaderLink>
       </div> */}
       <div className="App-header-link-container">
-        <ExternalLink href="docs.liq.markets">
+        <ExternalLink href="docs.axion.markets">
           <Trans>About</Trans>
         </ExternalLink>
       </div>

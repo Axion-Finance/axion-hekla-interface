@@ -43,15 +43,15 @@ import llp40Icon from "img/ic_llp_40.svg";
 import arrowIcon from "img/ic_convert_down.svg";
 
 //import avalanche16Icon from "img/ic_avalanche_16.svg";
-import fantom16Icon from "img/34443.png";
+import fantom16Icon from "img/167000.png";
 
-import arbitrum16Icon from "img/34443.png";
+import arbitrum16Icon from "img/167000.png";
 
 import "./GlpSwap.css";
 import AssetDropdown from "pages/Dashboard/AssetDropdown";
 import SwapErrorModal from "./SwapErrorModal";
 import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
-import { ARBITRUM, MODE_MAINNET, getChainName, IS_NETWORK_DISABLED } from "config/chains";
+import { ARBITRUM, TAIKO_MAINNET, getChainName, IS_NETWORK_DISABLED } from "config/chains";
 import { callContract, contractFetcher } from "lib/contracts";
 import { approveTokens, useInfoTokens } from "domain/tokens";
 import { useLocalStorageByChainId } from "lib/localStorage";
@@ -211,7 +211,7 @@ export default function GlpSwap(props) {
   //   }
   // );
 
-  const { liqPrice } = useLiqPrice(chainId, { arbitrum: chainId === MODE_MAINNET ? library : undefined }, active);
+  const { axionPrice } = useLiqPrice(chainId, { arbitrum: chainId === TAIKO_MAINNET ? library : undefined }, active);
 
   const rewardTrackersForStakingInfo = [/*stakedGlpTrackerAddress, */ feeGlpTrackerAddress];
   const { data: stakingInfo } = useSWR(
@@ -309,12 +309,12 @@ export default function GlpSwap(props) {
     const result = [];
     for (let i = 0; i < claimableTokens.length; i++) {
       const reward = claimableRewards[i];
-      if (claimableTokens[i] === getContract(chainId, "LIQ")) {
-        const rewardInUsd = liqPrice.mul(reward).div(expandDecimals(1, 18));
+      if (claimableTokens[i] === getContract(chainId, "AXION")) {
+        const rewardInUsd = axionPrice.mul(reward).div(expandDecimals(1, 18));
         totalRewardsInUsd.current = totalRewardsInUsd.current.add(rewardInUsd);
         totalApr.current = totalRewardsInUsd.current.mul;
         result.push({
-          token: { address: claimableTokens[i], symbol: "LIQ", rewardDisplayDecimals: 2 },
+          token: { address: claimableTokens[i], symbol: "AXION", rewardDisplayDecimals: 2 },
           reward,
           rewardInUsd,
         });
@@ -327,7 +327,7 @@ export default function GlpSwap(props) {
       }
     }
     return result;
-  }, [claimableAll, chainId, liqPrice, infoTokens]);
+  }, [claimableAll, chainId, axionPrice, infoTokens]);
 
   useEffect(() => {
     const updateSwapAmounts = () => {
@@ -701,7 +701,7 @@ export default function GlpSwap(props) {
       {/* <div className="Page-title-section">
         <div className="Page-title">{isBuying ? "Buy GLP" : "Sell GLP"}</div>
         {isBuying && <div className="Page-description">
-          Purchase <a href="docs.liq.markets/llp" target="_blank" rel="noopener noreferrer">GLP tokens</a> to earn {nativeTokenSymbol} fees from swaps and leverage trading.<br/>
+          Purchase <a href="docs.axion.markets/llp" target="_blank" rel="noopener noreferrer">GLP tokens</a> to earn {nativeTokenSymbol} fees from swaps and leverage trading.<br/>
           Note that there is a minimum holding time of 15 minutes after a purchase.<br/>
           <div>View <Link to="/earn">staking</Link> page.</div>
         </div>}

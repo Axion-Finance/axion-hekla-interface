@@ -115,7 +115,7 @@ export async function callContract(
               <br />
               <br />
               Please try changing the RPC url in your wallet settings.{" "}
-              <ExternalLink href="docs.liq.markets/trading#backup-rpc-urls">More info</ExternalLink>
+              <ExternalLink href="docs.axion.markets/trading#backup-rpc-urls">More info</ExternalLink>
             </Trans>
             <br />
             {originalError && <ToastifyDebug>{originalError}</ToastifyDebug>}

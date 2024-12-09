@@ -56,7 +56,7 @@ const ORDER_SIZE_DUST_USD = expandDecimals(1, USD_DECIMALS - 1); // $0.10
 
 function shouldSwap(collateralToken, receiveToken) {
   // If position collateral is WETH in contract, then position.collateralToken is { symbol: “ETH”, isNative: true, … }
-  // @see https://github.com/liq-io/liq-interface/blob/master/src/pages/Exchange/Exchange.js#L162
+  // @see https://github.com/axion-io/axion-interface/blob/master/src/pages/Exchange/Exchange.js#L162
   // meaning if collateralToken.isNative === true in reality position has WETH as a collateral
   // and if collateralToken.isNative === true and receiveToken.isNative === true then position’s WETH will be unwrapped and user will receive native ETH
   const isCollateralWrapped = collateralToken.isNative;
@@ -536,10 +536,10 @@ export default function PositionSeller(props) {
         return t`Enter Price`;
       }
       if (position.isLong && triggerPriceUsd.lte(liquidationPrice)) {
-        return t`Price below Liq. Price`;
+        return t`Price below Axion. Price`;
       }
       if (!position.isLong && triggerPriceUsd.gte(liquidationPrice)) {
-        return t`Price above Liq. Price`;
+        return t`Price above Axion. Price`;
       }
 
       if (profitPrice && nextDelta.eq(0) && nextHasProfit) {
@@ -824,7 +824,7 @@ export default function PositionSeller(props) {
           <div className="Confirmation-box-warning">
             <Trans>
               Reducing the position at the current price will forfeit a&nbsp;
-              <ExternalLink href="docs.liq.markets/trading#minimum-price-change">pending profit</ExternalLink> of{" "}
+              <ExternalLink href="docs.axion.markets/trading#minimum-price-change">pending profit</ExternalLink> of{" "}
               {deltaStr}. <br />
             </Trans>
             <Trans>
@@ -839,7 +839,7 @@ export default function PositionSeller(props) {
         <div className="Confirmation-box-warning">
           <Trans>
             This order will forfeit a&nbsp;
-            <ExternalLink href="docs.liq.markets/trading#minimum-price-change">profit</ExternalLink> of {deltaStr}.{" "}
+            <ExternalLink href="docs.axion.markets/trading#minimum-price-change">profit</ExternalLink> of {deltaStr}.{" "}
             <br />
           </Trans>
           <Trans>
@@ -1034,7 +1034,7 @@ export default function PositionSeller(props) {
             </div>
             <div className="Exchange-info-row">
               <div className="Exchange-info-label">
-                <Trans>Liq. Price</Trans>
+                <Trans>Axion. Price</Trans>
               </div>
               <div className="align-right">
                 {isClosing && orderOption !== STOP && "-"}
@@ -1195,7 +1195,7 @@ export default function PositionSeller(props) {
 
                       <div className="PositionSeller-fee-item">
                         <Trans>
-                          <ExternalLink href="docs.liq.markets/trading#fees">More Info</ExternalLink> about fees.
+                          <ExternalLink href="docs.axion.markets/trading#fees">More Info</ExternalLink> about fees.
                         </Trans>
                       </div>
                     </div>
