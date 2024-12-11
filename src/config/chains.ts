@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
-import { sample } from "lodash";
 import { isDevelopment } from "lib/legacy";
 import { NetworkMetadata } from "lib/wallets";
+import { sample } from "lodash";
 
 const { parseEther } = ethers.utils;
 
@@ -235,7 +235,7 @@ export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
   // },
   [TAIKO_MAINNET]: {
     chainId: "0x" + TAIKO_MAINNET.toString(16),
-    chainName: "Mode Mainnet",
+    chainName: "Taiko Mainnet",
     nativeCurrency: {
       name: "ETH",
       symbol: "ETH",
