@@ -1,27 +1,27 @@
-import React, { useState } from "react";
-import useSWR from "swr";
-import { ethers } from "ethers";
 import { useWeb3React } from "@web3-react/core";
+import { ethers } from "ethers";
 import { PLACEHOLDER_ACCOUNT } from "lib/legacy";
+import { useState } from "react";
+import useSWR from "swr";
 
 import { getContract } from "config/contracts";
 
-import Token from "abis/Token.json";
 import RewardReader from "abis/RewardReader.json";
+import Token from "abis/Token.json";
 
 import Checkbox from "components/Checkbox/Checkbox";
 
-import "./ClaimEsLiq.css";
+import "./ClaimEsAxion.css";
 
 import arbitrumIcon from "img/ic_arbitrum_96.svg";
 import avaIcon from "img/ic_avalanche_96.svg";
 
 import { Trans, t } from "@lingui/macro";
+import ExternalLink from "components/ExternalLink/ExternalLink";
 import { ARBITRUM, AVALANCHE } from "config/chains";
+import { useChainId } from "lib/chains";
 import { callContract, contractFetcher } from "lib/contracts";
 import { bigNumberify, formatAmount, formatAmountFree, parseValue } from "lib/numbers";
-import { useChainId } from "lib/chains";
-import ExternalLink from "components/ExternalLink/ExternalLink";
 
 const VEST_WITH_LIQ_ARB = "VEST_WITH_LIQ_ARB";
 const VEST_WITH_GLP_ARB = "VEST_WITH_GLP_ARB";
@@ -125,7 +125,7 @@ function getVestingValues({ minRatio, amount, vestingDataItem }) {
   };
 }
 
-export default function ClaimEsLiq({ setPendingTxns }) {
+export default function ClaimEsAxion({ setPendingTxns }) {
   const { active, account, library } = useWeb3React();
   const { chainId } = useChainId();
   const [selectedOption, setSelectedOption] = useState("");
@@ -138,7 +138,7 @@ export default function ClaimEsLiq({ setPendingTxns }) {
 
   const { data: esLiqIouBalance } = useSWR(
     isArbitrum && [
-      `ClaimEsLiq:esLiqIouBalance:${active}`,
+      `ClaimEsAxion:esLiqIouBalance:${active}`,
       chainId,
       esLiqIouAddress,
       "balanceOf",
@@ -328,7 +328,7 @@ export default function ClaimEsLiq({ setPendingTxns }) {
   };
 
   return (
-    <div className="ClaimEsLiq Page page-layout">
+    <div className="ClaimEsAxion Page page-layout">
       <div className="Page-title-section mt-0">
         <div className="Page-title">
           <Trans>Claim esLIQ</Trans>
@@ -373,13 +373,13 @@ export default function ClaimEsLiq({ setPendingTxns }) {
               </Trans>
             </div>
             <br />
-            <div className="ClaimEsLiq-vesting-options">
+            <div className="ClaimEsAxion-vesting-options">
               <Checkbox
                 className="arbitrum btn btn-primary btn-left btn-lg"
                 isChecked={selectedOption === VEST_WITH_LIQ_ARB}
                 setIsChecked={() => setSelectedOption(VEST_WITH_LIQ_ARB)}
               >
-                <div className="ClaimEsLiq-option-label">
+                <div className="ClaimEsAxion-option-label">
                   <Trans>Vest with Axion on Arbitrum</Trans>
                 </div>
                 <img src={arbitrumIcon} alt="Arbitrum" />
@@ -389,7 +389,7 @@ export default function ClaimEsLiq({ setPendingTxns }) {
                 isChecked={selectedOption === VEST_WITH_GLP_ARB}
                 setIsChecked={() => setSelectedOption(VEST_WITH_GLP_ARB)}
               >
-                <div className="ClaimEsLiq-option-label">
+                <div className="ClaimEsAxion-option-label">
                   <Trans>Vest with GLP on Arbitrum</Trans>
                 </div>
                 <img src={arbitrumIcon} alt="Arbitrum" />
@@ -399,7 +399,7 @@ export default function ClaimEsLiq({ setPendingTxns }) {
                 isChecked={selectedOption === VEST_WITH_LIQ_AVAX}
                 setIsChecked={() => setSelectedOption(VEST_WITH_LIQ_AVAX)}
               >
-                <div className="ClaimEsLiq-option-label">
+                <div className="ClaimEsAxion-option-label">
                   <Trans>Vest with Axion on Avalanche</Trans>
                 </div>
                 <img src={avaIcon} alt="Avalanche" />
@@ -409,7 +409,7 @@ export default function ClaimEsLiq({ setPendingTxns }) {
                 isChecked={selectedOption === VEST_WITH_GLP_AVAX}
                 setIsChecked={() => setSelectedOption(VEST_WITH_GLP_AVAX)}
               >
-                <div className="ClaimEsLiq-option-label avalanche">
+                <div className="ClaimEsAxion-option-label avalanche">
                   <Trans>Vest with GLP on Avalanche</Trans>
                 </div>
                 <img src={avaIcon} alt="Avalanche" />
@@ -434,14 +434,14 @@ export default function ClaimEsLiq({ setPendingTxns }) {
               </div>
             )}
             <div>
-              <div className="ClaimEsLiq-input-label muted">
+              <div className="ClaimEsAxion-input-label muted">
                 <Trans>Amount to claim</Trans>
               </div>
-              <div className="ClaimEsLiq-input-container">
+              <div className="ClaimEsAxion-input-container">
                 <input type="number" placeholder="0.0" value={value} onChange={(e) => setValue(e.target.value)} />
                 {value !== formatAmountFree(esLiqIouBalance, 18, 18) && (
                   <div
-                    className="ClaimEsLiq-max-button"
+                    className="ClaimEsAxion-max-button"
                     onClick={() => setValue(formatAmountFree(esLiqIouBalance, 18, 18))}
                   >
                     <Trans>MAX</Trans>

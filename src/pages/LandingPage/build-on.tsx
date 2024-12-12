@@ -1,17 +1,7 @@
-import React from "react";
 import styled from "styled-components";
 import { Column, Row } from "../../components/Layout";
 import { Text } from "../../components/Text";
-import Button from "../../components/Button/MainButton";
 import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
-import Spacer from "../../components/Spacer";
-import { formatNumber } from "../../utils/formatNumber";
-import { Link } from "react-router-dom";
-import { RowWrap } from "../../components/Layout/Row";
-import Mode from "img/landingpage/chains/mode.svg";
-import Optimism from "img/landingpage/chains/optimism.svg";
-import Kroma from "img/landingpage/chains/kroma.svg";
-import Linea from "img/landingpage/chains/linea.svg";
 
 const TradeOverviewWrapper = styled.div`
   width: 100%;
@@ -42,7 +32,7 @@ function TradeOnLiq() {
           >
             BUILD ON :
           </Text>
-          <RowWrap gap="8px" justify="center">
+          {/* <RowWrap gap="8px" justify="center">
             {[
               {
                 icon: Mode,
@@ -67,7 +57,7 @@ function TradeOnLiq() {
                 </a>
               );
             })}
-          </RowWrap>
+          </RowWrap> */}
         </Column>
       </Row>
     </TradeOverviewWrapper>

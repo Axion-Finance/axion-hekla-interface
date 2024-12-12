@@ -1,67 +1,66 @@
-import React, { useState, useEffect, useMemo, useRef } from "react";
-import { useHistory } from "react-router-dom";
 import { Trans, t } from "@lingui/macro";
 import { useWeb3React } from "@web3-react/core";
-import useSWR from "swr";
-import { ethers } from "ethers";
-import Tab from "../Tab/Tab";
 import cx from "classnames";
 import { getContract } from "config/contracts";
+import { ethers } from "ethers";
 import {
-  getBuyGlpToAmount,
-  getBuyGlpFromAmount,
-  getSellGlpFromAmount,
-  getSellGlpToAmount,
-  adjustForDecimals,
-  GLP_DECIMALS,
-  USD_DECIMALS,
   BASIS_POINTS_DIVISOR,
   GLP_COOLDOWN_DURATION,
-  SECONDS_PER_YEAR,
-  USDG_DECIMALS,
+  GLP_DECIMALS,
   PLACEHOLDER_ACCOUNT,
+  USDG_DECIMALS,
+  USD_DECIMALS,
+  adjustForDecimals,
+  getBuyGlpFromAmount,
+  getBuyGlpToAmount,
+  getSellGlpFromAmount,
+  getSellGlpToAmount,
   importImage,
 } from "lib/legacy";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { useHistory } from "react-router-dom";
+import useSWR from "swr";
+import Tab from "../Tab/Tab";
 
 import { useLiqPrice } from "domain/legacy";
 
-import TokenSelector from "../Exchange/TokenSelector";
 import BuyInputSection from "../BuyInputSection/BuyInputSection";
+import TokenSelector from "../Exchange/TokenSelector";
 import Tooltip from "../Tooltip/Tooltip";
 
+import LlpManager from "abis/LlpManager.json";
 import ReaderV2 from "abis/ReaderV2.json";
 import RewardReader from "abis/RewardReader.json";
-import VaultV2 from "abis/VaultV2.json";
-import LlpManager from "abis/LlpManager.json";
 import RewardTracker from "abis/RewardTracker.json";
+import VaultV2 from "abis/VaultV2.json";
 // import Vester from "abis/Vester.json";
 import RewardRouter from "abis/RewardRouter.json";
 import Token from "abis/Token.json";
 
+import arrowIcon from "img/ic_convert_down.svg";
 import glp24Icon from "img/ic_llp_24.svg";
 import llp40Icon from "img/ic_llp_40.svg";
-import arrowIcon from "img/ic_convert_down.svg";
 
 //import avalanche16Icon from "img/ic_avalanche_16.svg";
 import fantom16Icon from "img/167000.png";
 
 import arbitrum16Icon from "img/167000.png";
 
-import "./GlpSwap.css";
-import AssetDropdown from "pages/Dashboard/AssetDropdown";
-import SwapErrorModal from "./SwapErrorModal";
-import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
-import { ARBITRUM, TAIKO_MAINNET, getChainName, IS_NETWORK_DISABLED } from "config/chains";
-import { callContract, contractFetcher } from "lib/contracts";
-import { approveTokens, useInfoTokens } from "domain/tokens";
-import { useLocalStorageByChainId } from "lib/localStorage";
-import { helperToast } from "lib/helperToast";
-import { getTokenInfo, getUsd } from "domain/tokens/utils";
-import { bigNumberify, expandDecimals, formatAmount, formatAmountFree, formatKeyAmount, parseValue } from "lib/numbers";
-import { getNativeToken, getToken, getTokens, getWhitelistedTokens, getWrappedToken } from "config/tokens";
-import { useChainId } from "lib/chains";
 import ExternalLink from "components/ExternalLink/ExternalLink";
+import { ARBITRUM, IS_NETWORK_DISABLED, TAIKO_MAINNET, getChainName } from "config/chains";
+import { getNativeToken, getToken, getTokens, getWhitelistedTokens, getWrappedToken } from "config/tokens";
+import { approveTokens, useInfoTokens } from "domain/tokens";
+import { getTokenInfo, getUsd } from "domain/tokens/utils";
+import { useChainId } from "lib/chains";
+import { callContract, contractFetcher } from "lib/contracts";
+import { helperToast } from "lib/helperToast";
+import { useLocalStorageByChainId } from "lib/localStorage";
+import { bigNumberify, expandDecimals, formatAmount, formatAmountFree, formatKeyAmount, parseValue } from "lib/numbers";
+import AssetDropdown from "pages/Dashboard/AssetDropdown";
 import StakeV2 from "pages/Stake/StakeV2";
+import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
+import "./GlpSwap.css";
+import SwapErrorModal from "./SwapErrorModal";
 
 const { AddressZero } = ethers.constants;
 
@@ -236,6 +235,8 @@ export default function GlpSwap(props) {
     aum && aum.gt(0) && glpSupply.gt(0)
       ? aum.mul(expandDecimals(1, GLP_DECIMALS)).div(glpSupply)
       : expandDecimals(1, USD_DECIMALS);
+
+  console.log("glpPrice", glpPrice.toString());
   let glpBalanceUsd;
   if (glpBalance) {
     glpBalanceUsd = glpBalance.mul(glpPrice).div(expandDecimals(1, GLP_DECIMALS));
@@ -348,6 +349,12 @@ export default function GlpSwap(props) {
             totalTokenWeights
           );
           const nextValue = formatAmountFree(nextAmount, GLP_DECIMALS, GLP_DECIMALS);
+          console.log("nextAmount", nextAmount.toString());
+          console.log("nextValue", nextValue);
+          console.log("feeBps", feeBps);
+          console.log("glpPrice", glpPrice.toString());
+          console.log("usdgSupply", usdgSupply.toString());
+          console.log("totalTokenWeights", totalTokenWeights.toString());
           setGlpValue(nextValue);
           setFeeBasisPoints(feeBps);
         } else {

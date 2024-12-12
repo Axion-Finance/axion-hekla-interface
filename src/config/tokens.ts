@@ -1,7 +1,7 @@
-import { ethers } from "ethers";
-import { getContract } from "./contracts";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, MAINNET, TESTNET, TAIKO_MAINNET, MUMBAI } from "./chains";
 import { Token } from "domain/tokens";
+import { ethers } from "ethers";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, MAINNET, MUMBAI, TAIKO_MAINNET, TESTNET } from "./chains";
+import { getContract } from "./contracts";
 
 export const TOKENS: { [chainId: number]: Token[] } = {
   [MAINNET]: [
@@ -404,18 +404,18 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       imageUrl: "https://ftmscan.com/token/images/wFtm_32.png",
     },
     {
-      name: "Bitcoin",
-      symbol: "BTC",
-      address: "0xcDd475325D6F564d27247D1DddBb0DAc6fA0a5CF",
-      decimals: 8,
+      name: "Taiko Token",
+      symbol: "TAIKO",
+      address: "0xA9d23408b9bA935c230493c40C73824Df71A0975",
+      decimals: 18,
       displayDecimals: 2,
       isShortable: true,
-      imageUrl: "https://assets.coingecko.com/coins/images/26115/thumb/btcb.png?1655921693",
+      imageUrl: "https://assets.coingecko.com/coins/images/325/small/Tether-logo.png",
     },
     {
       name: "USD Coin",
       symbol: "USDC",
-      address: "0xd988097fb8612cc24eeC14542bC03424c656005f",
+      address: "0x07d83526730c7438048d55a4fc0b850e2aab6f0b",
       decimals: 6,
       displayDecimals: 2,
       isStable: true,
@@ -424,7 +424,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
     {
       name: "Tether",
       symbol: "USDT",
-      address: "0xf0F161fDA2712DB8b566946122a5af183995e2eD",
+      address: "0x2def195713cf4a606b49d07e520e22c17899a736",
       decimals: 6,
       displayDecimals: 2,
       isStable: true,
@@ -563,26 +563,26 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
   //   },
   // ],
   [TAIKO_MAINNET]: [
-    {
-      name: "AXION",
-      symbol: "AXION",
-      address: getContract(TAIKO_MAINNET, "AXION"),
-      decimals: 18,
-      imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
-    },
+    // {
+    //   name: "AXION",
+    //   symbol: "AXION",
+    //   address: getContract(TAIKO_MAINNET, "AXION"),
+    //   decimals: 18,
+    //   imageUrl: "https://assets.coingecko.com/coins/images/18323/small/arbit.png?1631532468",
+    // },
     // {
     //   name: "Escrowed LIQLIQ",
     //   symbol: "esLIQ",
     //   address: getContract(TAIKO_MAINNET, "ES_LIQ"),
     //   decimals: 18,
     // },
-    {
-      name: "Axion LP",
-      symbol: "LLP",
-      address: getContract(TAIKO_MAINNET, "LLP"),
-      decimals: 18,
-      imageUrl: "https://github.com/axion-io/axion-assets/blob/main/AXION-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
-    },
+    // {
+    //   name: "Axion LP",
+    //   symbol: "LLP",
+    //   address: getContract(TAIKO_MAINNET, "LLP"),
+    //   decimals: 18,
+    //   imageUrl: "https://github.com/axion-io/axion-assets/blob/main/AXION-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
+    // },
   ],
 };
 
@@ -638,7 +638,6 @@ export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } }
   //   },
   // },
   [TAIKO_MAINNET]: {
-    // avalanche
     AXION: {
       name: "AXION",
       symbol: "AXION",
@@ -706,7 +705,7 @@ export const ICONLINKS = {
       coingecko: "https://www.coingecko.com/en/coins/mummy-markets",
       fantom: "https://ftmscan.com/address/0x9CB7beAEcdE90a682BDb86AaA32EF032bD9e4079",
     },
-    GLP: {
+    TAIKO: {
       fantom: "https://ftmscan.com/token/0xcf4D627f1bb9aB2deC8Ec4c928686b2b4165Ec73",
     },
     ETH: {
@@ -731,10 +730,6 @@ export const ICONLINKS = {
     DAI: {
       coingecko: "https://www.coingecko.com/en/coins/dai",
       fantom: "https://ftmscan.com/address/0xDA10009cBd5D07dd0CeCc66161FC93D7c9000da1",
-    },
-    FTM: {
-      coingecko: "https://www.coingecko.com/en/coins/fantom",
-      fantom: "https://ftmscan.com/address/0x21be370D5312f44cB42ce377BC9b8a0cEF1A4C83",
     },
   },
   [ARBITRUM]: {

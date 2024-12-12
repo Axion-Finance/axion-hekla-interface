@@ -160,11 +160,11 @@ msgstr "추가로, 트리거 주문은 시장가 주문이며 트리거 가격�
 msgid "Affiliates"
 msgstr "제휴"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "After claiming you will be able to vest a maximum of {0} esLIQ at a ratio of {1} {stakingToken} to 1 esLIQ."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "After claiming, The esLIQ tokens will be airdropped to your account on the selected network within 7 days."
 msgstr ""
 
@@ -196,7 +196,7 @@ msgstr "수량"
 msgid "Amount of traders you referred."
 msgstr "추천한 거래자 수"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Amount to claim"
 msgstr "수령할 양"
 
@@ -423,7 +423,7 @@ msgstr "최저 수수료로 이용하려면 \"수수료 절약\" 섹션 아래�
 msgid "Checking code..."
 msgstr "코드 확인중..."
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
@@ -432,11 +432,11 @@ msgstr "코드 확인중..."
 msgid "Claim"
 msgstr "수령하기"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim completed!"
 msgstr "수령 완료!"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim esLIQ"
 msgstr ""
 
@@ -444,11 +444,11 @@ msgstr ""
 msgid "Claim failed"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim failed."
 msgstr "수령 실패"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim submitted!"
 msgstr "수령 제출 완료!"
 
@@ -456,7 +456,7 @@ msgstr "수령 제출 완료!"
 msgid "Claim submitted! <0>View status.</0>"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claiming..."
 msgstr "수령중..."
 
@@ -964,7 +964,7 @@ msgstr "가격 입력"
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/components/Migration/Migration.js
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 msgid "Enter an amount"
@@ -1512,7 +1512,7 @@ msgstr "손실"
 #: src/components/Exchange/PositionSeller.js
 #: src/components/Exchange/SwapBox.js
 #: src/components/InputSection/InputSection.js
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "MAX"
 msgstr "최대"
 
@@ -1767,7 +1767,7 @@ msgstr ""
 msgid "No PnLs found"
 msgstr "손익을 찾지 못했습니다."
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "No esLIQ to claim"
 msgstr "수령할 수 있는 esLIQ가 없습니다"
 
@@ -1996,7 +1996,7 @@ msgstr ""
 msgid "Please read the <0>Medium post</0> before migrating."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Please switch your network to Arbitrum."
 msgstr "네트워크를 Arbitrum으로 변경해주세요."
 
@@ -2306,7 +2306,7 @@ msgstr "언어 선택"
 msgid "Select Market"
 msgstr "마켓 선택"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Select an option"
 msgstr "옵션 선택"
 
@@ -2317,7 +2317,7 @@ msgstr "옵션 선택"
 msgid "Select different tokens"
 msgstr "다른 토큰 선택"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Select your vesting option below then click \"Claim\"."
 msgstr "베스팅 옵션을 선택한 후 \"수령하기\" 버튼을 클릭해주세요."
 
@@ -2631,7 +2631,7 @@ msgstr "\"APR 부스트는 스테이킹된 멀티플라이어 포인트로부터
 msgid "The Gambit protocol is in beta, please read the <0>staking details</0>before participating."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "The address of the esLIQ (IOU) token is {esLiqIouAddress}."
 msgstr ""
 
@@ -2639,11 +2639,11 @@ msgstr ""
 msgid "The borrow fee is calculated as (assets borrowed) / (total assets in pool) * 0.01% per hour."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "The esLIQ (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "The esLIQ tokens can be staked or vested at any time."
 msgstr ""
 
@@ -3008,19 +3008,19 @@ msgstr "유용한 링크"
 msgid "Utilization"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with GLP on Arbitrum"
 msgstr "Arbitrum에서 GLP로 베스팅하기"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with GLP on Avalanche"
 msgstr "Avalanche에서 LIQ로 베스팅하기"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with Axion on Arbitrum"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with Axion on Avalanche"
 msgstr ""
 
@@ -3097,7 +3097,7 @@ msgstr "지갑"
 msgid "Wallet is not connected"
 msgstr "지갑이 연결되지 않았습니다"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 #: src/pages/NftWallet/NftWallet.js
 msgid "Wallet not connected"
 msgstr "지갑이 연결되지 않음"
@@ -3170,11 +3170,11 @@ msgstr ""
 msgid "You can change this in the settings menu on the top right of the page.<0/><1/>Note that a low allowed slippage, e.g. less than 0.5%, may result in failed orders if prices are volatile."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "You can check your claim history <0>here</0>."
 msgstr "<0>여기</0>에서 수령한 내역을 확인할 수 있습니다."
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "You can currently vest a maximum of {0} esLIQ tokens at a ratio of {1} {stakingToken} to 1 esLIQ."
 msgstr ""
 
@@ -3198,7 +3198,7 @@ msgstr ""
 msgid "You have multiple existing Increase {longOrShortText} {0} limit orders"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "You have {0} esLIQ (IOU) tokens."
 msgstr "귀하는 {0} esLIQ (IOU) 토큰을 보유하고 있습니다."
 
@@ -3222,7 +3222,7 @@ msgstr ""
 msgid "You will receive at least {0} {1} if this order is executed. The execution price may vary depending on swap fees at the time the order is executed."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Your esLIQ (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
 msgstr "귀하의 esLIQ(IOU) 잔액은 수령 후 수령액만큼 감소하는데 이는 상정된 행동입니다."
 

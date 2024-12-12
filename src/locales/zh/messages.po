@@ -160,11 +160,11 @@ msgstr "此外，触发订单為市场订单，不保证以触发价格结算"
 msgid "Affiliates"
 msgstr "结盟企业"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "After claiming you will be able to vest a maximum of {0} esLIQ at a ratio of {1} {stakingToken} to 1 esLIQ."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "After claiming, The esLIQ tokens will be airdropped to your account on the selected network within 7 days."
 msgstr ""
 
@@ -196,7 +196,7 @@ msgstr "数量"
 msgid "Amount of traders you referred."
 msgstr "你所介绍的交易者数量"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Amount to claim"
 msgstr "取回金额"
 
@@ -423,7 +423,7 @@ msgstr "检查下方的 \"节省费用 \"，以获得最低的费用百分比"
 msgid "Checking code..."
 msgstr "检查代码..."
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
@@ -432,11 +432,11 @@ msgstr "检查代码..."
 msgid "Claim"
 msgstr "领取"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim completed!"
 msgstr "领取完成"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim esLIQ"
 msgstr ""
 
@@ -444,11 +444,11 @@ msgstr ""
 msgid "Claim failed"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim failed."
 msgstr "领取失败"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim submitted!"
 msgstr "送出领取"
 
@@ -456,7 +456,7 @@ msgstr "送出领取"
 msgid "Claim submitted! <0>View status.</0>"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claiming..."
 msgstr "领取中"
 
@@ -964,7 +964,7 @@ msgstr "輸入價錢"
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/components/Migration/Migration.js
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 msgid "Enter an amount"
@@ -1512,7 +1512,7 @@ msgstr "亏损"
 #: src/components/Exchange/PositionSeller.js
 #: src/components/Exchange/SwapBox.js
 #: src/components/InputSection/InputSection.js
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "MAX"
 msgstr "最大值"
 
@@ -1767,7 +1767,7 @@ msgstr ""
 msgid "No PnLs found"
 msgstr "未发现PnLs"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "No esLIQ to claim"
 msgstr "没有esLIQ可供索取"
 
@@ -1996,7 +1996,7 @@ msgstr ""
 msgid "Please read the <0>Medium post</0> before migrating."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Please switch your network to Arbitrum."
 msgstr "请将您的网络切换到Arbitrum"
 
@@ -2306,7 +2306,7 @@ msgstr "选择语言"
 msgid "Select Market"
 msgstr "选择市场"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Select an option"
 msgstr "选择一个方案"
 
@@ -2317,7 +2317,7 @@ msgstr "选择一个方案"
 msgid "Select different tokens"
 msgstr "选择不同的币种"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Select your vesting option below then click \"Claim\"."
 msgstr "在下面选择你的归属选项，然后点击 \"Claim\""
 
@@ -2631,7 +2631,7 @@ msgstr "提升的年利率来自于你所投注的乘数点"
 msgid "The Gambit protocol is in beta, please read the <0>staking details</0>before participating."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "The address of the esLIQ (IOU) token is {esLiqIouAddress}."
 msgstr ""
 
@@ -2639,11 +2639,11 @@ msgstr ""
 msgid "The borrow fee is calculated as (assets borrowed) / (total assets in pool) * 0.01% per hour."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "The esLIQ (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "The esLIQ tokens can be staked or vested at any time."
 msgstr ""
 
@@ -3008,19 +3008,19 @@ msgstr "实用链接"
 msgid "Utilization"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with GLP on Arbitrum"
 msgstr "在Arbitrum上授权GLP"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with GLP on Avalanche"
 msgstr "在Avalanche上授权GLP"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with Axion on Arbitrum"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with Axion on Avalanche"
 msgstr ""
 
@@ -3097,7 +3097,7 @@ msgstr "钱包"
 msgid "Wallet is not connected"
 msgstr "钱包未被连接"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 #: src/pages/NftWallet/NftWallet.js
 msgid "Wallet not connected"
 msgstr "钱包未连接"
@@ -3170,11 +3170,11 @@ msgstr ""
 msgid "You can change this in the settings menu on the top right of the page.<0/><1/>Note that a low allowed slippage, e.g. less than 0.5%, may result in failed orders if prices are volatile."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "You can check your claim history <0>here</0>."
 msgstr "你可以在这里查看你的提领历史<0></0>"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "You can currently vest a maximum of {0} esLIQ tokens at a ratio of {1} {stakingToken} to 1 esLIQ."
 msgstr ""
 
@@ -3198,7 +3198,7 @@ msgstr ""
 msgid "You have multiple existing Increase {longOrShortText} {0} limit orders"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "You have {0} esLIQ (IOU) tokens."
 msgstr "你有{0}个esLIQ (IOU) 代币"
 
@@ -3222,7 +3222,7 @@ msgstr ""
 msgid "You will receive at least {0} {1} if this order is executed. The execution price may vary depending on swap fees at the time the order is executed."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Your esLIQ (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
 msgstr "你的esLIQ（IOU）余额在提领后将减少您的领回金额，这是可预期的"
 

@@ -160,11 +160,11 @@ msgstr "Además, las órdenes de activación son órdenes de mercado y no se gar
 msgid "Affiliates"
 msgstr "Afiliados"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "After claiming you will be able to vest a maximum of {0} esLIQ at a ratio of {1} {stakingToken} to 1 esLIQ."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "After claiming, The esLIQ tokens will be airdropped to your account on the selected network within 7 days."
 msgstr ""
 
@@ -196,7 +196,7 @@ msgstr "Cantidad"
 msgid "Amount of traders you referred."
 msgstr "Cantidad de comerciantes que ha referido."
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Amount to claim"
 msgstr "Cantidad a reclamar"
 
@@ -423,7 +423,7 @@ msgstr "Comprueba la sección \"Ahorrar en tasas\" para obtener los porcentajes 
 msgid "Checking code..."
 msgstr "Comprobando código..."
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
@@ -432,11 +432,11 @@ msgstr "Comprobando código..."
 msgid "Claim"
 msgstr "Reclamar"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim completed!"
 msgstr "¡Reclamación completada!"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim esLIQ"
 msgstr ""
 
@@ -444,11 +444,11 @@ msgstr ""
 msgid "Claim failed"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim failed."
 msgstr "Reclamación fallida."
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim submitted!"
 msgstr "¡Reclamación enviada!"
 
@@ -456,7 +456,7 @@ msgstr "¡Reclamación enviada!"
 msgid "Claim submitted! <0>View status.</0>"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claiming..."
 msgstr "Reclamando..."
 
@@ -964,7 +964,7 @@ msgstr "Introduce un precio"
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/components/Migration/Migration.js
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 msgid "Enter an amount"
@@ -1512,7 +1512,7 @@ msgstr "Pérdida"
 #: src/components/Exchange/PositionSeller.js
 #: src/components/Exchange/SwapBox.js
 #: src/components/InputSection/InputSection.js
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "MAX"
 msgstr "MÁX"
 
@@ -1767,7 +1767,7 @@ msgstr ""
 msgid "No PnLs found"
 msgstr "No se han encontrado GyPs"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "No esLIQ to claim"
 msgstr "No hay esLIQ para reclamar"
 
@@ -1996,7 +1996,7 @@ msgstr ""
 msgid "Please read the <0>Medium post</0> before migrating."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Please switch your network to Arbitrum."
 msgstr "Por favor, cambie su red a Arbitrum."
 
@@ -2306,7 +2306,7 @@ msgstr "Seleccionar Idioma"
 msgid "Select Market"
 msgstr "Seleccionar Idioma"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Select an option"
 msgstr "Seleccionar una opción"
 
@@ -2317,7 +2317,7 @@ msgstr "Seleccionar una opción"
 msgid "Select different tokens"
 msgstr "Selecciona tokens diferentes"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Select your vesting option below then click \"Claim\"."
 msgstr "Seleccione su opción de adquisición a continuación y haga clic en \"Reclamar\"."
 
@@ -2631,7 +2631,7 @@ msgstr "El APR aumentado es de sus Puntos Multiplicadores stakeados."
 msgid "The Gambit protocol is in beta, please read the <0>staking details</0>before participating."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "The address of the esLIQ (IOU) token is {esLiqIouAddress}."
 msgstr ""
 
@@ -2639,11 +2639,11 @@ msgstr ""
 msgid "The borrow fee is calculated as (assets borrowed) / (total assets in pool) * 0.01% per hour."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "The esLIQ (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "The esLIQ tokens can be staked or vested at any time."
 msgstr ""
 
@@ -3008,19 +3008,19 @@ msgstr "Enlaces útiles"
 msgid "Utilization"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with GLP on Arbitrum"
 msgstr "Adquiera con GLP en Arbitrum"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with GLP on Avalanche"
 msgstr "Adquiera con GLP en Avalanche"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with Axion on Arbitrum"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with Axion on Avalanche"
 msgstr ""
 
@@ -3097,7 +3097,7 @@ msgstr "Monedero"
 msgid "Wallet is not connected"
 msgstr "El monedero no está conectado"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 #: src/pages/NftWallet/NftWallet.js
 msgid "Wallet not connected"
 msgstr "Monedero no conectado"
@@ -3170,11 +3170,11 @@ msgstr ""
 msgid "You can change this in the settings menu on the top right of the page.<0/><1/>Note that a low allowed slippage, e.g. less than 0.5%, may result in failed orders if prices are volatile."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "You can check your claim history <0>here</0>."
 msgstr "Puede consultar su historial de reclamaciones <0>aquí</0>."
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "You can currently vest a maximum of {0} esLIQ tokens at a ratio of {1} {stakingToken} to 1 esLIQ."
 msgstr ""
 
@@ -3198,7 +3198,7 @@ msgstr ""
 msgid "You have multiple existing Increase {longOrShortText} {0} limit orders"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "You have {0} esLIQ (IOU) tokens."
 msgstr "Tienes {0} tokens esLIQ (IOU)."
 
@@ -3222,7 +3222,7 @@ msgstr ""
 msgid "You will receive at least {0} {1} if this order is executed. The execution price may vary depending on swap fees at the time the order is executed."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Your esLIQ (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
 msgstr "El saldo de su esLIQ (IOU) disminuirá en la cantidad de su reclamación después de reclamar, este es el comportamiento esperado."
 

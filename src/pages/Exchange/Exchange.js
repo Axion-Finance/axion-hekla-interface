@@ -500,9 +500,20 @@ export const Exchange = forwardRef((props, ref) => {
     }
   );
 
-  const { data: usdgSupply } = useSWR([`Exchange:usdgSupply:${active}`, chainId, usdfAddress, "totalSupply"], {
-    fetcher: contractFetcher(library, Token),
-  });
+  // const provider = getProvider(library, chainId);
+  // const contract = new ethers.Contract(usdfAddress, Token.abi, provider);
+  // contract.totalSupply().then((res) => {
+  //   console.log("usdgSupply2", res);
+  // });
+
+  const { data: usdgSupply, error: usdgSupplyError } = useSWR(
+    [`Exchange:usdgSupply:${active}`, chainId, usdfAddress, "totalSupply"],
+    {
+      fetcher: contractFetcher(library, Token),
+    }
+  );
+
+  console.log("usdgSupply", usdgSupply, usdgSupplyError);
 
   const orderBookAddress = getContract(chainId, "OrderBook");
   const routerAddress = getContract(chainId, "Router");

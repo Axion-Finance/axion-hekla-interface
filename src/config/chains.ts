@@ -36,7 +36,7 @@ export const CHAIN_NAMES_MAP = {
   [ARBITRUM_TESTNET]: "ArbRinkeby",
   [ARBITRUM]: "Arbitrum",
   [AVALANCHE]: "Avalanche",
-  [TAIKO_MAINNET]: "Mode",
+  [TAIKO_MAINNET]: "Taiko",
 };
 
 export const GAS_PRICE_ADJUSTMENT_MAP = {

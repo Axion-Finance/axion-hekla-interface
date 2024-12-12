@@ -160,11 +160,11 @@ msgstr ""
 msgid "Affiliates"
 msgstr "アフィリエイト"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "After claiming you will be able to vest a maximum of {0} esLIQ at a ratio of {1} {stakingToken} to 1 esLIQ."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "After claiming, The esLIQ tokens will be airdropped to your account on the selected network within 7 days."
 msgstr ""
 
@@ -196,7 +196,7 @@ msgstr "額"
 msgid "Amount of traders you referred."
 msgstr "あなたがリファーしたトレーダー数"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Amount to claim"
 msgstr "請求額"
 
@@ -423,7 +423,7 @@ msgstr "最低手数料率で利用するには以下の\"手数料節約\"セ�
 msgid "Checking code..."
 msgstr "コード確認中"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
@@ -432,11 +432,11 @@ msgstr "コード確認中"
 msgid "Claim"
 msgstr "請求"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim completed!"
 msgstr "請求完了!"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim esLIQ"
 msgstr ""
 
@@ -444,11 +444,11 @@ msgstr ""
 msgid "Claim failed"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim failed."
 msgstr "請求できませんでした。"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claim submitted!"
 msgstr "請求申し込み完了!"
 
@@ -456,7 +456,7 @@ msgstr "請求申し込み完了!"
 msgid "Claim submitted! <0>View status.</0>"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Claiming..."
 msgstr "請求中"
 
@@ -964,7 +964,7 @@ msgstr "価格を入力"
 #: src/components/Glp/GlpSwap.js
 #: src/components/Glp/GlpSwap.js
 #: src/components/Migration/Migration.js
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 #: src/pages/Stake/StakeV1.js
 #: src/pages/Stake/StakeV1.js
 msgid "Enter an amount"
@@ -1512,7 +1512,7 @@ msgstr "損失"
 #: src/components/Exchange/PositionSeller.js
 #: src/components/Exchange/SwapBox.js
 #: src/components/InputSection/InputSection.js
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "MAX"
 msgstr "最大"
 
@@ -1767,7 +1767,7 @@ msgstr ""
 msgid "No PnLs found"
 msgstr "損益が見つかりません"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "No esLIQ to claim"
 msgstr "請求できるesLIQはありません"
 
@@ -1996,7 +1996,7 @@ msgstr ""
 msgid "Please read the <0>Medium post</0> before migrating."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Please switch your network to Arbitrum."
 msgstr "ネットワークをArbitrumに切り替えてください。"
 
@@ -2306,7 +2306,7 @@ msgstr "言語選択"
 msgid "Select Market"
 msgstr "マーケット選択"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Select an option"
 msgstr "オプション選択"
 
@@ -2317,7 +2317,7 @@ msgstr "オプション選択"
 msgid "Select different tokens"
 msgstr "別のトークンを選択"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Select your vesting option below then click \"Claim\"."
 msgstr "べスティングオプションを選択して\"請求\"をクリック。"
 
@@ -2631,7 +2631,7 @@ msgstr "APRブーストはステークされたマルチプライヤーポイン
 msgid "The Gambit protocol is in beta, please read the <0>staking details</0>before participating."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "The address of the esLIQ (IOU) token is {esLiqIouAddress}."
 msgstr ""
 
@@ -2639,11 +2639,11 @@ msgstr ""
 msgid "The borrow fee is calculated as (assets borrowed) / (total assets in pool) * 0.01% per hour."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "The esLIQ (IOU) token is transferrable. You can add the token to your wallet and send it to another address to claim if you'd like."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "The esLIQ tokens can be staked or vested at any time."
 msgstr ""
 
@@ -3008,19 +3008,19 @@ msgstr "有用なリンク"
 msgid "Utilization"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with GLP on Arbitrum"
 msgstr "ArbitrumでGLPを使ってべスティングする"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with GLP on Avalanche"
 msgstr "AvalancheでGLPを使ってべスティングする"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with Axion on Arbitrum"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Vest with Axion on Avalanche"
 msgstr ""
 
@@ -3097,7 +3097,7 @@ msgstr "ウォレット"
 msgid "Wallet is not connected"
 msgstr "ウォレットが接続されていません"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 #: src/pages/NftWallet/NftWallet.js
 msgid "Wallet not connected"
 msgstr "ウォレットが接続されていません"
@@ -3170,11 +3170,11 @@ msgstr ""
 msgid "You can change this in the settings menu on the top right of the page.<0/><1/>Note that a low allowed slippage, e.g. less than 0.5%, may result in failed orders if prices are volatile."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "You can check your claim history <0>here</0>."
 msgstr "<0>here</0>で請求履歴を確認できます。"
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "You can currently vest a maximum of {0} esLIQ tokens at a ratio of {1} {stakingToken} to 1 esLIQ."
 msgstr ""
 
@@ -3198,7 +3198,7 @@ msgstr ""
 msgid "You have multiple existing Increase {longOrShortText} {0} limit orders"
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "You have {0} esLIQ (IOU) tokens."
 msgstr "あなたは{0} esLIQ (IOU)トークンを保有しています。"
 
@@ -3222,7 +3222,7 @@ msgstr ""
 msgid "You will receive at least {0} {1} if this order is executed. The execution price may vary depending on swap fees at the time the order is executed."
 msgstr ""
 
-#: src/pages/ClaimEsLiq/ClaimEsLiq.js
+#: src/pages/ClaimEsAxion/ClaimEsAxion.js
 msgid "Your esLIQ (IOU) balance will decrease by your claim amount after claiming, this is expected behaviour."
 msgstr "あなたのesLIQ (IOU)残高は請求後に請求額の分だけ減少しますが、これは想定された挙動です。"
 

@@ -1,17 +1,17 @@
-import React, { useState, useEffect } from "react";
 import cx from "classnames";
+import { useEffect, useState } from "react";
 
 import { BiChevronDown } from "react-icons/bi";
 
 import Modal from "../Modal/Modal";
 
-import dropDownIcon from "img/DROP_DOWN.svg";
-import "./TokenSelector.css";
-import TooltipWithPortal from "../Tooltip/TooltipWithPortal";
-import { bigNumberify, expandDecimals, formatAmount } from "lib/numbers";
-import { getToken } from "config/tokens";
-import { importImage } from "lib/legacy";
 import { t } from "@lingui/macro";
+import { getToken } from "config/tokens";
+import dropDownIcon from "img/DROP_DOWN.svg";
+import { importImage } from "lib/legacy";
+import { bigNumberify, expandDecimals, formatAmount } from "lib/numbers";
+import TooltipWithPortal from "../Tooltip/TooltipWithPortal";
+import "./TokenSelector.css";
 
 export default function TokenSelector(props) {
   const [isModalVisible, setIsModalVisible] = useState(false);

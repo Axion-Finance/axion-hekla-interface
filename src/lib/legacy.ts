@@ -1,22 +1,22 @@
-import { useEffect, useState } from "react";
 import { useWeb3React } from "@web3-react/core";
-import { ethers } from "ethers";
 import { getContract } from "config/contracts";
+import { ethers } from "ethers";
+import { useEffect, useState } from "react";
 import useSWR from "swr";
 
-import OrderBookReader from "abis/OrderBookReader.json";
 import OrderBook from "abis/OrderBook.json";
+import OrderBookReader from "abis/OrderBookReader.json";
 
-import { CHAIN_ID, ETH_MAINNET, getExplorerUrl, getRpcUrl } from "config/chains";
+import { t } from "@lingui/macro";
 import { getServerBaseUrl } from "config/backend";
+import { CHAIN_ID, ETH_MAINNET, getExplorerUrl, getRpcUrl } from "config/chains";
+import { isValidToken } from "config/tokens";
 import { getMostAbundantStableToken } from "domain/tokens";
 import { getTokenInfo } from "domain/tokens/utils";
-import { getProvider } from "./rpc";
-import { bigNumberify, expandDecimals, formatAmount } from "./numbers";
-import { isValidToken } from "config/tokens";
 import { useChainId } from "./chains";
 import { isValidTimestamp } from "./dates";
-import { t } from "@lingui/macro";
+import { bigNumberify, expandDecimals, formatAmount } from "./numbers";
+import { getProvider } from "./rpc";
 
 const { AddressZero } = ethers.constants;
 
@@ -225,13 +225,23 @@ export function getFeeBasisPoints(
 }
 
 export function getBuyGlpToAmount(fromAmount, swapTokenAddress, infoTokens, glpPrice, usdgSupply, totalTokenWeights) {
+  console.log("fromAmount", fromAmount.toString());
+  console.log("swapTokenAddress", swapTokenAddress);
+  console.log("infoTokens", infoTokens);
+  console.log("glpPrice", glpPrice.toString());
+  console.log("usdgSupply", usdgSupply.toString());
+  console.log("totalTokenWeights", totalTokenWeights.toString());
+
   const defaultValue = { amount: bigNumberify(0), feeBasisPoints: 0 };
   if (!fromAmount || !swapTokenAddress || !infoTokens || !glpPrice || !usdgSupply || !totalTokenWeights) {
+    console.log("returning defaultValue");
     return defaultValue;
   }
 
   const swapToken = getTokenInfo(infoTokens, swapTokenAddress);
+  console.log("swapToken", swapToken);
   if (!swapToken || !swapToken.minPrice) {
+    console.log("returning defaultValue 2");
     return defaultValue;
   }
 
@@ -249,6 +259,7 @@ export function getBuyGlpToAmount(fromAmount, swapTokenAddress, infoTokens, glpP
     usdgSupply,
     totalTokenWeights
   );
+  console.log("feeBasisPoints", feeBasisPoints);
 
   glpAmount = glpAmount.mul(BASIS_POINTS_DIVISOR - feeBasisPoints).div(BASIS_POINTS_DIVISOR);
 

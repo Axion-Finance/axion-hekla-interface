@@ -1,7 +1,10 @@
-import { getContract } from "config/contracts";
-import useSWR from "swr";
-import { contractFetcher } from "lib/contracts";
+import { Web3Provider } from "@ethersproject/providers";
 import VaultReader from "abis/VaultReader.json";
+import { getServerUrl } from "config/backend";
+import { getContract } from "config/contracts";
+import { getTokens, getWhitelistedTokens } from "config/tokens";
+import { BigNumber } from "ethers";
+import { contractFetcher } from "lib/contracts";
 import {
   BASIS_POINTS_DIVISOR,
   DEFAULT_MAX_USDG_AMOUNT,
@@ -9,12 +12,9 @@ import {
   USD_DECIMALS,
   USDG_ADDRESS,
 } from "lib/legacy";
-import { getServerUrl } from "config/backend";
-import { InfoTokens, Token, TokenInfo } from "./types";
-import { BigNumber } from "ethers";
 import { bigNumberify, expandDecimals } from "lib/numbers";
-import { getTokens, getWhitelistedTokens } from "config/tokens";
-import { Web3Provider } from "@ethersproject/providers";
+import useSWR from "swr";
+import { InfoTokens, Token, TokenInfo } from "./types";
 
 export function useInfoTokens(
   library: Web3Provider,
@@ -32,13 +32,30 @@ export function useInfoTokens(
 
   const whitelistedTokens = getWhitelistedTokens(chainId);
   const whitelistedTokenAddresses = whitelistedTokens.map((token) => token.address);
-  // // console.log("whitelistedTokenAddresses", whitelistedTokenAddresses)
-  // // console.log("vaultReaderAddress", vaultReaderAddress)
-  // // console.log("vaultAddress", vaultAddress)
-  // // console.log("positionRouterAddress", positionRouterAddress)
-  // // console.log("nativeTokenAddress", nativeTokenAddress)
+  console.log("whitelistedTokenAddresses", whitelistedTokenAddresses);
+  console.log("vaultReaderAddress", vaultReaderAddress);
+  console.log("vaultAddress", vaultAddress);
+  console.log("positionRouterAddress", positionRouterAddress);
+  console.log("nativeTokenAddress", nativeTokenAddress);
 
-  const { data: vaultTokenInfo } = useSWR<BigNumber[], any>(
+  // const provider = getProvider(library, chainId);
+  // const contract = new ethers.Contract(vaultReaderAddress, VaultReader.abi, provider);
+  // contract
+  //   .getVaultTokenInfoV4(
+  //     vaultAddress,
+  //     positionRouterAddress,
+  //     nativeTokenAddress,
+  //     expandDecimals(1, 18),
+  //     whitelistedTokenAddresses
+  //   )
+  //   .then((res) => {
+  //     console.log("vaultTokenInfo2", res);
+  //   })
+  //   .catch((err) => {
+  //     console.log("vaultTokenInfo2 error", err);
+  //   });
+
+  const { data: vaultTokenInfo, error } = useSWR<BigNumber[], any>(
     [`useInfoTokens:${active}`, chainId, vaultReaderAddress, "getVaultTokenInfoV4"],
     {
       fetcher: contractFetcher(library, VaultReader, [
@@ -50,6 +67,8 @@ export function useInfoTokens(
       ]),
     }
   );
+
+  console.log("vaultTokenInfo", vaultTokenInfo, error);
 
   const indexPricesUrl = getServerUrl(chainId, "/prices");
 
