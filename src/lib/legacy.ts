@@ -225,23 +225,20 @@ export function getFeeBasisPoints(
 }
 
 export function getBuyGlpToAmount(fromAmount, swapTokenAddress, infoTokens, glpPrice, usdgSupply, totalTokenWeights) {
-  console.log("fromAmount", fromAmount.toString());
-  console.log("swapTokenAddress", swapTokenAddress);
-  console.log("infoTokens", infoTokens);
-  console.log("glpPrice", glpPrice.toString());
-  console.log("usdgSupply", usdgSupply.toString());
-  console.log("totalTokenWeights", totalTokenWeights.toString());
+  // console.log("fromAmount", fromAmount.toString());
+  // console.log("swapTokenAddress", swapTokenAddress);
+  // console.log("infoTokens", infoTokens);
+  // console.log("glpPrice", glpPrice.toString());
+  // console.log("usdgSupply", usdgSupply.toString());
+  // console.log("totalTokenWeights", totalTokenWeights.toString());
 
   const defaultValue = { amount: bigNumberify(0), feeBasisPoints: 0 };
   if (!fromAmount || !swapTokenAddress || !infoTokens || !glpPrice || !usdgSupply || !totalTokenWeights) {
-    console.log("returning defaultValue");
     return defaultValue;
   }
 
   const swapToken = getTokenInfo(infoTokens, swapTokenAddress);
-  console.log("swapToken", swapToken);
   if (!swapToken || !swapToken.minPrice) {
-    console.log("returning defaultValue 2");
     return defaultValue;
   }
 
@@ -259,7 +256,6 @@ export function getBuyGlpToAmount(fromAmount, swapTokenAddress, infoTokens, glpP
     usdgSupply,
     totalTokenWeights
   );
-  console.log("feeBasisPoints", feeBasisPoints);
 
   glpAmount = glpAmount.mul(BASIS_POINTS_DIVISOR - feeBasisPoints).div(BASIS_POINTS_DIVISOR);
 

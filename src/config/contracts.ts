@@ -7,7 +7,7 @@ export const XGMT_EXCLUDED_ACCOUNTS = [
   "0xffd0a93b4362052a336a7b22494f1b77018dd34b",
 ];
 
-const CONTRACTS = {
+const   CONTRACTS = {
   [MAINNET]: {
     // bsc mainnet
     Treasury: "0xa44E7252a0C137748F523F112644042E5987FfC7",

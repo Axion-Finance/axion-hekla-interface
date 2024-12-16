@@ -1,10 +1,10 @@
-import { FiX } from "react-icons/fi";
-import logoImg from "img/landingpage/logos/logo-light.svg";
 import { t } from "@lingui/macro";
+import logoImg from "img/landingpage/logos/logo-light.svg";
+import { FiX } from "react-icons/fi";
 
-import "./Header.css";
-import { Link } from "react-router-dom";
 import ExternalLink from "components/ExternalLink/ExternalLink";
+import { Link } from "react-router-dom";
+import "./Header.css";
 
 type Props = {
   small?: boolean;
@@ -30,7 +30,7 @@ const HOME_MENUS = [
   // },
   {
     label: t`Docs`,
-    link: "docs.axion.markets/",
+    link: "docs.axion.finance/",
   },
 ];
 

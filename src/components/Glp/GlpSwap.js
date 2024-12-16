@@ -349,12 +349,12 @@ export default function GlpSwap(props) {
             totalTokenWeights
           );
           const nextValue = formatAmountFree(nextAmount, GLP_DECIMALS, GLP_DECIMALS);
-          console.log("nextAmount", nextAmount.toString());
-          console.log("nextValue", nextValue);
-          console.log("feeBps", feeBps);
-          console.log("glpPrice", glpPrice.toString());
-          console.log("usdgSupply", usdgSupply.toString());
-          console.log("totalTokenWeights", totalTokenWeights.toString());
+          // console.log("nextAmount", nextAmount.toString());
+          // console.log("nextValue", nextValue);
+          // console.log("feeBps", feeBps);
+          // console.log("glpPrice", glpPrice.toString());
+          // console.log("usdgSupply", usdgSupply.toString());
+          // console.log("totalTokenWeights", totalTokenWeights.toString());
           setGlpValue(nextValue);
           setFeeBasisPoints(feeBps);
         } else {
@@ -708,7 +708,7 @@ export default function GlpSwap(props) {
       {/* <div className="Page-title-section">
         <div className="Page-title">{isBuying ? "Buy GLP" : "Sell GLP"}</div>
         {isBuying && <div className="Page-description">
-          Purchase <a href="docs.axion.markets/llp" target="_blank" rel="noopener noreferrer">GLP tokens</a> to earn {nativeTokenSymbol} fees from swaps and leverage trading.<br/>
+          Purchase <a href="docs.axion.finance/llp" target="_blank" rel="noopener noreferrer">GLP tokens</a> to earn {nativeTokenSymbol} fees from swaps and leverage trading.<br/>
           Note that there is a minimum holding time of 15 minutes after a purchase.<br/>
           <div>View <Link to="/earn">staking</Link> page.</div>
         </div>}

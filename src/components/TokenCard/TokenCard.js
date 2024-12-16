@@ -89,7 +89,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
                 <Trans>Buy on Avalanche</Trans>
               </BuyLink> */}
             </div>
-            <a href="docs.axion.markets/llp" target="_blank" rel="noreferrer" className="secondary-btn read-more">
+            <a href="docs.axion.finance/llp" target="_blank" rel="noreferrer" className="secondary-btn read-more">
               <Trans>Read more</Trans>
             </a>
           </div>

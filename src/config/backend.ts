@@ -1,18 +1,18 @@
 import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, MAINNET, TAIKO_MAINNET } from "./chains";
 
 export const LIQ_STATS_API_URL = {
-  default: "https://stats.axion.markets/api",
-  [TAIKO_MAINNET]: "https://stats.axion.markets/api",
+  default: "https://stats.axion.finance/api",
+  [TAIKO_MAINNET]: "https://stats.axion.finance/api",
 };
 
 const BACKEND_URLS = {
-  default: "https://api.axion.markets",
+  default: "https://api.axion.finance",
 
   [MAINNET]: "https://gambit-server-staging.uc.r.appspot.com",
   [ARBITRUM_TESTNET]: "https://gambit-server-devnet.uc.r.appspot.com",
   [ARBITRUM]: "https://axion-server-mainnet.uw.r.appspot.com",
   [AVALANCHE]: "https://axion-avax-server.uc.r.appspot.com",
-  [TAIKO_MAINNET]: "https://api.axion.markets",
+  [TAIKO_MAINNET]: "https://api.axion.finance",
 };
 
 export function getServerBaseUrl(chainId: number) {

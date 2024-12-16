@@ -403,7 +403,7 @@ export default function DashboardV2() {
               )}
               <br />
               <div>
-                <ExternalLink href="docs.axion.markets/llp">
+                <ExternalLink href="docs.axion.finance/llp">
                   <Trans>More Info</Trans>
                 </ExternalLink>
               </div>
@@ -533,7 +533,7 @@ export default function DashboardV2() {
                 {chainName} Total Stats start from {totalStatsStartDate}.<br /> For detailed stats:
               </Trans>{" "}
               {chainId === TAIKO_MAINNET && (
-                <ExternalLink href="https://stats.axion.markets">https://stats.axion.markets</ExternalLink>
+                <ExternalLink href="https://stats.axion.finance">https://stats.axion.finance</ExternalLink>
               )}
               .
             </div>

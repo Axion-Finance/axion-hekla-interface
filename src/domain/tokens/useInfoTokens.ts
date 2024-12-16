@@ -37,6 +37,7 @@ export function useInfoTokens(
   console.log("vaultAddress", vaultAddress);
   console.log("positionRouterAddress", positionRouterAddress);
   console.log("nativeTokenAddress", nativeTokenAddress);
+  console.log("expandDecimals", expandDecimals(1, 18));
 
   // const provider = getProvider(library, chainId);
   // const contract = new ethers.Contract(vaultReaderAddress, VaultReader.abi, provider);

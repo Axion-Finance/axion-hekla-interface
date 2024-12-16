@@ -1,8 +1,8 @@
-import "./RedirectModal.css";
-import Modal from "../Modal/Modal";
-import Checkbox from "../Checkbox/Checkbox";
 import { t, Trans } from "@lingui/macro";
 import ExternalLink from "components/ExternalLink/ExternalLink";
+import Checkbox from "../Checkbox/Checkbox";
+import Modal from "../Modal/Modal";
+import "./RedirectModal.css";
 
 export function RedirectPopupModal({
   redirectModalVisible,
@@ -27,7 +27,7 @@ export function RedirectPopupModal({
     >
       <Trans>
         {/* Alternative links can be found in the{" "}
-        <ExternalLink href="docs.axion.markets">docs</ExternalLink>
+        <ExternalLink href="docs.axion.finance">docs</ExternalLink>
         . */}
         <br />
         <br />

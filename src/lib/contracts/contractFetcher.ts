@@ -8,7 +8,6 @@ export const contractFetcher =
     // eslint-disable-next-line
     const [id, chainId, arg0, arg1, ...params] = args;
     const provider = getProvider(library, chainId);
-    console.log("provider", provider);
 
     const method = ethers.utils.isAddress(arg0) ? arg1 : arg0;
 
@@ -77,7 +76,6 @@ export const contractFetcher =
   };
 
 function getContractCall({ provider, contractInfo, arg0, arg1, method, params, additionalArgs }) {
-  console.log("getContractCall", provider, contractInfo, arg0, arg1, method, params, additionalArgs);
   if (ethers.utils.isAddress(arg0)) {
     const address = arg0;
     const contract = new ethers.Contract(address, contractInfo.abi, provider);

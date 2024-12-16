@@ -21,7 +21,6 @@ import { DECREASE, INCREASE, SWAP, USD_DECIMALS, getOrderKey } from "lib/legacy"
 
 import { t } from "@lingui/macro";
 import { getServerBaseUrl, getServerUrl } from "config/backend";
-import { getTokenBySymbol } from "config/tokens";
 import { LIQ_PRICE } from "config/ui";
 
 import { callContract, contractFetcher } from "lib/contracts";
@@ -471,7 +470,7 @@ export function useHasOutdatedUi() {
   return { data: hasOutdatedUi };
 }
 export function useLIQLIQnfo() {
-  const url = "https://api.axion.markets/api/tokens/info?symbols=LIQLIQ&chain=TAIKO_MAINNET";
+  const url = "https://api.axion.finance/api/tokens/info?symbols=AXIONAXION&chain=TAIKO_MAINNET";
   const { data } = useSWR([url], {
     // @ts-ignore
     fetcher: (...args) => fetch(...args).then((res) => res.json()),

@@ -1,18 +1,9 @@
-import React from "react";
 import styled from "styled-components";
-import { Column, Row } from "../../components/Layout";
-import { Text } from "../../components/Text";
 import Button from "../../components/Button/MainButton";
-import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
-import Spacer from "../../components/Spacer";
-import { formatNumber } from "../../utils/formatNumber";
+import { Column, Row } from "../../components/Layout";
 import { AutoRow } from "../../components/Layout/Row";
-import Trade1 from "img/landingpage/decoration/trade1.png";
-import Trade2 from "img/landingpage/decoration/trade2.png";
-import Trade3 from "img/landingpage/decoration/trade3.png";
-import BgTrade1 from "img/landingpage/bg/bg-trade1.png";
-import BgTrade2 from "img/landingpage/bg/bg-trade2.png";
-import BgTrade3 from "img/landingpage/bg/bg-trade3.png";
+import { Text } from "../../components/Text";
+import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
 
 const TradeOverviewWrapper = styled.div`
   width: 100%;
@@ -67,20 +58,20 @@ function TradeOnLiq() {
           <AutoRow gap="50px" justify="center">
             {[
               {
-                icon: Trade1,
-                iconBg: BgTrade1,
+                icon: "",
+                iconBg: "",
                 title: "Your Keys, Your Assets",
                 desc: "Trade and earn cryptocurrencies with lowest fees, depthless liquidity, and up to 100x leverage. Generate yield in a bull, bear, or sideways market.",
               },
               {
-                icon: Trade2,
-                iconBg: BgTrade2,
+                icon: "",
+                iconBg: "",
                 title: "Zero Price Effect",
                 desc: "Trade and earn cryptocurrencies with lowest fees, depthless liquidity, and up to 100x leverage. Generate yield in a bull, bear, or sideways market.",
               },
               {
-                icon: Trade3,
-                iconBg: BgTrade3,
+                icon: "",
+                iconBg: "",
                 title: "Truly Composable",
                 desc: "KTX Finance is built to be integrated by any DeFi protocol without compromising decentralization, efficiency, and security.",
               },

@@ -122,7 +122,7 @@ function Referrals({ connectWallet, setPendingTxns, pendingTxns }) {
                 Get fee discounts and earn rebates through the Axion Perpetual referral program.
                 <br />
                 For more information, please read the{" "}
-                <ExternalLink href="docs.axion.markets/referrals">referral program details</ExternalLink>.
+                <ExternalLink href="docs.axion.finance/referrals">referral program details</ExternalLink>.
               </Trans>
             </div>
           </div>

@@ -1,55 +1,55 @@
-import React, { useState, useCallback, useEffect, useMemo } from "react";
-import { ethers } from "ethers";
+import { t, Trans } from "@lingui/macro";
 import cx from "classnames";
-import { Trans, t } from "@lingui/macro";
+import { ethers } from "ethers";
+import { useCallback, useEffect, useMemo, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
 
-import {
-  DEFAULT_SLIPPAGE_AMOUNT,
-  DEFAULT_HIGHER_SLIPPAGE_AMOUNT,
-  USD_DECIMALS,
-  DUST_USD,
-  BASIS_POINTS_DIVISOR,
-  MIN_PROFIT_TIME,
-  getLiquidationPrice,
-  getLeverage,
-  getMarginFee,
-  PRECISION,
-  MARKET,
-  STOP,
-  DECREASE,
-  calculatePositionDelta,
-  getDeltaStr,
-  getProfitPrice,
-  getNextToAmount,
-  USDG_DECIMALS,
-  adjustForDecimals,
-  isAddressZero,
-  MAX_ALLOWED_LEVERAGE,
-} from "lib/legacy";
-import { ARBITRUM, getChainName, getConstant, IS_NETWORK_DISABLED } from "config/chains";
-import { createDecreaseOrder, useHasOutdatedUi } from "domain/legacy";
-import { getContract } from "config/contracts";
 import PositionRouter from "abis/PositionRouter.json";
-import Checkbox from "../Checkbox/Checkbox";
-import Tab from "../Tab/Tab";
-import Modal from "../Modal/Modal";
-import ExchangeInfoRow from "./ExchangeInfoRow";
-import Tooltip from "../Tooltip/Tooltip";
-import TokenSelector from "./TokenSelector";
-import "./PositionSeller.css";
-import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
-import { callContract } from "lib/contracts";
-import { getTokenAmountFromUsd } from "domain/tokens";
-import { TRIGGER_PREFIX_ABOVE, TRIGGER_PREFIX_BELOW } from "config/ui";
-import { useLocalStorageByChainId, useLocalStorageSerializeKey } from "lib/localStorage";
-import { CLOSE_POSITION_RECEIVE_TOKEN_KEY, SLIPPAGE_BPS_KEY } from "config/localStorage";
-import { getTokenInfo, getUsd } from "domain/tokens/utils";
-import { usePrevious } from "lib/usePrevious";
-import { bigNumberify, expandDecimals, formatAmount, formatAmountFree, parseValue } from "lib/numbers";
-import { getTokens, getWrappedToken } from "config/tokens";
-import { formatDateTime, getTimeRemaining } from "lib/dates";
 import ExternalLink from "components/ExternalLink/ExternalLink";
+import { ARBITRUM, getChainName, getConstant, IS_NETWORK_DISABLED } from "config/chains";
+import { getContract } from "config/contracts";
+import { CLOSE_POSITION_RECEIVE_TOKEN_KEY, SLIPPAGE_BPS_KEY } from "config/localStorage";
+import { getTokens, getWrappedToken } from "config/tokens";
+import { TRIGGER_PREFIX_ABOVE, TRIGGER_PREFIX_BELOW } from "config/ui";
+import { createDecreaseOrder, useHasOutdatedUi } from "domain/legacy";
+import { getTokenAmountFromUsd } from "domain/tokens";
+import { getTokenInfo, getUsd } from "domain/tokens/utils";
+import { callContract } from "lib/contracts";
+import { formatDateTime, getTimeRemaining } from "lib/dates";
+import {
+  adjustForDecimals,
+  BASIS_POINTS_DIVISOR,
+  calculatePositionDelta,
+  DECREASE,
+  DEFAULT_HIGHER_SLIPPAGE_AMOUNT,
+  DEFAULT_SLIPPAGE_AMOUNT,
+  DUST_USD,
+  getDeltaStr,
+  getLeverage,
+  getLiquidationPrice,
+  getMarginFee,
+  getNextToAmount,
+  getProfitPrice,
+  isAddressZero,
+  MARKET,
+  MAX_ALLOWED_LEVERAGE,
+  MIN_PROFIT_TIME,
+  PRECISION,
+  STOP,
+  USD_DECIMALS,
+  USDG_DECIMALS,
+} from "lib/legacy";
+import { useLocalStorageByChainId, useLocalStorageSerializeKey } from "lib/localStorage";
+import { bigNumberify, expandDecimals, formatAmount, formatAmountFree, parseValue } from "lib/numbers";
+import { usePrevious } from "lib/usePrevious";
+import Checkbox from "../Checkbox/Checkbox";
+import Modal from "../Modal/Modal";
+import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
+import Tab from "../Tab/Tab";
+import Tooltip from "../Tooltip/Tooltip";
+import ExchangeInfoRow from "./ExchangeInfoRow";
+import "./PositionSeller.css";
+import TokenSelector from "./TokenSelector";
 
 const { AddressZero } = ethers.constants;
 const ORDER_SIZE_DUST_USD = expandDecimals(1, USD_DECIMALS - 1); // $0.10
@@ -824,7 +824,7 @@ export default function PositionSeller(props) {
           <div className="Confirmation-box-warning">
             <Trans>
               Reducing the position at the current price will forfeit a&nbsp;
-              <ExternalLink href="docs.axion.markets/trading#minimum-price-change">pending profit</ExternalLink> of{" "}
+              <ExternalLink href="docs.axion.finance/trading#minimum-price-change">pending profit</ExternalLink> of{" "}
               {deltaStr}. <br />
             </Trans>
             <Trans>
@@ -839,7 +839,7 @@ export default function PositionSeller(props) {
         <div className="Confirmation-box-warning">
           <Trans>
             This order will forfeit a&nbsp;
-            <ExternalLink href="docs.axion.markets/trading#minimum-price-change">profit</ExternalLink> of {deltaStr}.{" "}
+            <ExternalLink href="docs.axion.finance/trading#minimum-price-change">profit</ExternalLink> of {deltaStr}.{" "}
             <br />
           </Trans>
           <Trans>
@@ -1195,7 +1195,7 @@ export default function PositionSeller(props) {
 
                       <div className="PositionSeller-fee-item">
                         <Trans>
-                          <ExternalLink href="docs.axion.markets/trading#fees">More Info</ExternalLink> about fees.
+                          <ExternalLink href="docs.axion.finance/trading#fees">More Info</ExternalLink> about fees.
                         </Trans>
                       </div>
                     </div>

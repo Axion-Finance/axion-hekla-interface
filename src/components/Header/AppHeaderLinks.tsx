@@ -1,11 +1,10 @@
-import React from "react";
-import { FiX } from "react-icons/fi";
 import { Trans } from "@lingui/macro";
+import { FiX } from "react-icons/fi";
 //import { Link } from "react-router-dom";
 
-import { HeaderLink } from "./HeaderLink";
-import "./Header.css";
 import { useHistory } from "react-router-dom";
+import "./Header.css";
+import { HeaderLink } from "./HeaderLink";
 //import { isHomeSite } from "lib/legacy";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 import logoImg from "img/logo.png";
@@ -96,7 +95,7 @@ export function AppHeaderLinks({
         </HeaderLink>
       </div> */}
       <div className="App-header-link-container">
-        <ExternalLink href="docs.axion.markets">
+        <ExternalLink href="docs.axion.finance">
           <Trans>About</Trans>
         </ExternalLink>
       </div>

@@ -1,17 +1,9 @@
-import React from "react";
 import styled from "styled-components";
+import Button from "../../components/Button/MainButton";
 import { Column, Row } from "../../components/Layout";
 import { Text } from "../../components/Text";
-import Button from "../../components/Button/MainButton";
-import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
-import Spacer from "../../components/Spacer";
-import { formatNumber } from "../../utils/formatNumber";
-import { Link } from "react-router-dom";
 import { SOCIAL_INFO } from "../../config/constant";
-import BgRound1 from "img/landingpage/bg/bg-round1.png";
-import BgRound2 from "img/landingpage/bg/bg-round2.png";
-import BgRound3 from "img/landingpage/bg/bg-round3.png";
-import BgRound4 from "img/landingpage/bg/bg-round4.png";
+import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
 
 const TradeOverviewWrapper = styled.div`
   width: 100%;
@@ -21,13 +13,6 @@ const TradeOverviewWrapper = styled.div`
   @media (max-width: 1200px) {
     padding: 20% 0%;
   }
-`;
-
-const ImagesWrapper = styled.div`
-  position: relative;
-  background: url(${BgRound1});
-  width: 353px;
-  height: 353px;
 `;
 
 const PoistionImg2 = styled.img`
@@ -88,13 +73,6 @@ function JoinCommunity() {
             <Button style={{ backgroundColor: "#110204", marginTop: "10px" }}>JOIN DISCORD</Button>
           </a>
         </Column>
-        {!isTablet && (
-          <ImagesWrapper>
-            <PoistionImg2 src={BgRound3} />
-            <PoistionImg3 src={BgRound2} />
-            <PoistionImg4 src={BgRound4} />
-          </ImagesWrapper>
-        )}
       </Row>
     </TradeOverviewWrapper>
   );

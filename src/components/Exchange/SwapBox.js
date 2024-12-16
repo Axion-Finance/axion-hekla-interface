@@ -2199,7 +2199,7 @@ export default function SwapBox(props) {
               orders. <br />
               <br />
               For screenshots and more information, please see the{" "}
-              <ExternalLink href="docs.axion.markets/trading#stop-loss-take-profit-orders">docs</ExternalLink>.
+              <ExternalLink href="docs.axion.finance/trading#stop-loss-take-profit-orders">docs</ExternalLink>.
             </Trans>
           </div>
         )}
@@ -2300,7 +2300,7 @@ export default function SwapBox(props) {
                         top right of the page after connecting your wallet.
                         <br />
                         <br />
-                        <ExternalLink href="docs.axion.markets/trading#opening-a-position">More Info</ExternalLink>
+                        <ExternalLink href="docs.axion.finance/trading#opening-a-position">More Info</ExternalLink>
                       </Trans>
                     </div>
                   );
@@ -2327,7 +2327,7 @@ export default function SwapBox(props) {
                         This exit price will change with the price of the asset.
                         <br />
                         <br />
-                        <ExternalLink href="docs.axion.markets/trading#opening-a-position">More Info</ExternalLink>
+                        <ExternalLink href="docs.axion.finance/trading#opening-a-position">More Info</ExternalLink>
                       </Trans>
                     </div>
                   );
@@ -2363,7 +2363,7 @@ export default function SwapBox(props) {
                         </div>
                       )}
                       <br />
-                      <ExternalLink href="docs.axion.markets/trading#opening-a-position">
+                      <ExternalLink href="docs.axion.finance/trading#opening-a-position">
                         <Trans>More Info</Trans>
                       </ExternalLink>
                     </div>
@@ -2411,7 +2411,7 @@ export default function SwapBox(props) {
         <div className="App-card-divider"></div>
         <div className="Exchange-info-row">
           <div className="Exchange-info-label-button">
-            <ExternalLink href="docs.axion.markets/trading">
+            <ExternalLink href="docs.axion.finance/trading">
               <Trans>Trading guide</Trans>
             </ExternalLink>
           </div>
@@ -2425,7 +2425,7 @@ export default function SwapBox(props) {
         </div> */}
         <div className="Exchange-info-row">
           <div className="Exchange-info-label-button">
-            <ExternalLink href="docs.axion.markets/trading#backup-rpc-urls">
+            <ExternalLink href="docs.axion.finance/trading#backup-rpc-urls">
               <Trans>Speed up page loading</Trans>
             </ExternalLink>
           </div>

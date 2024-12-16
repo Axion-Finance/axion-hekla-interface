@@ -88,7 +88,7 @@ export default function ReferralTerms() {
               <p className="body-text">
                 The Rebates and Discounts percentages for the default tier Tier 1, and instructions to upgrade to Tier 2
                 and Tier 3, are contained in{" "}
-                <ExternalLink href="docs.axion.markets/referrals">docs.axion.markets/referrals.</ExternalLink>
+                <ExternalLink href="docs.axion.finance/referrals">docs.axion.finance/referrals.</ExternalLink>
               </p>
             </div>
             <div className="section">

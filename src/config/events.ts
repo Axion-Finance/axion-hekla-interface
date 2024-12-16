@@ -37,7 +37,7 @@ export const homeEventsData: EventData[] = [
   //   isActive: true,
   //   validTill: "10 Jul 2022, 12:00",
   //   bodyText:
-  //     "Updates have been applied to the Axion frontend to inform users of the separation between axion.io and perp.testnet.axion.markets",
+  //     "Updates have been applied to the Axion frontend to inform users of the separation between axion.io and perp.testnet.axion.finance",
   //   buttons: [
   //     {
   //       text: "Read More",
@@ -89,7 +89,7 @@ export const appEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Read more",
-  //       link: "docs.axion.markets/roadmap#30-march-2022",
+  //       link: "docs.axion.finance/roadmap#30-march-2022",
   //       newTab: true,
   //     },
   //     {
@@ -120,7 +120,7 @@ export const appEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Learn More",
-  //       link: "docs.axion.markets/trading#backup-rpc-urls",
+  //       link: "docs.axion.finance/trading#backup-rpc-urls",
   //       newTab: true,
   //     },
   //   ],
@@ -166,7 +166,7 @@ export const appEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Learn More",
-  //       link: "docs.axion.markets/trading#backup-rpc-urls",
+  //       link: "docs.axion.finance/trading#backup-rpc-urls",
   //       newTab: true,
   //     },
   //   ],
@@ -191,7 +191,7 @@ export const appEventsData: EventData[] = [
   //   isActive: true,
   //   validTill: "6 Jul 2022, 12:00",
   //   bodyText:
-  //     "On 6 Jul 2022, updates will be applied to the AXION frontend to inform users of the separation between axion.io and perp.testnet.axion.markets",
+  //     "On 6 Jul 2022, updates will be applied to the AXION frontend to inform users of the separation between axion.io and perp.testnet.axion.finance",
   //   buttons: [
   //     {
   //       text: "Read More",
@@ -226,7 +226,7 @@ export const appEventsData: EventData[] = [
   //   isActive: true,
   //   validTill: "10 Jul 2022, 12:00",
   //   bodyText:
-  //     "You are currently using perp.testnet.axion.markets. Customized settings have been reset, you may need to adjust your settings by clicking on the menu in the top right after connecting your wallet.",
+  //     "You are currently using perp.testnet.axion.finance. Customized settings have been reset, you may need to adjust your settings by clicking on the menu in the top right after connecting your wallet.",
   //   buttons: [
   //     {
   //       text: "Read More",
@@ -245,7 +245,7 @@ export const appEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Learn More",
-  //       link: "docs.axion.markets/trading#backup-rpc-urls",
+  //       link: "docs.axion.finance/trading#backup-rpc-urls",
   //       newTab: true,
   //     },
   //   ],

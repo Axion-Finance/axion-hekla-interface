@@ -1,34 +1,34 @@
-import React, { useEffect, useState } from "react";
-import useSWR from "swr";
-import { Trans, t } from "@lingui/macro";
+import { t, Trans } from "@lingui/macro";
 import { ethers } from "ethers";
+import { useEffect, useState } from "react";
 import { BsArrowRight } from "react-icons/bs";
+import useSWR from "swr";
 
+import { getContract } from "config/contracts";
 import {
-  USD_DECIMALS,
   BASIS_POINTS_DIVISOR,
   DEPOSIT_FEE,
   DUST_BNB,
   getLiquidationPrice,
   MAX_ALLOWED_LEVERAGE,
+  USD_DECIMALS,
 } from "lib/legacy";
-import { getContract } from "config/contracts";
-import Tab from "../Tab/Tab";
 import Modal from "../Modal/Modal";
+import Tab from "../Tab/Tab";
 
 import PositionRouter from "abis/PositionRouter.json";
 import Token from "abis/Token.json";
 import Tooltip from "../Tooltip/Tooltip";
 
+import ExternalLink from "components/ExternalLink/ExternalLink";
 import { getChainName, getConstant, IS_NETWORK_DISABLED } from "config/chains";
-import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
+import { approveTokens, shouldRaiseGasError } from "domain/tokens";
+import { getTokenInfo } from "domain/tokens/utils";
 import { callContract, contractFetcher } from "lib/contracts";
 import { helperToast } from "lib/helperToast";
-import { getTokenInfo } from "domain/tokens/utils";
-import { approveTokens, shouldRaiseGasError } from "domain/tokens";
-import { usePrevious } from "lib/usePrevious";
 import { bigNumberify, expandDecimals, formatAmount, formatAmountFree, parseValue } from "lib/numbers";
-import ExternalLink from "components/ExternalLink/ExternalLink";
+import { usePrevious } from "lib/usePrevious";
+import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
 
 const DEPOSIT = "Deposit";
 const WITHDRAW = "Withdraw";
@@ -626,7 +626,7 @@ export default function PositionEditor(props) {
                                 This is the network cost required to execute the {depositOrWithdrawalText}.
                                 <br />
                                 <br />
-                                <ExternalLink href="docs.axion.markets/trading#execution-fee">More Info</ExternalLink>
+                                <ExternalLink href="docs.axion.finance/trading#execution-fee">More Info</ExternalLink>
                               </Trans>
                             </>
                           );

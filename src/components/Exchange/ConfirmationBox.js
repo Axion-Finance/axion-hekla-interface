@@ -1,36 +1,36 @@
-import React, { useCallback, useState, useMemo } from "react";
-import "./ConfirmationBox.css";
-import {
-  USD_DECIMALS,
-  PRECISION,
-  BASIS_POINTS_DIVISOR,
-  LIMIT,
-  MIN_PROFIT_TIME,
-  INCREASE,
-  getExchangeRate,
-  getExchangeRateDisplay,
-  DEFAULT_SLIPPAGE_AMOUNT,
-  DEFAULT_HIGHER_SLIPPAGE_AMOUNT,
-  calculatePositionDelta,
-  DECREASE,
-} from "lib/legacy";
 import { getConstant } from "config/chains";
 import { getContract } from "config/contracts";
+import {
+  BASIS_POINTS_DIVISOR,
+  calculatePositionDelta,
+  DECREASE,
+  DEFAULT_HIGHER_SLIPPAGE_AMOUNT,
+  DEFAULT_SLIPPAGE_AMOUNT,
+  getExchangeRate,
+  getExchangeRateDisplay,
+  INCREASE,
+  LIMIT,
+  MIN_PROFIT_TIME,
+  PRECISION,
+  USD_DECIMALS,
+} from "lib/legacy";
+import { useCallback, useMemo, useState } from "react";
+import "./ConfirmationBox.css";
 
-import { BsArrowRight } from "react-icons/bs";
-import Modal from "../Modal/Modal";
-import Tooltip from "../Tooltip/Tooltip";
-import Checkbox from "../Checkbox/Checkbox";
-import ExchangeInfoRow from "./ExchangeInfoRow";
-import { cancelDecreaseOrder, handleCancelOrder } from "domain/legacy";
-import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
-import { TRIGGER_PREFIX_ABOVE, TRIGGER_PREFIX_BELOW } from "config/ui";
-import { useLocalStorageSerializeKey } from "lib/localStorage";
-import { SLIPPAGE_BPS_KEY } from "config/localStorage";
-import { expandDecimals, formatAmount, formatAmountFree } from "lib/numbers";
-import { getNativeToken, getToken, getWrappedToken } from "config/tokens";
 import { Plural, t, Trans } from "@lingui/macro";
 import ExternalLink from "components/ExternalLink/ExternalLink";
+import { SLIPPAGE_BPS_KEY } from "config/localStorage";
+import { getNativeToken, getToken, getWrappedToken } from "config/tokens";
+import { TRIGGER_PREFIX_ABOVE, TRIGGER_PREFIX_BELOW } from "config/ui";
+import { cancelDecreaseOrder, handleCancelOrder } from "domain/legacy";
+import { useLocalStorageSerializeKey } from "lib/localStorage";
+import { expandDecimals, formatAmount, formatAmountFree } from "lib/numbers";
+import { BsArrowRight } from "react-icons/bs";
+import Checkbox from "../Checkbox/Checkbox";
+import Modal from "../Modal/Modal";
+import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
+import Tooltip from "../Tooltip/Tooltip";
+import ExchangeInfoRow from "./ExchangeInfoRow";
 
 const HIGH_SPREAD_THRESHOLD = expandDecimals(1, USD_DECIMALS).div(100); // 1%;
 
@@ -666,7 +666,7 @@ export default function ConfirmationBox(props) {
                         <br />
                         <Trans>
                           This is the network cost required to execute the postion.{" "}
-                          <ExternalLink href="docs.axion.markets/trading#execution-fee">More Info</ExternalLink>
+                          <ExternalLink href="docs.axion.finance/trading#execution-fee">More Info</ExternalLink>
                         </Trans>
                       </>
                     );
