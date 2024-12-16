@@ -1,14 +1,10 @@
-import React from "react";
+import Light_Logo from "img/landingpage/logos/logo-light.png";
 import styled from "styled-components";
+import Button from "../../components/Button/MainButton";
 import { Column, Row } from "../../components/Layout";
 import { Text } from "../../components/Text";
-import Button from "../../components/Button/MainButton";
-import Spacer from "../../components/Spacer";
-import Animationview from "./animationview";
-import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
-import { Link } from "react-router-dom";
 import { SOCIAL_INFO } from "../../config/constant";
-import Light_Logo from "img/landingpage/logos/logo-light.png";
+import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
 
 const PageWrapper = styled.div`
   width: 100%;
@@ -40,7 +36,6 @@ function TitlePageView() {
   const { isTablet } = useMatchBreakPoints();
   return (
     <PageWrapper>
-      <Animationview />
       <TitlePageWrapper>
         <Row width="100%" justify="left" align="center">
           <Logo src={Light_Logo} />
@@ -76,7 +71,7 @@ function TitlePageView() {
             </Text>
             <Row width="fit-content" gap="20px" padding="20px">
               <a href={SOCIAL_INFO.discord} target="_blank">
-                <Button isFilled={true}>JOIN THE COMMUNITY</Button>
+                <Button>JOIN THE COMMUNITY</Button>
               </a>
               {/* <Button width="140px" isFilled={true} disabled={true}>
                   AIRDROP

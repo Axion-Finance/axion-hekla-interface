@@ -20,7 +20,7 @@ import {
   default as arbitrum24Icon,
   default as avalanche24Icon,
   default as ftm24Icon,
-  default as modeIcon,
+  default as taikoIcon,
 } from "img/167000.png";
 import avalanche16Icon from "img/ic_avalanche_16.svg";
 import llp40Icon from "img/ic_llp_40.svg";
@@ -737,7 +737,7 @@ export default function DashboardV2() {
                         {chainId === ARBITRUM ? (
                           <img src={arbitrum16Icon} alt={t`Arbitrum Icon`} className="selected-network-symbol" />
                         ) : (
-                          <img src={modeIcon} alt={t`Mode Icon`} className="selected-network-symbol" />
+                          <img src={taikoIcon} alt={t`Taiko Icon`} className="selected-network-symbol" />
                         )}
                       </div>
                       <div className="App-card-title-mark-info">
@@ -833,7 +833,7 @@ export default function DashboardV2() {
                   <img src={avalanche16Icon} alt={t`Avalanche Icon`} style={{ height: "24px" }} />
                 )}
                 {chainId === ARBITRUM && <img src={arbitrum16Icon} alt={t`Arbitrum Icon`} style={{ height: "24px" }} />}
-                {chainId === TAIKO_MAINNET && <img src={modeIcon} alt={t`Mode Icon`} style={{ height: "24px" }} />}
+                {chainId === TAIKO_MAINNET && <img src={taikoIcon} alt={t`Taiko Icon`} style={{ height: "24px" }} />}
               </div>
               <div className="App-card-divider"></div>
               <table className="token-table">

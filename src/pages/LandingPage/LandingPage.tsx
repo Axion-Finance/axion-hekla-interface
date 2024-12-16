@@ -1,10 +1,9 @@
 import styled from "styled-components";
-import Animationview from "./animationview";
-import TradeOverview from "./trade-overview";
 import BuildOn from "./build-on";
-import TradeOnLiq from "./trade-on-axion";
 import JoinCommunity from "./join-community";
 import TitlePageView from "./title-view";
+import TradeOnLiq from "./trade-on-axion";
+import TradeOverview from "./trade-overview";
 
 const HomeWrapper = styled.div`
   width: 100%;

@@ -150,6 +150,7 @@ export function getPositions(
   updatedPositions
 ) {
   const propsLength = getConstant(chainId, "positionReaderPropsLength");
+
   const positions = [];
   const positionsMap = {};
   if (!positionData) {
@@ -487,6 +488,8 @@ export const Exchange = forwardRef((props, ref) => {
     }
   );
 
+  console.log("positionsData", positionQuery, positionData, positionDataError);
+
   const positionsDataIsLoading = active && !positionData && !positionDataError;
 
   const { data: fundingRateInfo } = useSWR([active, chainId, readerAddress, "getFundingRates"], {
@@ -564,6 +567,8 @@ export const Exchange = forwardRef((props, ref) => {
     pendingPositions,
     updatedPositions
   );
+
+  console.log("allPositions", positions, positionsMap);
 
   useImperativeHandle(ref, () => ({
     onUpdatePosition(key, size, collateral, averagePrice, entryFundingRate, reserveAmount, realisedPnl) {

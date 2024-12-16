@@ -35,8 +35,8 @@ function TradeOnLiq() {
           {/* <RowWrap gap="8px" justify="center">
             {[
               {
-                icon: Mode,
-                url: "https://www.mode.network/",
+                icon: Taiko,
+                url: "https://taiko.xyz/",
               },
               {
                 icon: Optimism,

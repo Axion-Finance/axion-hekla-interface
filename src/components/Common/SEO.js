@@ -4,7 +4,7 @@ function SEO(props) {
   const { children, ...customMeta } = props;
   const meta = {
     title: "Axion | The SuperDEX for Perpetual Trading",
-    description: "Bring unparalleled and effortless Swap and Perpetual Trading experience to Mode.",
+    description: "Bring unparalleled and effortless Swap and Perpetual Trading experience to Taiko.",
     image: "",
     type: "exchange",
     ...customMeta,
