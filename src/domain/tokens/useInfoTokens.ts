@@ -69,7 +69,7 @@ export function useInfoTokens(
     }
   );
 
-  console.log("vaultTokenInfo", vaultTokenInfo, error);
+  console.log("getVaultTokenInfoV4", vaultTokenInfo, error);
 
   const indexPricesUrl = getServerUrl(chainId, "/prices");
 

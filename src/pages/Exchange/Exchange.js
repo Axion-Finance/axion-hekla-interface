@@ -300,8 +300,11 @@ export function getPositions(
 
     positionsMap[key] = position;
 
+    console.log("pendingPositions", pendingPositions);
+
     applyPendingChanges(position, pendingPositions);
 
+    console.log("positionsize", position.size, position);
     if (position.size.gt(0) || position.hasPendingChanges) {
       positions.push(position);
     }
@@ -488,6 +491,23 @@ export const Exchange = forwardRef((props, ref) => {
     }
   );
 
+  // const provider = getProvider(library, chainId);
+  // const contract = new ethers.Contract(readerAddress, Reader.abi, provider);
+  // contract
+  //   .getPositions(
+  //     vaultAddress,
+  //     account,
+  //     positionQuery.collateralTokens,
+  //     positionQuery.indexTokens,
+  //     positionQuery.isLong
+  //   )
+  //   .then((res) => {
+  //     console.log("getPositionsres", res);
+  //   })
+  //   .catch((err) => {
+  //     console.log("getPositionserror", err);
+  //   });
+
   console.log("positionsData", positionQuery, positionData, positionDataError);
 
   const positionsDataIsLoading = active && !positionData && !positionDataError;
@@ -568,7 +588,20 @@ export const Exchange = forwardRef((props, ref) => {
     updatedPositions
   );
 
-  console.log("allPositions", positions, positionsMap);
+  console.log(
+    "allPositions",
+    chainId,
+    positionQuery,
+    positionData,
+    infoTokens,
+    savedIsPnlInLeverage,
+    savedShowPnlAfterFees,
+    account,
+    pendingPositions,
+    updatedPositions,
+    positions,
+    positionsMap
+  );
 
   useImperativeHandle(ref, () => ({
     onUpdatePosition(key, size, collateral, averagePrice, entryFundingRate, reserveAmount, realisedPnl) {
@@ -728,6 +761,8 @@ export const Exchange = forwardRef((props, ref) => {
 
   const flagOrdersEnabled = true;
   const [orders] = useAccountOrders(flagOrdersEnabled);
+
+  console.log("userOrders", orders);
 
   const [isWaitingForPluginApproval, setIsWaitingForPluginApproval] = useState(false);
   const [isWaitingForPositionRouterApproval, setIsWaitingForPositionRouterApproval] = useState(false);

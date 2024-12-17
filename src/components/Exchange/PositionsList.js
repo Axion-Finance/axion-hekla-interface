@@ -1,33 +1,33 @@
-import React, { useState } from "react";
+import { select, t, Trans } from "@lingui/macro";
 import cx from "classnames";
-import { Trans, t, select } from "@lingui/macro";
+import { useState } from "react";
 import Tooltip from "../Tooltip/Tooltip";
-import PositionSeller from "./PositionSeller";
-import PositionEditor from "./PositionEditor";
 import OrdersToa from "./OrdersToa";
+import PositionEditor from "./PositionEditor";
+import PositionSeller from "./PositionSeller";
 
 import { ImSpinner2 } from "react-icons/im";
 
+import { getUsd } from "domain/tokens/utils";
+import { helperToast } from "lib/helperToast";
 import {
-  getLiquidationPrice,
-  getLeverage,
-  getOrderError,
-  USD_DECIMALS,
+  DECREASE,
   FUNDING_RATE_PRECISION,
-  SWAP,
+  getLeverage,
+  getLiquidationPrice,
+  getOrderError,
+  INCREASE,
   LONG,
   SHORT,
-  INCREASE,
-  DECREASE,
+  SWAP,
+  USD_DECIMALS,
 } from "lib/legacy";
-import PositionShare from "./PositionShare";
-import PositionDropdown from "./PositionDropdown";
-import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
-import { helperToast } from "lib/helperToast";
-import { getUsd } from "domain/tokens/utils";
 import { bigNumberify, formatAmount } from "lib/numbers";
-import { AiOutlineEdit } from "react-icons/ai";
 import useAccountType, { AccountType } from "lib/wallets/useAccountType";
+import { AiOutlineEdit } from "react-icons/ai";
+import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
+import PositionDropdown from "./PositionDropdown";
+import PositionShare from "./PositionShare";
 
 const getOrdersForPosition = (account, position, orders, nativeTokenAddress) => {
   if (!orders || orders.length === 0) {

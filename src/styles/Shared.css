@@ -55,9 +55,9 @@ input {
 
 :root {
   --dark-blue: rgba(17, 17, 17, 0.6);
-  --dark-primary: #ff3e50;
-  --primary-btn-hover: #ff3e509c;
-  --primary-btn-active: #ff3e50;
+  --dark-primary: #e81899;
+  --primary-btn-hover: #e818999c;
+  --primary-btn-active: #e81899;
   --dark-blue-active: #9597a1;
   --avax-red: #e84143;
   --arbitrum-blue: #28a0f0;

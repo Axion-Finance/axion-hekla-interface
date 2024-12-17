@@ -1017,6 +1017,8 @@ export function useAccountOrders(flagOrdersEnabled, overrideAccount) {
 
       const fetchIndexesFromServer = () => {
         const ordersIndexesUrl = `${getServerBaseUrl(chainId)}/orders_indices?account=${account}`;
+
+        console.log("ordersIndexesUrl", ordersIndexesUrl);
         return fetch(ordersIndexesUrl)
           .then(async (res) => {
             const json = await res.json();
@@ -1069,17 +1071,19 @@ export function useAccountOrders(flagOrdersEnabled, overrideAccount) {
         const indexes = getIndexes(knownIndexes, lastIndex);
         const ordersData = await orderBookReaderContract[method](orderBookAddress, account, indexes);
         const orders = parseFunc(chainId, ordersData, account, indexes);
-
+        console.log("getOrders", method, knownIndexes, lastIndex, parseFunc, indexes, ordersData, orders);
         return orders;
       };
 
       try {
         const [serverIndexes, lastIndexes]: any = await Promise.all([fetchIndexesFromServer(), fetchLastIndexes()]);
+        console.log("serverIndexes", serverIndexes, lastIndexes);
         const [swapOrders = [], increaseOrders = [], decreaseOrders = []] = await Promise.all([
           getOrders("getSwapOrders", serverIndexes.swap, lastIndexes.swap, parseSwapOrdersData),
           getOrders("getIncreaseOrders", serverIndexes.increase, lastIndexes.increase, parseIncreaseOrdersData),
           getOrders("getDecreaseOrders", serverIndexes.decrease, lastIndexes.decrease, parseDecreaseOrdersData),
         ]);
+        console.log("increaseOrders", increaseOrders);
         return [...swapOrders, ...increaseOrders, ...decreaseOrders];
       } catch (ex) {
         // eslint-disable-next-line no-console
@@ -1087,6 +1091,8 @@ export function useAccountOrders(flagOrdersEnabled, overrideAccount) {
       }
     },
   });
+
+  console.log("userOrders", orders);
 
   return [orders, updateOrders, ordersError];
 }

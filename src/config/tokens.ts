@@ -398,7 +398,7 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       symbol: "WETH",
       decimals: 18,
       displayDecimals: 3,
-      address: "0xa51894664a773981c6c112c43ce576f315d5b1b6",
+      address: "0xA51894664A773981C6C112C43ce576f315d5b1B6",
       isWrapped: true,
       baseSymbol: "WETH",
       imageUrl: "https://ftmscan.com/token/images/wFtm_32.png",
@@ -888,7 +888,7 @@ export function getToken(chainId: number, address: string) {
   if (!TOKENS_MAP[chainId]) {
     throw new Error(`Incorrect chainId ${chainId}`);
   }
-  // console.log("TOKENS_MAP[chainId][address] : ", TOKENS_MAP);
+  // console.log("TOKENS_MAP[chainId][address] : ", TOKENS_MAP, address);
   if (!TOKENS_MAP[chainId][address]) {
     throw new Error(`Incorrect address "${address}" for chainId ${chainId}`);
   }

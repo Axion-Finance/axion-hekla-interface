@@ -9,6 +9,7 @@ import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
 const PageWrapper = styled.div`
   width: 100%;
   height: 100vh;
+  background-color: #763a4e;
   // max-height: 704px;  #TODO: ENABLE
   position: relative;
 `;
@@ -59,11 +60,11 @@ function TitlePageView() {
               yield in a bull, bear, or sideways market.
             </Text>
             <Text
-              fontSize={isTablet ? "60px" : "93px"}
+              fontSize={isTablet ? "40px" : "73px"}
               textAlign="center"
               fontFamily="Sequel100Black-65"
               fontWeight={400}
-              lineHeight={isTablet ? "46px" : "79px"}
+              lineHeight={isTablet ? "36px" : "69px"}
               fontStyle="normal"
               color="white"
             >
