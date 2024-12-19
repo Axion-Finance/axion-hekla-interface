@@ -1,8 +1,7 @@
-import React, { ElementType, ReactNode } from "react";
+import { ElementType, ReactNode } from "react";
 import styled, { PolymorphicComponentProps } from "styled-components";
 import { LayoutProps, SpaceProps, variant } from "styled-system";
-import { Row } from "../Layout";
-import { Text, TextProps } from "../Text";
+import { TextProps } from "../Text";
 
 export const scales = {
   MD: "md",
@@ -36,26 +35,26 @@ const StyledButton = styled.button<{
   align-items: center;
   justify-content: center;
   border-radius: 300px;
-  border: 1px solid ${({ isFilled }) => (isFilled ? "transparent" : "#fff")};
+  border: 1px solid #e81899;
   height: 38px;
   padding: 0px 24px;
-  background-color: #000000;
+  background-color: ${({ isFilled }) => (isFilled ? "#e81899" : "transparent")};
   width: ${({ width }) => (width ? width : "auto")};
   // box-shadow: 0px -1px 0px 0px rgba(14, 14, 44, 0.4) inset;
   cursor: pointer;
   display: inline-flex;
   text-align: center;
   font-family: Sequel100Black-45;
-  font-size: 10px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   line-height: 84px; /* 840% */
   justify-content: center;
   letter-spacing: 0.03em;
   line-height: 1;
   outline: 0;
   transition: background-color 0.2s, opacity 0.2s;
-  color: #fff;
+  color: ${({ isFilled }) => (isFilled ? "#fff" : "#e81899")};
 
   :focus-visible {
     outline: none;

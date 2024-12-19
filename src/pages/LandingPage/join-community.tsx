@@ -1,3 +1,4 @@
+import Bgview from "img/ic-communityproject.svg";
 import styled from "styled-components";
 import Button from "../../components/Button/MainButton";
 import { Column, Row } from "../../components/Layout";
@@ -15,27 +16,18 @@ const TradeOverviewWrapper = styled.div`
   }
 `;
 
-const PoistionImg2 = styled.img`
-  width: 151.394px;
-  height: 142.809px;
+const PoistionImg = styled.img`
+  width: 250px;
+  height: 250px;
   position: absolute;
-  right: 80px;
+  right: -100px;
   top: 40px;
 `;
 
-const PoistionImg3 = styled.img`
-  width: 149px;
-  height: 149px;
-  position: absolute;
-  bottom: 10px;
-  right: -90px;
-`;
-const PoistionImg4 = styled.img`
-  width: 206px;
-  height: 207px;
-  position: absolute;
-  bottom: -70px;
-  left: -40px;
+const ImagesWrapper = styled.div`
+  position: relative;
+  width: 353px;
+  height: 353px;
 `;
 
 function JoinCommunity() {
@@ -44,19 +36,18 @@ function JoinCommunity() {
     <TradeOverviewWrapper>
       <Row width="100%" justify="center" align="center" gap="10%">
         <Column
-          width={isTablet ? "86%" : "min-content"}
+          width={isTablet ? "86%" : "500px"}
           gap="24px"
           justify={isTablet ? "center" : "flex-start"}
           align={isTablet ? "center" : "left"}
         >
           <Text
             fontSize="48px"
-            fontFamily="Sequel100Black-65"
+            fontFamily="ClashDisplay-Medium"
             fontWeight={400}
             lineHeight={isTablet ? "36px" : "53px"}
-            textTransform="uppercase"
           >
-            Join our COLLECTIVE
+            Unite with our Collective
           </Text>
           <Text
             fontSize="20px"
@@ -66,13 +57,20 @@ function JoinCommunity() {
             letterSpacing="0.96px"
             color="#8D8D8D"
           >
-            We are building a community of innovative, boundary-pushing users and investors who are ready to pioneer the
-            new frontier of Web3 markets.
+            We are creating a community of forward-thinking users and investors, eager to lead the way in shaping the
+            future of Web3 markets.
           </Text>
           <a href={SOCIAL_INFO.discord} target="_blank">
-            <Button style={{ backgroundColor: "#110204", marginTop: "10px" }}>JOIN DISCORD</Button>
+            <Button isFilled={false} style={{ marginTop: "10px" }}>
+              Join Discord
+            </Button>
           </a>
         </Column>
+        {!isTablet && (
+          <ImagesWrapper>
+            <PoistionImg src={Bgview} />
+          </ImagesWrapper>
+        )}
       </Row>
     </TradeOverviewWrapper>
   );

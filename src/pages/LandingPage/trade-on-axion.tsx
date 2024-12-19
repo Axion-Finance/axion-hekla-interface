@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import Button from "../../components/Button/MainButton";
 import { Column, Row } from "../../components/Layout";
 import { AutoRow } from "../../components/Layout/Row";
 import { Text } from "../../components/Text";
@@ -28,15 +27,14 @@ function TradeOnLiq() {
     <TradeOverviewWrapper>
       <Row width="100%" justify="center" align="center">
         <Column padding={isTablet ? "6% 10% 26% 10%" : "4% 18%"} gap={"38px"}>
-          <Button>WHY WHY WHY</Button>
+          <Text color="#e81899">WHY WHY WHY</Text>
           <Column padding="0px" gap={isTablet ? "18px" : "20px"}>
             <Text
               fontSize="48px"
               textAlign="center"
-              fontFamily="Sequel100Black-65"
+              fontFamily="ClashDisplay-Medium"
               fontWeight={400}
               lineHeight={isTablet ? "36px" : "53px"}
-              textTransform="uppercase"
             >
               Why Trade On AXION?
             </Text>

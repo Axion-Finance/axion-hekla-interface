@@ -12,23 +12,22 @@ body,
 
 body {
   margin: 0;
-  src: local("Neue Haas Grotesk Display"), url(fonts/neue-haas/NeueHaasDisplay-Thin.ttf) format("truetype");
-  font-family: "NeueHaasDisplay-Black", "NeueHaasDisplay-BlackItalic", "NeueHaasDisplay-Bold",
-    "NeueHaasDisplay-BoldItalic", "NeueHaasDisplay-Light", "NeueHaasDisplay-LightItalic", "NeueHaasDisplay-Medium",
-    "NeueHaasDisplay-MediumItalic", "NeueHaasDisplay-Thin", "Sequel100Black-45", "Sequel100Black-55",
-    "Sequel100Black-65";
+  src: local("ClashDisplay-Semibold"), url(fonts/ClashGrotesk/ClashDisplay-Semibold.ttf) format("truetype");
+  font-family: "ClashDisplay-Medium", "ClashDisplay-Semibold",
+      "PublicSans-Medium", "PublicSans-Regular",
+      "PublicSans-SemiBold";
   -webkit-font-smoothing: subpixel-antialiased;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: ClashDisplay-Medium, PublicSans-Medium;
 }
 
 * {
   box-sizing: border-box;
-  font-family: "Relative", sans-serif;
+  font-family: ClashDisplay-Medium, PublicSans-Medium;
   letter-spacing: 0.05rem;
 }
 

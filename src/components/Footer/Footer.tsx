@@ -59,7 +59,7 @@ function Footer() {
         marginTop={isTablet ? "10px" : "50px"}
       >
         <Column align="start" padding="0% 5%" marginLeft="40px">
-          <img src={Light_Logo} width="36px" height="36px" />
+          <img src={Light_Logo} width="96px" height="48px" />
           {!isTablet && (
             <Text
               fontSize="10px"

@@ -9,7 +9,7 @@ import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
 const PageWrapper = styled.div`
   width: 100%;
   height: 100vh;
-  background-color: #763a4e;
+  background-color: #0f0f0f;
   // max-height: 704px;  #TODO: ENABLE
   position: relative;
 `;
@@ -56,23 +56,23 @@ function TitlePageView() {
               lineHeight="25px"
               letterSpacing="1.2px"
             >
-              Trade and earn cryptocurrencies with lowest fees, depthless liquidity, and up to 100x leverage. Generate
-              yield in a bull, bear, or sideways market.
+              Trade and profit from cryptocurrencies with minimal fees, infinite liquidity, and leverage up to 100x
+              leverage. Earn yields in rising, falling, or flat markets.
             </Text>
             <Text
               fontSize={isTablet ? "40px" : "73px"}
               textAlign="center"
-              fontFamily="Sequel100Black-65"
+              fontFamily="ClashDisplay-Medium"
               fontWeight={400}
               lineHeight={isTablet ? "36px" : "69px"}
               fontStyle="normal"
               color="white"
             >
-              DECENTRALIZED DERIVATIVES EXCHANGE
+              Decentralized Derivatives Trading Platform
             </Text>
             <Row width="fit-content" gap="20px" padding="20px">
               <a href={SOCIAL_INFO.discord} target="_blank">
-                <Button>JOIN THE COMMUNITY</Button>
+                <Button isFilled={false}>Join The Community</Button>
               </a>
               {/* <Button width="140px" isFilled={true} disabled={true}>
                   AIRDROP

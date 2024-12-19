@@ -1,12 +1,9 @@
-import React from "react";
 import styled from "styled-components";
 import { Column, Row } from "../../components/Layout";
+import { AutoRow } from "../../components/Layout/Row";
 import { Text } from "../../components/Text";
-import Button from "../../components/Button/MainButton";
-import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
-import Spacer from "../../components/Spacer";
 import { formatNumber } from "../../utils/formatNumber";
-import { AutoRow, RowWrap } from "../../components/Layout/Row";
+import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
 
 const TradeOverviewWrapper = styled.div`
   width: 100%;
@@ -27,16 +24,15 @@ function TradeOverview() {
     <TradeOverviewWrapper>
       <Row width="100%" justify="center" align="center">
         <Column padding="148px 10%" gap="38px">
-          <Button>IN AXION WE TRUST</Button>
+          <Text color="#e81899">IN AXION WE TRUST</Text>
           <Text
             fontSize="48px"
             textAlign="center"
-            fontFamily="Sequel100Black-65"
+            fontFamily="ClashDisplay-Medium"
             fontWeight={400}
             lineHeight={isTablet ? "36px" : "53px"}
-            textTransform="uppercase"
           >
-            Trusted by over 16,582 Traders
+            Trusted by over <span color="#e81899"> 16,582</span> Traders
           </Text>
           <AutoRow gap="30px">
             {[
