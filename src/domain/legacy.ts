@@ -15,13 +15,12 @@ import Vault from "abis/Vault.json";
 import PositionRouter from "abis/PositionRouter.json";
 import Token from "abis/Token.json";
 
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, MODE_MAINNET, getConstant, getHighExecutionFee } from "config/chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, TAIKO_MAINNET, getConstant, getHighExecutionFee } from "config/chains";
 import { getContract } from "config/contracts";
 import { DECREASE, INCREASE, SWAP, USD_DECIMALS, getOrderKey } from "lib/legacy";
 
 import { t } from "@lingui/macro";
 import { getServerBaseUrl, getServerUrl } from "config/backend";
-import { getTokenBySymbol } from "config/tokens";
 import { LIQ_PRICE } from "config/ui";
 
 import { callContract, contractFetcher } from "lib/contracts";
@@ -395,7 +394,7 @@ export function useMinExecutionFee(library, active, chainId, infoTokens) {
   if (chainId === AVALANCHE) {
     multiplier = 700000;
   }
-  if (chainId === MODE_MAINNET) {
+  if (chainId === TAIKO_MAINNET) {
     multiplier = 700000;
   }
 
@@ -422,7 +421,7 @@ export function useMinExecutionFee(library, active, chainId, infoTokens) {
 }
 
 export function useStakedLiqSupply(library, active) {
-  const liqAddressArb = getContract(ARBITRUM, "LIQ");
+  const liqAddressArb = getContract(ARBITRUM, "AXION");
   const stakedLiqTrackerAddressArb = getContract(ARBITRUM, "StakedLiqTracker");
 
   const { data: arbData, mutate: arbMutate } = useSWR<any>(
@@ -432,7 +431,7 @@ export function useStakedLiqSupply(library, active) {
     }
   );
 
-  const liqAddressAvax = getContract(AVALANCHE, "LIQ");
+  const liqAddressAvax = getContract(AVALANCHE, "AXION");
   const stakedLiqTrackerAddressAvax = getContract(AVALANCHE, "StakedLiqTracker");
 
   const { data: avaxData, mutate: avaxMutate } = useSWR(
@@ -471,7 +470,7 @@ export function useHasOutdatedUi() {
   return { data: hasOutdatedUi };
 }
 export function useLIQLIQnfo() {
-  const url = "https://api.liq.markets/api/tokens/info?symbols=LIQLIQ&chain=MODE_MAINNET";
+  const url = "https://api.axion.finance/api/tokens/info?symbols=AXIONAXION&chain=TAIKO_MAINNET";
   const { data } = useSWR([url], {
     // @ts-ignore
     fetcher: (...args) => fetch(...args).then((res) => res.json()),
@@ -479,12 +478,12 @@ export function useLIQLIQnfo() {
   return {
     totalSupply: parseValue(data?.LIQLIQ?.totalSupply, 18) || 0,
     totalLiqSupply: parseValue(data?.LIQLIQ?.circulatingSupply, 18) || 0,
-    liqPrice: parseValue(data?.LIQLIQ?.price, USD_DECIMALS) || 0,
+    axionPrice: parseValue(data?.LIQLIQ?.price, USD_DECIMALS) || 0,
   };
 }
 export function useLiqPrice(chainId, libraries, active) {
   return {
-    liqPrice: LIQ_PRICE,
+    axionPrice: LIQ_PRICE,
   };
 
   // const arbitrumLibrary = libraries && libraries.arbitrum ? libraries.arbitrum : undefined;
@@ -492,13 +491,13 @@ export function useLiqPrice(chainId, libraries, active) {
   // //const { data: liqPriceFromAvalanche, mutate: mutateFromAvalanche } = useLiqPriceFromAvalanche();
   // const { data: liqPriceFromFantom, mutate: mutateFromFantom } = useLiqPriceFromModeTestnet();
 
-  // const liqPrice = liqPriceFromFantom;
+  // const axionPrice = liqPriceFromFantom;
   // const mutate = useCallback(() => {
   //   mutateFromFantom();
   // }, [mutateFromFantom]);
 
   // return {
-  //   liqPrice,
+  //   axionPrice,
   //   //liqPriceFromArbitrum,
   //   //liqPriceFromAvalanche,
   //   mutate,
@@ -523,13 +522,13 @@ export function useTotalLiqSupply() {
 export function useTotalLiqStaked() {
   const stakedLiqTrackerAddressArbitrum = getContract(ARBITRUM, "StakedLiqTracker");
   const stakedLiqTrackerAddressAvax = getContract(AVALANCHE, "StakedLiqTracker");
-  const stakedLiqTrackerAddressFtm = getContract(MODE_MAINNET, "StakedLiqTracker");
+  const stakedLiqTrackerAddressFtm = getContract(TAIKO_MAINNET, "StakedLiqTracker");
   let totalStakedLiq = useRef(bigNumberify(0));
   // const { data: stakedLiqSupplyArbitrum, mutate: updateStakedLiqSupplyArbitrum } = useSWR<BigNumber>(
   //   [
   //     `StakeV2:stakedLiqSupply:${ARBITRUM}`,
   //     ARBITRUM,
-  //     getContract(ARBITRUM, "LIQ"),
+  //     getContract(ARBITRUM, "AXION"),
   //     "balanceOf",
   //     stakedLiqTrackerAddressArbitrum,
   //   ],
@@ -541,7 +540,7 @@ export function useTotalLiqStaked() {
   //   [
   //     `StakeV2:stakedLiqSupply:${AVALANCHE}`,
   //     AVALANCHE,
-  //     getContract(AVALANCHE, "LIQ"),
+  //     getContract(AVALANCHE, "AXION"),
   //     "balanceOf",
   //     stakedLiqTrackerAddressAvax,
   //   ],
@@ -551,9 +550,9 @@ export function useTotalLiqStaked() {
   // );
   const { data: stakedLiqSupplyFtm, mutate: updateStakedLiqSupplyFtm } = useSWR<BigNumber>(
     [
-      `StakeV2:stakedLiqSupply:${MODE_MAINNET}`,
-      MODE_MAINNET,
-      getContract(MODE_MAINNET, "LIQ"),
+      `StakeV2:stakedLiqSupply:${TAIKO_MAINNET}`,
+      TAIKO_MAINNET,
+      getContract(TAIKO_MAINNET, "AXION"),
       "balanceOf",
       stakedLiqTrackerAddressFtm,
     ],
@@ -584,26 +583,26 @@ export function useTotalLiqStaked() {
 export function useTotalLiqInLiquidity() {
   // let poolAddressArbitrum = getContract(ARBITRUM, "UniswapLiqEthPool");
   // let poolAddressAvax = getContract(AVALANCHE, "TraderJoeLiqAvaxPool");
-  let poolAddressFtm = getContract(MODE_MAINNET, "UniswapLiqEthPool");
+  let poolAddressFtm = getContract(TAIKO_MAINNET, "UniswapLiqEthPool");
   let totalLIQ = useRef(bigNumberify(0));
 
   // const { data: liqInLiquidityOnArbitrum, mutate: mutateLIQInLiquidityOnArbitrum } = useSWR<any>(
-  //   [`StakeV2:liqInLiquidity:${ARBITRUM}`, ARBITRUM, getContract(ARBITRUM, "LIQ"), "balanceOf", poolAddressArbitrum],
+  //   [`StakeV2:liqInLiquidity:${ARBITRUM}`, ARBITRUM, getContract(ARBITRUM, "AXION"), "balanceOf", poolAddressArbitrum],
   //   {
   //     fetcher: contractFetcher(undefined, Token),
   //   }
   // );
   // const { data: liqInLiquidityOnAvax, mutate: mutateLIQInLiquidityOnAvax } = useSWR<any>(
-  //   [`StakeV2:liqInLiquidity:${AVALANCHE}`, AVALANCHE, getContract(AVALANCHE, "LIQ"), "balanceOf", poolAddressAvax],
+  //   [`StakeV2:liqInLiquidity:${AVALANCHE}`, AVALANCHE, getContract(AVALANCHE, "AXION"), "balanceOf", poolAddressAvax],
   //   {
   //     fetcher: contractFetcher(undefined, Token),
   //   }
   // );
   const { data: liqInLiquidityOnFtm, mutate: mutateLIQInLiquidityOnFtm } = useSWR<any>(
     [
-      `StakeV2:liqInLiquidity:${MODE_MAINNET}`,
-      MODE_MAINNET,
-      getContract(MODE_MAINNET, "LIQ"),
+      `StakeV2:liqInLiquidity:${TAIKO_MAINNET}`,
+      TAIKO_MAINNET,
+      getContract(TAIKO_MAINNET, "AXION"),
       "balanceOf",
       poolAddressFtm,
     ],
@@ -626,30 +625,30 @@ export function useTotalLiqInLiquidity() {
 }
 
 // function useLiqPriceFromModeTestnet() {
-//   const poolAddress = getContract(MODE_MAINNET, "UniswapLiqEthPool");
+//   const poolAddress = getContract(TAIKO_MAINNET, "UniswapLiqEthPool");
 
 //   const { data, mutate: updateReserves } = useSWR(
-//     ["TraderJoeLiqFantomReserves", MODE_MAINNET, poolAddress, "getReserves"],
+//     ["TraderJoeLiqFantomReserves", TAIKO_MAINNET, poolAddress, "getReserves"],
 //     {
 //       fetcher: contractFetcher(undefined, UniswapV2),
 //     }
 //   );
 //   const { _reserve0: liqReserve, _reserve1: kavaReserve }: any = data || {};
 
-//   const vaultAddress = getContract(MODE_MAINNET, "Vault");
-//   const croAddress = getTokenBySymbol(MODE_MAINNET, "WETH").address;
+//   const vaultAddress = getContract(TAIKO_MAINNET, "Vault");
+//   const croAddress = getTokenBySymbol(TAIKO_MAINNET, "WETH").address;
 //   const { data: ethPrice, mutate: updateUsdcPrice } = useSWR(
-//     [`StakeV2:ethPrice`, MODE_MAINNET, vaultAddress, "getMinPrice", croAddress],
+//     [`StakeV2:ethPrice`, TAIKO_MAINNET, vaultAddress, "getMinPrice", croAddress],
 //     {
 //       fetcher: contractFetcher(undefined, Vault),
 //     }
 //   );
 
 //   const PRECISION = bigNumberify(10)!.pow(18);
-//   let liqPrice;
+//   let axionPrice;
 //   //console.log(kavaReserve.toString(), liqReserve.toString(),ethPrice)
 //   if (kavaReserve && liqReserve && ethPrice) {
-//     liqPrice = kavaReserve.mul(PRECISION).div(liqReserve).mul(ethPrice).div(PRECISION);
+//     axionPrice = kavaReserve.mul(PRECISION).div(liqReserve).mul(ethPrice).div(PRECISION);
 //   }
 
 //   const mutate = useCallback(() => {
@@ -657,7 +656,7 @@ export function useTotalLiqInLiquidity() {
 //     updateUsdcPrice(undefined, true);
 //   }, [updateReserves, updateUsdcPrice]);
 
-//   return { data: liqPrice, mutate };
+//   return { data: axionPrice, mutate };
 // }
 
 // function useLiqPriceFromAvalanche() {
@@ -678,9 +677,9 @@ export function useTotalLiqInLiquidity() {
 //   );
 
 //   const PRECISION = bigNumberify(10)!.pow(18);
-//   let liqPrice;
+//   let axionPrice;
 //   if (avaxReserve && liqReserve && avaxPrice) {
-//     liqPrice = avaxReserve.mul(PRECISION).div(liqReserve).mul(avaxPrice).div(PRECISION);
+//     axionPrice = avaxReserve.mul(PRECISION).div(liqReserve).mul(avaxPrice).div(PRECISION);
 //   }
 
 //   const mutate = useCallback(() => {
@@ -688,7 +687,7 @@ export function useTotalLiqInLiquidity() {
 //     updateAvaxPrice(undefined, true);
 //   }, [updateReserves, updateAvaxPrice]);
 
-//   return { data: liqPrice, mutate };
+//   return { data: axionPrice, mutate };
 // }
 
 // function useLiqPriceFromArbitrum(library, active) {
@@ -709,11 +708,11 @@ export function useTotalLiqInLiquidity() {
 //     }
 //   );
 
-//   const liqPrice = useMemo(() => {
+//   const axionPrice = useMemo(() => {
 //     if (uniPoolSlot0 && ethPrice) {
 //       const tokenA = new UniToken(ARBITRUM, ethAddress, 18, "SYMBOL", "NAME");
 
-//       const liqAddress = getContract(ARBITRUM, "LIQ");
+//       const liqAddress = getContract(ARBITRUM, "AXION");
 //       const tokenB = new UniToken(ARBITRUM, liqAddress, 18, "SYMBOL", "NAME");
 
 //       const pool = new Pool(
@@ -737,7 +736,7 @@ export function useTotalLiqInLiquidity() {
 //     updateEthPrice(undefined, true);
 //   }, [updateEthPrice, updateUniPoolSlot0]);
 
-//   return { data: liqPrice, mutate };
+//   return { data: axionPrice, mutate };
 // }
 
 export async function approvePlugin(chainId, pluginAddress, { library, setPendingTxns, sentMsg, failMsg }) {

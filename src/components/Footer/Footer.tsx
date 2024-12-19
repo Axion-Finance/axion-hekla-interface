@@ -1,16 +1,16 @@
-import styled from "styled-components";
-import { SOCIAL_INFO } from "../../config/constant";
-import Divider from "../../components/Divider";
-import { Row, Column } from "../../components/Layout";
-import { Link } from "react-router-dom";
-import { Text } from "../../components/Text";
-import { AutoRow } from "../../components/Layout/Row";
-import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
 import Light_Logo from "img/landingpage/logos/logo-light.svg";
-import TelegramIcon from "img/landingpage/social/telegram.svg";
 import DiscordIcon from "img/landingpage/social/discord.svg";
 import MediumIcon from "img/landingpage/social/medium.svg";
+import TelegramIcon from "img/landingpage/social/telegram.svg";
 import TwitterIcon from "img/landingpage/social/twitter.svg";
+import { Link } from "react-router-dom";
+import styled from "styled-components";
+import Divider from "../../components/Divider";
+import { Column, Row } from "../../components/Layout";
+import { AutoRow } from "../../components/Layout/Row";
+import { Text } from "../../components/Text";
+import { SOCIAL_INFO } from "../../config/constant";
+import useMatchBreakPoints from "../../utils/useMatchBreakPoints";
 
 const FooterWrapper = styled.div`
   width: 100%;
@@ -59,7 +59,7 @@ function Footer() {
         marginTop={isTablet ? "10px" : "50px"}
       >
         <Column align="start" padding="0% 5%" marginLeft="40px">
-          <img src={Light_Logo} width="114px" height="36px" />
+          <img src={Light_Logo} width="36px" height="36px" />
           {!isTablet && (
             <Text
               fontSize="10px"
@@ -68,7 +68,7 @@ function Footer() {
               fontWeight={400}
               lineHeight="28px"
             >
-              Copyright © LIQ , 2024. All rights reserved
+              Copyright © AXION , 2024. All rights reserved
             </Text>
           )}
         </Column>
@@ -143,7 +143,7 @@ function Footer() {
             fontWeight={400}
             lineHeight="24px"
           >
-            Copyright © LIQ , 2024. All rights reserved
+            Copyright © AXION , 2024. All rights reserved
           </Text>
         )}
       </AutoRow>

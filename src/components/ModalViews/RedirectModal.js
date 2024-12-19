@@ -1,8 +1,8 @@
-import "./RedirectModal.css";
-import Modal from "../Modal/Modal";
-import Checkbox from "../Checkbox/Checkbox";
 import { t, Trans } from "@lingui/macro";
 import ExternalLink from "components/ExternalLink/ExternalLink";
+import Checkbox from "../Checkbox/Checkbox";
+import Modal from "../Modal/Modal";
+import "./RedirectModal.css";
 
 export function RedirectPopupModal({
   redirectModalVisible,
@@ -27,13 +27,13 @@ export function RedirectPopupModal({
     >
       <Trans>
         {/* Alternative links can be found in the{" "}
-        <ExternalLink href="docs.liq.markets">docs</ExternalLink>
+        <ExternalLink href="docs.axion.finance">docs</ExternalLink>
         . */}
         <br />
         <br />
         By clicking Agree you accept the{" "}
-        <ExternalLink href="https://liq.markets/#/terms-and-conditions">T&Cs</ExternalLink> and{" "}
-        <ExternalLink href="https://liq.markets/#/referral-terms">Referral T&Cs</ExternalLink>.
+        <ExternalLink href="https://axion.finance/#/terms-and-conditions">T&Cs</ExternalLink> and{" "}
+        <ExternalLink href="https://axion.finance/#/referral-terms">Referral T&Cs</ExternalLink>.
         <br />
         <br />
       </Trans>

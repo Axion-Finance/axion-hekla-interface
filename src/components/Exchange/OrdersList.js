@@ -1,28 +1,28 @@
-import React, { useState, useCallback } from "react";
 import { t, Trans } from "@lingui/macro";
+import React, { useCallback, useState } from "react";
 
-import {
-  SWAP,
-  INCREASE,
-  DECREASE,
-  USD_DECIMALS,
-  getOrderError,
-  getExchangeRateDisplay,
-  getExchangeRate,
-  getPositionForOrder,
-} from "lib/legacy";
-import { handleCancelOrder } from "domain/legacy";
 import { getContract } from "config/contracts";
+import { handleCancelOrder } from "domain/legacy";
+import {
+  DECREASE,
+  getExchangeRate,
+  getExchangeRateDisplay,
+  getOrderError,
+  getPositionForOrder,
+  INCREASE,
+  SWAP,
+  USD_DECIMALS,
+} from "lib/legacy";
 
 import Tooltip from "../Tooltip/Tooltip";
 import OrderEditor from "./OrderEditor";
 
-import "./OrdersList.css";
-import Checkbox from "../Checkbox/Checkbox";
-import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
 import { TRIGGER_PREFIX_ABOVE, TRIGGER_PREFIX_BELOW } from "config/ui";
 import { getTokenInfo, getUsd } from "domain/tokens/utils";
 import { formatAmount } from "lib/numbers";
+import Checkbox from "../Checkbox/Checkbox";
+import StatsTooltipRow from "../StatsTooltip/StatsTooltipRow";
+import "./OrdersList.css";
 
 export default function OrdersList(props) {
   const {
@@ -201,12 +201,13 @@ export default function OrdersList(props) {
                 handle={getExchangeRateDisplay(order.triggerRatio, fromTokenInfo, toTokenInfo)}
                 renderContent={() => t`
                   You will receive at least ${formatAmount(
-                  order.minOut,
-                  toTokenInfo.decimals,
-                  toTokenInfo.isStable || toTokenInfo.isUsdg ? 2 : 4,
-                  true
-                )} ${toTokenInfo.symbol
-                  } if this order is executed. The execution price may vary depending on swap fees at the time the order is executed.
+                    order.minOut,
+                    toTokenInfo.decimals,
+                    toTokenInfo.isStable || toTokenInfo.isUsdg ? 2 : 4,
+                    true
+                  )} ${
+                  toTokenInfo.symbol
+                } if this order is executed. The execution price may vary depending on swap fees at the time the order is executed.
                 `}
               />
             </td>
@@ -357,8 +358,9 @@ export default function OrdersList(props) {
                       toTokenInfo.decimals,
                       toTokenInfo.isStable || toTokenInfo.isUsdg ? 2 : 4,
                       true
-                    )} ${toTokenInfo.symbol
-                      } if this order is executed. The exact execution price may vary depending on fees at the time the order is executed.
+                    )} ${
+                      toTokenInfo.symbol
+                    } if this order is executed. The exact execution price may vary depending on fees at the time the order is executed.
                   `}
                   />
                 </div>

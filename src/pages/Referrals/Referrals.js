@@ -119,10 +119,10 @@ function Referrals({ connectWallet, setPendingTxns, pendingTxns }) {
             </div>
             <div className="Page-description">
               <Trans>
-                Get fee discounts and earn rebates through the Liq Perpetual referral program.
+                Get fee discounts and earn rebates through the Axion Perpetual referral program.
                 <br />
                 For more information, please read the{" "}
-                <ExternalLink href="docs.liq.markets/referrals">referral program details</ExternalLink>.
+                <ExternalLink href="docs.axion.finance/referrals">referral program details</ExternalLink>.
               </Trans>
             </div>
           </div>

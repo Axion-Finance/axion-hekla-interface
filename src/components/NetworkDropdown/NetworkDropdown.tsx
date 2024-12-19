@@ -2,7 +2,7 @@ import { Menu } from "@headlessui/react";
 import { Trans, t } from "@lingui/macro";
 import cx from "classnames";
 import { LANGUAGE_LOCALSTORAGE_KEY } from "config/localStorage";
-import { default as arbitrumIcon, default as ftmIcon } from "img/34443.png";
+import { default as arbitrumIcon, default as ftmIcon } from "img/167000.png";
 import settingsIcon from "img/ic_settings_16.svg";
 import { defaultLocale } from "lib/i18n";
 import { importImage } from "lib/legacy";

@@ -150,6 +150,7 @@ export function getPositions(
   updatedPositions
 ) {
   const propsLength = getConstant(chainId, "positionReaderPropsLength");
+
   const positions = [];
   const positionsMap = {};
   if (!positionData) {
@@ -299,8 +300,11 @@ export function getPositions(
 
     positionsMap[key] = position;
 
+    console.log("pendingPositions", pendingPositions);
+
     applyPendingChanges(position, pendingPositions);
 
+    console.log("positionsize", position.size, position);
     if (position.size.gt(0) || position.hasPendingChanges) {
       positions.push(position);
     }
@@ -487,6 +491,25 @@ export const Exchange = forwardRef((props, ref) => {
     }
   );
 
+  // const provider = getProvider(library, chainId);
+  // const contract = new ethers.Contract(readerAddress, Reader.abi, provider);
+  // contract
+  //   .getPositions(
+  //     vaultAddress,
+  //     account,
+  //     positionQuery.collateralTokens,
+  //     positionQuery.indexTokens,
+  //     positionQuery.isLong
+  //   )
+  //   .then((res) => {
+  //     console.log("getPositionsres", res);
+  //   })
+  //   .catch((err) => {
+  //     console.log("getPositionserror", err);
+  //   });
+
+  console.log("positionsData", positionQuery, positionData, positionDataError);
+
   const positionsDataIsLoading = active && !positionData && !positionDataError;
 
   const { data: fundingRateInfo } = useSWR([active, chainId, readerAddress, "getFundingRates"], {
@@ -500,9 +523,20 @@ export const Exchange = forwardRef((props, ref) => {
     }
   );
 
-  const { data: usdgSupply } = useSWR([`Exchange:usdgSupply:${active}`, chainId, usdfAddress, "totalSupply"], {
-    fetcher: contractFetcher(library, Token),
-  });
+  // const provider = getProvider(library, chainId);
+  // const contract = new ethers.Contract(usdfAddress, Token.abi, provider);
+  // contract.totalSupply().then((res) => {
+  //   console.log("usdgSupply2", res);
+  // });
+
+  const { data: usdgSupply, error: usdgSupplyError } = useSWR(
+    [`Exchange:usdgSupply:${active}`, chainId, usdfAddress, "totalSupply"],
+    {
+      fetcher: contractFetcher(library, Token),
+    }
+  );
+
+  console.log("usdgSupply", usdgSupply, usdgSupplyError);
 
   const orderBookAddress = getContract(chainId, "OrderBook");
   const routerAddress = getContract(chainId, "Router");
@@ -552,6 +586,21 @@ export const Exchange = forwardRef((props, ref) => {
     account,
     pendingPositions,
     updatedPositions
+  );
+
+  console.log(
+    "allPositions",
+    chainId,
+    positionQuery,
+    positionData,
+    infoTokens,
+    savedIsPnlInLeverage,
+    savedShowPnlAfterFees,
+    account,
+    pendingPositions,
+    updatedPositions,
+    positions,
+    positionsMap
   );
 
   useImperativeHandle(ref, () => ({
@@ -712,6 +761,8 @@ export const Exchange = forwardRef((props, ref) => {
 
   const flagOrdersEnabled = true;
   const [orders] = useAccountOrders(flagOrdersEnabled);
+
+  console.log("userOrders", orders);
 
   const [isWaitingForPluginApproval, setIsWaitingForPluginApproval] = useState(false);
   const [isWaitingForPositionRouterApproval, setIsWaitingForPositionRouterApproval] = useState(false);

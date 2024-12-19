@@ -1,12 +1,12 @@
-import { BigNumber, Contract } from "ethers";
-import { helperToast } from "../helperToast";
-import { ToastifyDebug } from "components/ToastifyDebug/ToastifyDebug";
-import { extractError, NETWORK_CHANGED, NOT_ENOUGH_FUNDS, RPC_ERROR, SLIPPAGE, USER_DENIED } from "./transactionErrors";
-import { getGasLimit, setGasPrice } from "./utils";
-import { getChainName, getExplorerUrl } from "config/chains";
-import { switchNetwork } from "lib/wallets";
 import { t, Trans } from "@lingui/macro";
 import ExternalLink from "components/ExternalLink/ExternalLink";
+import { ToastifyDebug } from "components/ToastifyDebug/ToastifyDebug";
+import { getChainName, getExplorerUrl } from "config/chains";
+import { BigNumber, Contract } from "ethers";
+import { switchNetwork } from "lib/wallets";
+import { helperToast } from "../helperToast";
+import { extractError, NETWORK_CHANGED, NOT_ENOUGH_FUNDS, RPC_ERROR, SLIPPAGE, USER_DENIED } from "./transactionErrors";
+import { getGasLimit, setGasPrice } from "./utils";
 
 export async function callContract(
   chainId: number,
@@ -115,7 +115,7 @@ export async function callContract(
               <br />
               <br />
               Please try changing the RPC url in your wallet settings.{" "}
-              <ExternalLink href="docs.liq.markets/trading#backup-rpc-urls">More info</ExternalLink>
+              <ExternalLink href="docs.axion.finance/trading#backup-rpc-urls">More info</ExternalLink>
             </Trans>
             <br />
             {originalError && <ToastifyDebug>{originalError}</ToastifyDebug>}

@@ -40,7 +40,7 @@ function PositionShare({ setIsPositionShareModalOpen, isPositionShareModalOpen, 
   const sharePositionBgImg = useLoadImage(shareBgImg);
   const positionRef = useRef();
   const tweetLink = getTwitterIntentURL(
-    `Latest $${positionToShare?.indexToken?.symbol} trade on @Liq`,
+    `Latest $${positionToShare?.indexToken?.symbol} trade on @Axion`,
     getShareURL(uploadedImageInfo, userAffiliateCode)
   );
 
@@ -140,8 +140,8 @@ function PositionShareCard({
     <div className="relative">
       <div ref={positionRef} className="position-share">
         <div className="top-right">
-          <img className="logo" src={liqLogo} alt="Liq Logo" />
-          LIQ
+          <img className="logo" src={liqLogo} alt="Axion Logo" />
+          AXION
         </div>
         <ul className="info">
           <li className="side">{isLong ? "LONG" : "SHORT"}</li>
@@ -170,7 +170,7 @@ function PositionShareCard({
                 <p className="code">{code}</p>
               </>
             ) : (
-              <p className="code">https://liq.markets</p>
+              <p className="code">https://axion.finance</p>
             )}
           </div>
         </div>

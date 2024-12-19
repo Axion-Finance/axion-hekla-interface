@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Link, useHistory } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 // import Footer from "components/Footer/Footer";
 import GlpSwap from "components/Glp/GlpSwap";
@@ -35,7 +35,7 @@ export default function BuyLlp(props) {
           </div>
           <div className="Page-description">
             <Trans>
-              Purchase <ExternalLink href="docs.liq.markets/llp">LLP tokens</ExternalLink> to earn {nativeTokenSymbol}{" "}
+              Purchase <ExternalLink href="docs.axion.finance/llp">LLP tokens</ExternalLink> to earn {nativeTokenSymbol}{" "}
               fees from swaps and leverages trading.
             </Trans>
             <br />

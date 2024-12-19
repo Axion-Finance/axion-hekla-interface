@@ -16,7 +16,7 @@ function Jobs() {
               <Trans>Jobs</Trans>
             </div>
             <div className="Page-description">
-              <Trans>Job openings at Liq.</Trans>
+              <Trans>Job openings at Axion.</Trans>
             </div>
           </div>
         </div>
@@ -24,19 +24,18 @@ function Jobs() {
           <NoJob />
         </div>
       </div>
-  
     </SEO>
   );
 }
 
 function NoJob() {
   return (
-    <Card title={t`No open positions at LIQ currently`}>
+    <Card title={t`No open positions at AXION currently`}>
       <div className="body-para">
         <p className="subheading">
           <Trans>
-          Liq is not actively looking for new hires at the moment. However, if you think you can contribute to the
-            project, please email <ExternalLink href="mailto:jobs@liq.io">jobs@liq.io</ExternalLink>.
+            Axion is not actively looking for new hires at the moment. However, if you think you can contribute to the
+            project, please email <ExternalLink href="mailto:jobs@axion.io">jobs@axion.io</ExternalLink>.
           </Trans>
         </p>
       </div>
@@ -50,7 +49,7 @@ function NoJob() {
 //   <div className="body-para">
 //     <p className="subheading">What you will do:</p>
 //     <ul>
-//       <li>Work closely with the Liq team on the Liq front-end website.</li>
+//       <li>Work closely with the Axion team on the Axion front-end website.</li>
 //       <li>Collaborate and discuss features to be worked on.</li>
 //       <li>Remote full-time position, flexible working hours.</li>
 //     </ul>
@@ -64,11 +63,11 @@ function NoJob() {
 //         <li>Must speak fluent English and available to start right away.</li>
 //         <li>Comfortable making changes to the interface following our current design guidelines.</li>
 //       </ul>
-//       <p>The salary is 60,000 to 120,000 USD + 1,000 to 3,000 LIQ a year.</p>
+//       <p>The salary is 60,000 to 120,000 USD + 1,000 to 3,000 AXION a year.</p>
 //       <p className="jobs-contact">
 //         If the job suits you, please get in touch with{" "}
-//         <a target="_blank" href="mailto:jobs@liq.io" rel="noopener noreferrer">
-//           jobs@liq.io
+//         <a target="_blank" href="mailto:jobs@axion.io" rel="noopener noreferrer">
+//           jobs@axion.io
 //         </a>{" "}
 //         using the following email subject: Application for Senior front-end developer: [Your name]
 //       </p>

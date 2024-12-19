@@ -1,7 +1,7 @@
 import { ethers } from "ethers";
-import { sample } from "lodash";
 import { isDevelopment } from "lib/legacy";
 import { NetworkMetadata } from "lib/wallets";
+import { sample } from "lodash";
 
 const { parseEther } = ethers.utils;
 
@@ -13,20 +13,20 @@ export const ARBITRUM_TESTNET = 421611;
 export const ARBITRUM = 42161;
 //export const KAVA = 2222;
 export const MUMBAI = 80001;
-export const MODE_MAINNET = 34443;
+export const TAIKO_MAINNET = 167000;
 
 // TODO take it from web3
-export const DEFAULT_CHAIN_ID = MODE_MAINNET;
+export const DEFAULT_CHAIN_ID = TAIKO_MAINNET;
 export const CHAIN_ID = DEFAULT_CHAIN_ID;
 
-export const SUPPORTED_CHAIN_IDS = [MODE_MAINNET];
+export const SUPPORTED_CHAIN_IDS = [TAIKO_MAINNET];
 
 if (isDevelopment()) {
   SUPPORTED_CHAIN_IDS.push(ARBITRUM_TESTNET);
 }
 
 export const IS_NETWORK_DISABLED = {
-  [MODE_MAINNET]: false,
+  [TAIKO_MAINNET]: false,
   [AVALANCHE]: false,
 };
 
@@ -36,24 +36,24 @@ export const CHAIN_NAMES_MAP = {
   [ARBITRUM_TESTNET]: "ArbRinkeby",
   [ARBITRUM]: "Arbitrum",
   [AVALANCHE]: "Avalanche",
-  [MODE_MAINNET]: "Mode",
+  [TAIKO_MAINNET]: "Taiko",
 };
 
 export const GAS_PRICE_ADJUSTMENT_MAP = {
   [ARBITRUM]: "0",
   [AVALANCHE]: "3000000000", // 3 gwei
-  [MODE_MAINNET]: "0",
+  [TAIKO_MAINNET]: "0",
 };
 
 export const MAX_GAS_PRICE_MAP = {
   [AVALANCHE]: "200000000000", // 200 gwei
-  // [MODE_MAINNET]: "200000000000",
+  // [TAIKO_MAINNET]: "200000000000",
 };
 
 export const HIGH_EXECUTION_FEES_MAP = {
   [ARBITRUM]: 3, // 3 USD
   [AVALANCHE]: 3, // 3 USD
-  [MODE_MAINNET]: 3,
+  [TAIKO_MAINNET]: 3,
 };
 
 const constants = {
@@ -113,7 +113,7 @@ const constants = {
     // contract requires that execution fee be strictly greater than instead of gte
     DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0100001"),
   },
-  [MODE_MAINNET]: {
+  [TAIKO_MAINNET]: {
     nativeTokenSymbol: "ETH",
     wrappedTokenSymbol: "WETH",
     defaultCollateralSymbol: "USDC",
@@ -128,11 +128,11 @@ const constants = {
   },
 };
 
-const ALCHEMY_WHITELISTED_DOMAINS = ["perp.testnet.liq.markets"];
+const ALCHEMY_WHITELISTED_DOMAINS = ["perp.testnet.axion.finance"];
 
 export const ARBITRUM_RPC_PROVIDERS = [getDefaultArbitrumRpcUrl()];
 export const AVALANCHE_RPC_PROVIDERS = ["https://api.avax.network/ext/bc/C/rpc"];
-export const MODE_MAINNET_RPC_PROVIDERS = ["https://mainnet.mode.network"];
+export const TAIKO_MAINNET_RPC_PROVIDERS = ["https://rpc.mainnet.taiko.xyz"];
 
 // BSC TESTNET
 // const RPC_PROVIDERS = [
@@ -168,11 +168,11 @@ export const RPC_PROVIDERS = {
   [MAINNET]: BSC_RPC_PROVIDERS,
   [ARBITRUM]: ARBITRUM_RPC_PROVIDERS,
   [AVALANCHE]: AVALANCHE_RPC_PROVIDERS,
-  [MODE_MAINNET]: MODE_MAINNET_RPC_PROVIDERS,
+  [TAIKO_MAINNET]: TAIKO_MAINNET_RPC_PROVIDERS,
 };
 
 export const FALLBACK_PROVIDERS = {
-  [MODE_MAINNET]: MODE_MAINNET_RPC_PROVIDERS,
+  [TAIKO_MAINNET]: TAIKO_MAINNET_RPC_PROVIDERS,
   [ARBITRUM]: [getAlchemyHttpUrl()],
   [AVALANCHE]: ["https://avax-mainnet.gateway.pokt.network/v1/lb/626f37766c499d003aada23b"],
 };
@@ -233,16 +233,16 @@ export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
   //   rpcUrls: AVALANCHE_RPC_PROVIDERS,
   //   blockExplorerUrls: [getExplorerUrl(AVALANCHE)],
   // },
-  [MODE_MAINNET]: {
-    chainId: "0x" + MODE_MAINNET.toString(16),
-    chainName: "Mode Mainnet",
+  [TAIKO_MAINNET]: {
+    chainId: "0x" + TAIKO_MAINNET.toString(16),
+    chainName: "Taiko Mainnet",
     nativeCurrency: {
       name: "ETH",
       symbol: "ETH",
       decimals: 18,
     },
-    rpcUrls: MODE_MAINNET_RPC_PROVIDERS,
-    blockExplorerUrls: [getExplorerUrl(MODE_MAINNET)],
+    rpcUrls: TAIKO_MAINNET_RPC_PROVIDERS,
+    blockExplorerUrls: [getExplorerUrl(TAIKO_MAINNET)],
   },
 };
 
@@ -299,8 +299,8 @@ export function getExplorerUrl(chainId) {
     return "https://arbiscan.io/";
   } else if (chainId === AVALANCHE) {
     return "https://snowtrace.io/";
-  } else if (chainId === MODE_MAINNET) {
-    return "https://explorer.mode.network/";
+  } else if (chainId === TAIKO_MAINNET) {
+    return "https://taikoscan.io/";
   }
   return "https://etherscan.io/";
 }

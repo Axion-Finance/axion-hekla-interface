@@ -14,7 +14,7 @@ describe("Helpers", function () {
       expected: expandDecimals(40500, 30),
     },
     {
-      // liq price by fees
+      // axion price by fees
       isLong: true,
       size: expandDecimals(50000, 30),
       collateral: expandDecimals(10000, 30),
@@ -100,8 +100,8 @@ describe("Helpers", function () {
   ];
   it("getLiquidationPrice", function () {
     for (const case_ of cases) {
-      const liqPrice = getLiquidationPrice(case_);
-      expect(liqPrice).toEqual(case_.expected);
+      const axionPrice = getLiquidationPrice(case_);
+      expect(axionPrice).toEqual(case_.expected);
     }
   });
 });

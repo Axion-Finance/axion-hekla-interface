@@ -10,6 +10,6 @@ export const IS_PNL_IN_LEVERAGE_KEY = "Exchange-swap-is-pnl-in-leverage";
 export const SHOW_PNL_AFTER_FEES_KEY = "Exchange-swap-show-pnl-after-fees";
 export const DISABLE_ORDER_VALIDATION_KEY = "disable-order-validation";
 export const SHOULD_SHOW_POSITION_LINES_KEY = "Exchange-swap-should-show-position-lines";
-export const REFERRAL_CODE_KEY = "Liq-referralCode";
+export const REFERRAL_CODE_KEY = "Axion-referralCode";
 export const REFERRALS_SELECTED_TAB_KEY = "Referrals-selected-tab";
 export const TV_SAVE_LOAD_CHARTS_KEY = "tv-save-load-charts";

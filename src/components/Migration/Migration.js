@@ -34,7 +34,7 @@ const { MaxUint256, AddressZero } = ethers.constants;
 // console.log("Data is : ", data);
 const precision = 1000000;
 const decimals = 6;
-const liqPrice = bigNumberify(2 * precision);
+const axionPrice = bigNumberify(2 * precision);
 const tokens = [
   {
     name: "GMT",
@@ -130,13 +130,13 @@ function MigrationModal(props) {
   let totalAmountUsd;
 
   if (amount) {
-    baseAmount = amount.mul(token.price).div(liqPrice);
+    baseAmount = amount.mul(token.price).div(axionPrice);
     bonusAmount = baseAmount.mul(token.bonus).div(100);
     totalAmount = baseAmount.add(bonusAmount);
 
-    baseAmountUsd = baseAmount.mul(liqPrice);
-    bonusAmountUsd = bonusAmount.mul(liqPrice);
-    totalAmountUsd = totalAmount.mul(liqPrice);
+    baseAmountUsd = baseAmount.mul(axionPrice);
+    bonusAmountUsd = bonusAmount.mul(axionPrice);
+    totalAmountUsd = totalAmount.mul(axionPrice);
   }
 
   const getError = () => {
@@ -255,7 +255,7 @@ function MigrationModal(props) {
             <div className="App-info-label">{token.bonus > 0 ? "Base Tokens" : "To Receive"}</div>
             <div className="align-right">
               {baseAmount &&
-                `${formatAmount(baseAmount, 18, 4, true)} LIQ ($${formatAmount(
+                `${formatAmount(baseAmount, 18, 4, true)} AXION ($${formatAmount(
                   baseAmountUsd,
                   18 + decimals,
                   2,
@@ -271,7 +271,7 @@ function MigrationModal(props) {
               </div>
               <div className="align-right">
                 {bonusAmount &&
-                  `${formatAmount(bonusAmount, 18, 4, true)} LIQ ($${formatAmount(
+                  `${formatAmount(bonusAmount, 18, 4, true)} AXION ($${formatAmount(
                     bonusAmountUsd,
                     18 + decimals,
                     2,
@@ -288,7 +288,7 @@ function MigrationModal(props) {
               </div>
               <div className="align-right">
                 {totalAmount &&
-                  `${formatAmount(totalAmount, 18, 4, true)} LIQ ($${formatAmount(
+                  `${formatAmount(totalAmount, 18, 4, true)} AXION ($${formatAmount(
                     totalAmountUsd,
                     18 + decimals,
                     2,
@@ -363,7 +363,7 @@ export default function Migration() {
       totalMigratedLiq = totalMigratedLiq.add(iouBalances[i * 2 + 1]);
     }
 
-    totalMigratedUsd = totalMigratedLiq.mul(liqPrice);
+    totalMigratedUsd = totalMigratedLiq.mul(axionPrice);
   }
 
   useEffect(() => {
@@ -412,12 +412,12 @@ export default function Migration() {
         </div>
       </div>
       <div className="Migration-note">
-        <Trans>Your wallet: {formatAmount(liqBalance, 18, 4, true)}</Trans> LIQ
+        <Trans>Your wallet: {formatAmount(liqBalance, 18, 4, true)}</Trans> AXION
       </div>
       <div className="Migration-note">
         <Trans>
           Please read the{" "}
-          <ExternalLink href="https://gambitprotocol.medium.com/gambit-liq-migration-now-live-2ba999d208dd">
+          <ExternalLink href="https://gambitprotocol.medium.com/gambit-axion-migration-now-live-2ba999d208dd">
             Medium post
           </ExternalLink>{" "}
           before migrating.

@@ -1,5 +1,5 @@
-import { ethers } from "ethers";
 import { Web3Provider } from "@ethersproject/providers";
+import { ethers } from "ethers";
 import { getFallbackProvider, getProvider } from "../rpc";
 
 export const contractFetcher =

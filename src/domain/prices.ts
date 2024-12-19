@@ -113,7 +113,7 @@ export async function getChartPricesFromStats(chainId, symbol, period) {
   const from = Math.floor(Date.now() / 1000 - timeDiff);
   const url = `${
     LIQ_STATS_API_URL[chainId]
-  }/candles/${symbol}?preferableChainId=${34443}&period=${period}&from=${from}&preferableSource=fast`;
+  }/candles/${symbol}?preferableChainId=${167000}&period=${period}&from=${from}&preferableSource=fast`;
 
   const TIMEOUT = 5000;
   const res: Response = await new Promise(async (resolve, reject) => {

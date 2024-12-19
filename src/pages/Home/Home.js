@@ -18,20 +18,20 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   // const [openedFAQIndex, setOpenedFAQIndex] = useState(null)
   // const faqContent = [{
   //   id: 1,
-  //   question: "What is Liq?",
-  //   answer: "Liq is a decentralized spot and perpetual exchange that supports low swap fees and zero price impact trades.<br><br>Trading is supported by a unique multi-asset pool that earns liquidity providers fees from market making, swap fees, leverage trading (spreads, funding fees & liquidations), and asset rebalancing.<br><br>Dynamic pricing is supported by Chainlink Oracles along with TWAP pricing from leading volume DEXs."
+  //   question: "What is Axion?",
+  //   answer: "Axion is a decentralized spot and perpetual exchange that supports low swap fees and zero price impact trades.<br><br>Trading is supported by a unique multi-asset pool that earns liquidity providers fees from market making, swap fees, leverage trading (spreads, funding fees & liquidations), and asset rebalancing.<br><br>Dynamic pricing is supported by Chainlink Oracles along with TWAP pricing from leading volume DEXs."
   // }, {
   //   id: 2,
-  //   question: "What is the Liq Governance Token? ",
-  //   answer: "The LIQ token is the governance token of the Liq ecosystem, it provides the token owner voting rights on the direction of the Liq platform.<br><br>Additionally, when Liq is staked you will earn 30% of the platform-generated fees, you will also earn Escrowed LIQLIQ tokens and Multiplier Points."
+  //   question: "What is the Axion Governance Token? ",
+  //   answer: "The AXION token is the governance token of the Axion ecosystem, it provides the token owner voting rights on the direction of the Axion platform.<br><br>Additionally, when Axion is staked you will earn 30% of the platform-generated fees, you will also earn Escrowed LIQLIQ tokens and Multiplier Points."
   // }, {
   //   id: 3,
   //   question: "What is the GLP Token? ",
-  //   answer: "The GLP token represents the liquidity users provide to the Liq platform for Swaps and Margin Trading.<br><br>To provide liquidity to GLP you <a href='https://liq.markets/liquidity' target='_blank'>trade</a> your crypto asset BTC, ETH, LINK, UNI, USDC, USDT, MIM, or FRAX to the liquidity pool, in exchange, you gain exposure to a diversified index of tokens while earning 50% of the platform trading fees and esLIQ."
+  //   answer: "The GLP token represents the liquidity users provide to the Axion platform for Swaps and Margin Trading.<br><br>To provide liquidity to GLP you <a href='https://axion.finance/liquidity' target='_blank'>trade</a> your crypto asset BTC, ETH, LINK, UNI, USDC, USDT, MIM, or FRAX to the liquidity pool, in exchange, you gain exposure to a diversified index of tokens while earning 50% of the platform trading fees and esLIQ."
   // }, {
   //   id: 4,
-  //   question: "What can I Trade on Liq? ",
-  //   answer: "On Liq you can swap or margin trade any of the following assets: ETH, BTC, LINK, UNI, USDC, USDT, MIM, FRAX, with others to be added. "
+  //   question: "What can I Trade on Axion? ",
+  //   answer: "On Axion you can swap or margin trade any of the following assets: ETH, BTC, LINK, UNI, USDC, USDT, MIM, FRAX, with others to be added. "
   // }]
 
   // const toggleFAQContent = function(index) {
@@ -258,7 +258,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
           <div className="Home-faqs-introduction">
             <div className="Home-faqs-introduction__title">FAQs</div>
             <div className="Home-faqs-introduction__description">Most asked questions. If you wish to learn more, please head to our Documentation page.</div>
-            <a href="docs.liq.markets/" className="default-btn Home-faqs-documentation">Documentation</a>
+            <a href="docs.axion.finance/" className="default-btn Home-faqs-documentation">Documentation</a>
           </div>
           <div className="Home-faqs-content-block">
             {

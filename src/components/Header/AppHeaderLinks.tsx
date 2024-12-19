@@ -1,11 +1,10 @@
-import React from "react";
-import { FiX } from "react-icons/fi";
 import { Trans } from "@lingui/macro";
+import { FiX } from "react-icons/fi";
 //import { Link } from "react-router-dom";
 
-import { HeaderLink } from "./HeaderLink";
-import "./Header.css";
 import { useHistory } from "react-router-dom";
+import "./Header.css";
+import { HeaderLink } from "./HeaderLink";
 //import { isHomeSite } from "lib/legacy";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 import logoImg from "img/logo.png";
@@ -32,9 +31,9 @@ export function AppHeaderLinks({
     <div className="App-header-links">
       {small && (
         <div className="App-header-links-header">
-          <a className="App-header-link-main" href="https://liq.markets/">
-            <img src={logoImg} alt="LIQ Logo" />
-            LIQ<span style={{ color: "orange" }}></span>
+          <a className="App-header-link-main" href="https://axion.finance/">
+            <img src={logoImg} alt="AXION Logo" />
+            AXION<span style={{ color: "orange" }}></span>
           </a>
           <div
             className="App-header-menu-icon-block mobile-cross-menu"
@@ -96,7 +95,7 @@ export function AppHeaderLinks({
         </HeaderLink>
       </div> */}
       <div className="App-header-link-container">
-        <ExternalLink href="docs.liq.markets">
+        <ExternalLink href="docs.axion.finance">
           <Trans>About</Trans>
         </ExternalLink>
       </div>

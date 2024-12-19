@@ -1,0 +1,99 @@
+.ClaimEsAxion input {
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: var(--font-base);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.ClaimEsAxion label {
+  display: block;
+  margin-bottom: 0.8rem;
+}
+
+.ClaimEsAxion-content {
+  padding: 4.65rem;
+  padding-top: 1.5rem;
+  max-width: 38.75rem;
+}
+
+.ClaimEsAxion-row {
+  margin-bottom: 1.5rem;
+}
+
+.ClaimEsAxion button {
+  margin-top: 0.8rem;
+}
+
+.ClaimEsAxion-vesting-options .Checkbox.btn-lg {
+  font-size: 1.85rem;
+  margin-bottom: 0.8rem;
+  display: block;
+  width: 35.65rem;
+  padding-left: 1.85rem;
+  padding-top: 0.465rem;
+}
+
+.ClaimEsAxion-vesting-options .Checkbox.btn-lg.selected.arbitrum {
+  background: rgba(41, 160, 240, 0.2);
+}
+
+.ClaimEsAxion-vesting-options .Checkbox.btn-lg.selected.avalanche {
+  background: rgba(232, 65, 65, 0.2);
+}
+
+.ClaimEsAxion-vesting-options .Checkbox img {
+  height: 1.5rem;
+}
+
+.ClaimEsAxion-option-label {
+  display: inline-block;
+  width: 27.9rem;
+  text-align: center;
+  opacity: 0.7;
+}
+
+.ClaimEsAxion-vesting-options .Checkbox.selected .ClaimEsAxion-option-label {
+  opacity: 1;
+}
+
+.ClaimEsAxion-vesting-options .Checkbox.arbitrum .Checkbox-icon.active {
+  color: #29a0f0;
+}
+
+.ClaimEsAxion-vesting-options .Checkbox.avalanche .Checkbox-icon.active {
+  color: #e84141;
+}
+
+.ClaimEsAxion button {
+  max-width: 35.65rem;
+}
+
+.ClaimEsAxion-input-label {
+  margin-bottom: 0.8rem;
+}
+
+.ClaimEsAxion input {
+  width: 35.65rem;
+}
+
+.ClaimEsAxion-input-container {
+  position: relative;
+}
+
+.ClaimEsAxion-max-button {
+  position: absolute;
+  padding: 0.465rem 0.8rem;
+  background: var(--dark-primary);
+  left: 29.75rem;
+  top: 0.93rem;
+  font-size: var(--font-sm);
+  border-radius: 3px;
+  z-index: 1;
+  cursor: pointer;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.ClaimEsAxion-max-button:hover {
+  color: rgba(255, 255, 255, 1);
+  background: var(--dark-primary);
+}
