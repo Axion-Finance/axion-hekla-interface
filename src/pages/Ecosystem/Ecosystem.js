@@ -32,7 +32,7 @@ export default function Ecosystem() {
     },
     {
       title: "Axion Stats",
-      link: "https://axion.markets/",
+      link: "https://axion.finance/",
       linkLabel: "stats.axion.finance",
       about: t`Axion Stats Page`,
       chainIds: [ARBITRUM, AVALANCHE],

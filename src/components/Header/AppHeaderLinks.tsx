@@ -31,7 +31,7 @@ export function AppHeaderLinks({
     <div className="App-header-links">
       {small && (
         <div className="App-header-links-header">
-          <a className="App-header-link-main" href="https://axion.markets/">
+          <a className="App-header-link-main" href="https://axion.finance/">
             <img src={logoImg} alt="AXION Logo" />
             AXION<span style={{ color: "orange" }}></span>
           </a>

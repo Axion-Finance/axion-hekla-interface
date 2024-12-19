@@ -27,7 +27,7 @@ export default function Home({ showRedirectModal, redirectPopupTimestamp }) {
   // }, {
   //   id: 3,
   //   question: "What is the GLP Token? ",
-  //   answer: "The GLP token represents the liquidity users provide to the Axion platform for Swaps and Margin Trading.<br><br>To provide liquidity to GLP you <a href='https://axion.markets/liquidity' target='_blank'>trade</a> your crypto asset BTC, ETH, LINK, UNI, USDC, USDT, MIM, or FRAX to the liquidity pool, in exchange, you gain exposure to a diversified index of tokens while earning 50% of the platform trading fees and esLIQ."
+  //   answer: "The GLP token represents the liquidity users provide to the Axion platform for Swaps and Margin Trading.<br><br>To provide liquidity to GLP you <a href='https://axion.finance/liquidity' target='_blank'>trade</a> your crypto asset BTC, ETH, LINK, UNI, USDC, USDT, MIM, or FRAX to the liquidity pool, in exchange, you gain exposure to a diversified index of tokens while earning 50% of the platform trading fees and esLIQ."
   // }, {
   //   id: 4,
   //   question: "What can I Trade on Axion? ",

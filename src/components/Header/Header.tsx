@@ -92,7 +92,7 @@ export function Header({
       <header>
         <div className="App-header large">
           <div className="App-header-container-left">
-            <a className="App-header-link-main" href="https://axion.markets/">
+            <a className="App-header-link-main" href="https://axion.finance/">
               <img src={logoImg} className="big" alt="Axion Logo" />
               <img src={logoSmallImg} className="small" alt="Axion Logo" />
             </a>

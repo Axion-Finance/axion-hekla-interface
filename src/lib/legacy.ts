@@ -1400,7 +1400,7 @@ export function getHomeUrl() {
     return "http://localhost:3010";
   }
 
-  return "https://axion.markets";
+  return "https://axion.finance";
 }
 
 export function getAppBaseUrl() {
@@ -1408,7 +1408,7 @@ export function getAppBaseUrl() {
     return "http://localhost:3011/#";
   }
 
-  return "https://axion.markets/#";
+  return "https://axion.finance/#";
 }
 
 export function getRootShareApiUrl() {
@@ -1424,7 +1424,7 @@ export function getTradePageUrl() {
     return "http://localhost:3011/#/trade";
   }
 
-  return "https://axion.markets/#/trade";
+  return "https://axion.finance/#/trade";
 }
 
 export function importImage(name) {

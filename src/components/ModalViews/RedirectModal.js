@@ -32,8 +32,8 @@ export function RedirectPopupModal({
         <br />
         <br />
         By clicking Agree you accept the{" "}
-        <ExternalLink href="https://axion.markets/#/terms-and-conditions">T&Cs</ExternalLink> and{" "}
-        <ExternalLink href="https://axion.markets/#/referral-terms">Referral T&Cs</ExternalLink>.
+        <ExternalLink href="https://axion.finance/#/terms-and-conditions">T&Cs</ExternalLink> and{" "}
+        <ExternalLink href="https://axion.finance/#/referral-terms">Referral T&Cs</ExternalLink>.
         <br />
         <br />
       </Trans>

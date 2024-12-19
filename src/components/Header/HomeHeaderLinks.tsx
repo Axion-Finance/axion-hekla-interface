@@ -14,7 +14,7 @@ type Props = {
 const HOME_MENUS = [
   {
     label: t`App`,
-    link: "https://axion.markets/#/trade",
+    link: "https://axion.finance/#/trade",
   },
   {
     label: t`Protocol`,

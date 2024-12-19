@@ -170,7 +170,7 @@ function PositionShareCard({
                 <p className="code">{code}</p>
               </>
             ) : (
-              <p className="code">https://axion.markets</p>
+              <p className="code">https://axion.finance</p>
             )}
           </div>
         </div>
