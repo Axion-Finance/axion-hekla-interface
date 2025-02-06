@@ -7,11 +7,12 @@ import ReferralStorage from "abis/ReferralStorage.json";
 import { MAX_REFERRAL_CODE_LENGTH, isAddressZero, isHashZero } from "lib/legacy";
 import { getContract } from "config/contracts";
 import { REGEX_VERIFY_BYTES32 } from "components/Referrals/referralsHelper";
-import { ARBITRUM, AVALANCHE, TAIKO_MAINNET } from "config/chains";
+import { ARBITRUM, AVALANCHE, TAIKO_MAINNET, TAIKO_TESTNET } from "config/chains";
 import {
   arbitrumReferralsGraphClient,
   avalancheReferralsGraphClient,
   fantomReferralsGraphClient,
+  taikoTestnetGraphClient,
 } from "lib/subgraph/clients";
 import { callContract, contractFetcher } from "lib/contracts";
 import { helperToast } from "lib/helperToast";
@@ -30,6 +31,8 @@ function getGraphClient(chainId) {
     return avalancheReferralsGraphClient;
   } else if (chainId === TAIKO_MAINNET) {
     return fantomReferralsGraphClient;
+  } else if (chainId === TAIKO_TESTNET) {
+    return taikoTestnetGraphClient;
   }
   throw new Error(`Unsupported chain ${chainId}`);
 }

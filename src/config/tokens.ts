@@ -1,6 +1,15 @@
 import { Token } from "domain/tokens";
 import { ethers } from "ethers";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, MAINNET, MUMBAI, TAIKO_MAINNET, TESTNET } from "./chains";
+import {
+  ARBITRUM,
+  ARBITRUM_TESTNET,
+  AVALANCHE,
+  MAINNET,
+  MUMBAI,
+  TAIKO_MAINNET,
+  TAIKO_TESTNET,
+  TESTNET,
+} from "./chains";
 import { getContract } from "./contracts";
 
 export const TOKENS: { [chainId: number]: Token[] } = {
@@ -431,6 +440,55 @@ export const TOKENS: { [chainId: number]: Token[] } = {
       imageUrl: "https://assets.coingecko.com/coins/images/325/small/Tether-logo.png",
     },
   ],
+  [TAIKO_TESTNET]: [
+    {
+      name: "ETH",
+      symbol: "ETH",
+      decimals: 18,
+      displayDecimals: 3,
+      address: ethers.constants.AddressZero,
+      isNative: true,
+      isShortable: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/4001/small/Fantom_round.png?1669652346",
+    },
+    {
+      name: "Wrapped ETH",
+      symbol: "WETH",
+      decimals: 18,
+      displayDecimals: 3,
+      address: "0x4cb55c4C3b0ec4E2AC20Ee90afeF7A32c1f56D64",
+      isWrapped: true,
+      baseSymbol: "WETH",
+      imageUrl: "https://ftmscan.com/token/images/wFtm_32.png",
+    },
+    // {
+    //   name: "Taiko Token",
+    //   symbol: "TAIKO",
+    //   address: "0xA9d23408b9bA935c230493c40C73824Df71A0975",
+    //   decimals: 18,
+    //   displayDecimals: 2,
+    //   isShortable: true,
+    //   imageUrl: "https://assets.coingecko.com/coins/images/325/small/Tether-logo.png",
+    // },
+    {
+      name: "USD Coin",
+      symbol: "USDC",
+      address: "0x6699b71295c0549Fd95FE67B62Cc43D3B11b368F",
+      decimals: 6,
+      displayDecimals: 2,
+      isStable: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/6319/thumb/USD_Coin_icon.png?1547042389",
+    },
+    {
+      name: "Tether",
+      symbol: "USDT",
+      address: "0x0358E1AEfeD84Eec337fa58Febb15D3C205486b9",
+      decimals: 6,
+      displayDecimals: 2,
+      isStable: true,
+      imageUrl: "https://assets.coingecko.com/coins/images/325/small/Tether-logo.png",
+    },
+  ],
   [MUMBAI]: [
     {
       name: "FTM",
@@ -584,6 +642,7 @@ export const ADDITIONAL_TOKENS: { [chainId: number]: Token[] } = {
     //   imageUrl: "https://github.com/axion-io/axion-assets/blob/main/AXION-Assets/PNG/GLP_LOGO%20ONLY.png?raw=true",
     // },
   ],
+  [TAIKO_TESTNET]: [],
 };
 
 export const PLATFORM_TOKENS: { [chainId: number]: { [symbol: string]: Token } } = {
@@ -814,6 +873,12 @@ export const ICONLINKS = {
       avalanche: "https://snowtrace.io/address/0xa7d7079b0fead91f3e65f86e8915cb59c1a4c664",
     },
   },
+  [TAIKO_TESTNET]: {
+    AXION: {
+      coingecko: "https://www.coingecko.com/en/coins/axion",
+      fantom: "https://ftmscan.com/address/0x9CB7beAEcdE90a682BDb86AaA32EF032bD9e4079",
+    },
+  },
 };
 
 export const GLP_POOL_COLORS = {
@@ -837,7 +902,7 @@ export const TOKENS_BY_SYMBOL_MAP: { [chainId: number]: { [symbol: string]: Toke
 export const WRAPPED_TOKENS_MAP: { [chainId: number]: Token } = {};
 export const NATIVE_TOKENS_MAP: { [chainId: number]: Token } = {};
 
-const CHAIN_IDS = [MAINNET, TESTNET, ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, TAIKO_MAINNET];
+const CHAIN_IDS = [MAINNET, TESTNET, ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, TAIKO_MAINNET, TAIKO_TESTNET];
 
 for (let j = 0; j < CHAIN_IDS.length; j++) {
   const chainId = CHAIN_IDS[j];

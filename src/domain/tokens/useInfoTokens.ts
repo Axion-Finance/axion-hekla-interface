@@ -26,6 +26,7 @@ export function useInfoTokens(
 ) {
   const tokens = getTokens(chainId);
   const vaultReaderAddress = getContract(chainId, "VaultReader");
+  console.log("vaultReaderAddress", vaultReaderAddress);
   const vaultAddress = getContract(chainId, "Vault");
   const positionRouterAddress = getContract(chainId, "PositionRouter");
   const nativeTokenAddress = getContract(chainId, "NATIVE_TOKEN");
@@ -56,7 +57,7 @@ export function useInfoTokens(
   //     console.log("vaultTokenInfo2 error", err);
   //   });
 
-  const { data: vaultTokenInfo, error } = useSWR<BigNumber[], any>(
+  const { data: vaultTokenInfo, error } = useSWR(
     [`useInfoTokens:${active}`, chainId, vaultReaderAddress, "getVaultTokenInfoV4"],
     {
       fetcher: contractFetcher(library, VaultReader, [
@@ -72,20 +73,20 @@ export function useInfoTokens(
   console.log("getVaultTokenInfoV4", vaultTokenInfo, error);
 
   const indexPricesUrl = getServerUrl(chainId, "/prices");
-
+  console.log("indexPricesUrl", indexPricesUrl);
   const { data: indexPrices } = useSWR([indexPricesUrl], {
     // @ts-ignore spread args incorrect type
     fetcher: (...args) => fetch(...args).then((res) => res.json()),
     refreshInterval: 500,
     refreshWhenHidden: true,
   });
-
+  console.log("indexPricesdata", indexPrices);
   return {
     infoTokens: getInfoTokens(
       tokens,
       tokenBalances,
       whitelistedTokens,
-      vaultTokenInfo,
+      vaultTokenInfo as BigNumber[],
       fundingRateInfo,
       vaultPropsLength,
       indexPrices,

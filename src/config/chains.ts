@@ -14,12 +14,12 @@ export const ARBITRUM = 42161;
 //export const KAVA = 2222;
 export const MUMBAI = 80001;
 export const TAIKO_MAINNET = 167000;
-
+export const TAIKO_TESTNET = 167009;
 // TODO take it from web3
 export const DEFAULT_CHAIN_ID = TAIKO_MAINNET;
 export const CHAIN_ID = DEFAULT_CHAIN_ID;
 
-export const SUPPORTED_CHAIN_IDS = [TAIKO_MAINNET];
+export const SUPPORTED_CHAIN_IDS = [TAIKO_MAINNET, TAIKO_TESTNET];
 
 if (isDevelopment()) {
   SUPPORTED_CHAIN_IDS.push(ARBITRUM_TESTNET);
@@ -28,6 +28,7 @@ if (isDevelopment()) {
 export const IS_NETWORK_DISABLED = {
   [TAIKO_MAINNET]: false,
   [AVALANCHE]: false,
+  [TAIKO_TESTNET]: false,
 };
 
 export const CHAIN_NAMES_MAP = {
@@ -37,12 +38,14 @@ export const CHAIN_NAMES_MAP = {
   [ARBITRUM]: "Arbitrum",
   [AVALANCHE]: "Avalanche",
   [TAIKO_MAINNET]: "Taiko",
+  [TAIKO_TESTNET]: "Taiko Testnet",
 };
 
 export const GAS_PRICE_ADJUSTMENT_MAP = {
   [ARBITRUM]: "0",
   [AVALANCHE]: "3000000000", // 3 gwei
   [TAIKO_MAINNET]: "0",
+  [TAIKO_TESTNET]: "0",
 };
 
 export const MAX_GAS_PRICE_MAP = {
@@ -54,6 +57,7 @@ export const HIGH_EXECUTION_FEES_MAP = {
   [ARBITRUM]: 3, // 3 USD
   [AVALANCHE]: 3, // 3 USD
   [TAIKO_MAINNET]: 3,
+  [TAIKO_TESTNET]: 3,
 };
 
 const constants = {
@@ -126,6 +130,19 @@ const constants = {
     // contract requires that execution fee be strictly greater than instead of gte
     DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0010001"),
   },
+  [TAIKO_TESTNET]: {
+    nativeTokenSymbol: "ETH",
+    wrappedTokenSymbol: "WETH",
+    defaultCollateralSymbol: "USDC",
+    defaultFlagOrdersEnabled: true,
+    positionReaderPropsLength: 9,
+    v2: true,
+
+    SWAP_ORDER_EXECUTION_GAS_FEE: parseEther("0.001001"),
+    INCREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.001001"),
+    // contract requires that execution fee be strictly greater than instead of gte
+    DECREASE_ORDER_EXECUTION_GAS_FEE: parseEther("0.0010001"),
+  },
 };
 
 const ALCHEMY_WHITELISTED_DOMAINS = ["perp.testnet.axion.finance"];
@@ -133,7 +150,7 @@ const ALCHEMY_WHITELISTED_DOMAINS = ["perp.testnet.axion.finance"];
 export const ARBITRUM_RPC_PROVIDERS = [getDefaultArbitrumRpcUrl()];
 export const AVALANCHE_RPC_PROVIDERS = ["https://api.avax.network/ext/bc/C/rpc"];
 export const TAIKO_MAINNET_RPC_PROVIDERS = ["https://rpc.mainnet.taiko.xyz"];
-
+export const TAIKO_TESTNET_RPC_PROVIDERS = ["https://rpc.hekla.taiko.xyz"];
 // BSC TESTNET
 // const RPC_PROVIDERS = [
 //   "https://data-seed-prebsc-1-s1.binance.org:8545",
@@ -169,12 +186,14 @@ export const RPC_PROVIDERS = {
   [ARBITRUM]: ARBITRUM_RPC_PROVIDERS,
   [AVALANCHE]: AVALANCHE_RPC_PROVIDERS,
   [TAIKO_MAINNET]: TAIKO_MAINNET_RPC_PROVIDERS,
+  [TAIKO_TESTNET]: TAIKO_TESTNET_RPC_PROVIDERS,
 };
 
 export const FALLBACK_PROVIDERS = {
   [TAIKO_MAINNET]: TAIKO_MAINNET_RPC_PROVIDERS,
   [ARBITRUM]: [getAlchemyHttpUrl()],
   [AVALANCHE]: ["https://avax-mainnet.gateway.pokt.network/v1/lb/626f37766c499d003aada23b"],
+  [TAIKO_TESTNET]: TAIKO_TESTNET_RPC_PROVIDERS,
 };
 
 export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
@@ -244,6 +263,17 @@ export const NETWORK_METADATA: { [chainId: number]: NetworkMetadata } = {
     rpcUrls: TAIKO_MAINNET_RPC_PROVIDERS,
     blockExplorerUrls: [getExplorerUrl(TAIKO_MAINNET)],
   },
+  [TAIKO_TESTNET]: {
+    chainId: "0x" + TAIKO_TESTNET.toString(16),
+    chainName: "Taiko Testnet",
+    nativeCurrency: {
+      name: "ETH",
+      symbol: "ETH",
+      decimals: 18,
+    },
+    rpcUrls: TAIKO_TESTNET_RPC_PROVIDERS,
+    blockExplorerUrls: [getExplorerUrl(TAIKO_TESTNET)],
+  },
 };
 
 export const getConstant = (chainId: number, key: string) => {
@@ -301,6 +331,8 @@ export function getExplorerUrl(chainId) {
     return "https://snowtrace.io/";
   } else if (chainId === TAIKO_MAINNET) {
     return "https://taikoscan.io/";
+  } else if (chainId === TAIKO_TESTNET) {
+    return "https://rpc.hekla.taiko.xyz";
   }
   return "https://etherscan.io/";
 }
