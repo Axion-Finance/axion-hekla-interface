@@ -3,7 +3,7 @@ import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, MAINNET, TAIKO_MAINNET, TAIKO_TE
 export const LIQ_STATS_API_URL = {
   default: "https://stats.axion.finance/api",
   [TAIKO_MAINNET]: "https://stats.axion.finance/api",
-  [TAIKO_TESTNET]: "https://stats.axion.finance/api",
+  [TAIKO_TESTNET]: "http://localhost:3000/api",
 };
 
 const BACKEND_URLS = {

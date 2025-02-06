@@ -1,4 +1,4 @@
-import { ARBITRUM, AVALANCHE, TAIKO_MAINNET } from "config/chains";
+import { ARBITRUM, AVALANCHE, TAIKO_MAINNET, TAIKO_TESTNET } from "config/chains";
 import { formatTVDate, formatTVTime } from "lib/dates";
 
 const RED = "#fa3c58";
@@ -84,4 +84,4 @@ export const defaultChartProps = {
   },
 };
 
-export const availableNetworksForChart = [TAIKO_MAINNET];
+export const availableNetworksForChart = [TAIKO_MAINNET, TAIKO_TESTNET];

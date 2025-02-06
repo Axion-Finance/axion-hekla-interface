@@ -332,7 +332,7 @@ export function getExplorerUrl(chainId) {
   } else if (chainId === TAIKO_MAINNET) {
     return "https://taikoscan.io/";
   } else if (chainId === TAIKO_TESTNET) {
-    return "https://rpc.hekla.taiko.xyz";
+    return "https://hekla.taikoexplorer.com/";
   }
   return "https://etherscan.io/";
 }

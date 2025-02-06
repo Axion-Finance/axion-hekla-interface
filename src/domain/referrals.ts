@@ -12,7 +12,7 @@ import {
   arbitrumReferralsGraphClient,
   avalancheReferralsGraphClient,
   fantomReferralsGraphClient,
-  taikoTestnetGraphClient,
+  taikoTestnetReferralsGraphClient,
 } from "lib/subgraph/clients";
 import { callContract, contractFetcher } from "lib/contracts";
 import { helperToast } from "lib/helperToast";
@@ -20,7 +20,7 @@ import { REFERRAL_CODE_KEY } from "config/localStorage";
 import { getProvider } from "lib/rpc";
 import { bigNumberify } from "lib/numbers";
 
-const ACTIVE_CHAINS = [TAIKO_MAINNET];
+const ACTIVE_CHAINS = [TAIKO_MAINNET, TAIKO_TESTNET];
 const DISTRIBUTION_TYPE_REBATES = "1";
 const DISTRIBUTION_TYPE_DISCOUNT = "2";
 
@@ -32,7 +32,7 @@ function getGraphClient(chainId) {
   } else if (chainId === TAIKO_MAINNET) {
     return fantomReferralsGraphClient;
   } else if (chainId === TAIKO_TESTNET) {
-    return taikoTestnetGraphClient;
+    return taikoTestnetReferralsGraphClient;
   }
   throw new Error(`Unsupported chain ${chainId}`);
 }

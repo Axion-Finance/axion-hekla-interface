@@ -874,9 +874,20 @@ export const ICONLINKS = {
     },
   },
   [TAIKO_TESTNET]: {
-    AXION: {
-      coingecko: "https://www.coingecko.com/en/coins/axion",
-      fantom: "https://ftmscan.com/address/0x9CB7beAEcdE90a682BDb86AaA32EF032bD9e4079",
+    ETH: {
+      coingecko: "https://www.coingecko.com/en/coins/ethereum",
+    },
+    BTC: {
+      coingecko: "https://www.coingecko.com/en/coins/wrapped-bitcoin",
+      fantom: "https://ftmscan.com/address/0xA3F4CFDEd079C16BC6390E3bE9CF94771123d4B2",
+    },
+    USDC: {
+      coingecko: "https://www.coingecko.com/en/coins/usd-coin",
+      fantom: "https://ftmscan.com/address/0x6699b71295c0549Fd95FE67B62Cc43D3B11b368F",
+    },
+    USDT: {
+      coingecko: "https://www.coingecko.com/en/coins/tether",
+      fantom: "https://ftmscan.com/address/0x0358E1AEfeD84Eec337fa58Febb15D3C205486b9",
     },
   },
 };
