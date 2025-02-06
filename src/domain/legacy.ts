@@ -15,7 +15,15 @@ import Vault from "abis/Vault.json";
 import PositionRouter from "abis/PositionRouter.json";
 import Token from "abis/Token.json";
 
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, TAIKO_MAINNET, getConstant, getHighExecutionFee } from "config/chains";
+import {
+  ARBITRUM,
+  ARBITRUM_TESTNET,
+  AVALANCHE,
+  TAIKO_MAINNET,
+  TAIKO_TESTNET,
+  getConstant,
+  getHighExecutionFee,
+} from "config/chains";
 import { getContract } from "config/contracts";
 import { DECREASE, INCREASE, SWAP, USD_DECIMALS, getOrderKey } from "lib/legacy";
 
@@ -398,6 +406,10 @@ export function useMinExecutionFee(library, active, chainId, infoTokens) {
     multiplier = 700000;
   }
 
+  if (chainId === TAIKO_TESTNET) {
+    multiplier = 700000;
+  }
+
   let finalExecutionFee = minExecutionFee;
 
   if (gasPrice && minExecutionFee) {
@@ -476,9 +488,9 @@ export function useLIQLIQnfo() {
     fetcher: (...args) => fetch(...args).then((res) => res.json()),
   });
   return {
-    totalSupply: parseValue(data?.LIQLIQ?.totalSupply, 18) || 0,
-    totalLiqSupply: parseValue(data?.LIQLIQ?.circulatingSupply, 18) || 0,
-    axionPrice: parseValue(data?.LIQLIQ?.price, USD_DECIMALS) || 0,
+    totalSupply: 0, //parseValue(data?.LIQLIQ?.totalSupply, 18) || 0,
+    totalLiqSupply: 0, //parseValue(data?.LIQLIQ?.circulatingSupply, 18) || 0,
+    axionPrice: 0, //parseValue(data?.LIQLIQ?.price, USD_DECIMALS) || 0,
   };
 }
 export function useLiqPrice(chainId, libraries, active) {

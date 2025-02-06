@@ -155,7 +155,7 @@ export default function GlpSwap(props) {
       fetcher: contractFetcher(library, ReaderV2, [tokenAddresses]),
     }
   );
-
+  // console.log("tokenBalancesdata", tokenBalances);
   const { data: balancesAndSupplies } = useSWR(
     [
       `GlpSwap:getTokenBalancesWithSupplies:${active}`,
@@ -219,7 +219,7 @@ export default function GlpSwap(props) {
       fetcher: contractFetcher(library, RewardReader, [rewardTrackersForStakingInfo]),
     }
   );
-
+  console.log("Glpswap_stakingInfo", stakingInfo);
   const stakingData = getStakingData(stakingInfo);
 
   const redemptionTime = lastPurchaseTime ? lastPurchaseTime.add(GLP_COOLDOWN_DURATION) : undefined;
@@ -578,7 +578,7 @@ export default function GlpSwap(props) {
     const method = swapTokenAddress === AddressZero ? "mintAndStakeLlpETH" : "mintAndStakeLlp";
     const params = swapTokenAddress === AddressZero ? [0, minGlp] : [swapTokenAddress, swapAmount, 0, minGlp];
     const value = swapTokenAddress === AddressZero ? swapAmount : 0;
-    // // console.log("buyGlp", swapTokenAddress, swapAmount.toString(), minGlp.toString(), value.toString());
+    console.log("buyGlp", swapTokenAddress, swapAmount.toString(), minGlp.toString(), value.toString());
     callContract(chainId, contract, method, params, {
       value,
       sentMsg: t`Buy submitted.`,

@@ -7,11 +7,12 @@ import ReferralStorage from "abis/ReferralStorage.json";
 import { MAX_REFERRAL_CODE_LENGTH, isAddressZero, isHashZero } from "lib/legacy";
 import { getContract } from "config/contracts";
 import { REGEX_VERIFY_BYTES32 } from "components/Referrals/referralsHelper";
-import { ARBITRUM, AVALANCHE, TAIKO_MAINNET } from "config/chains";
+import { ARBITRUM, AVALANCHE, TAIKO_MAINNET, TAIKO_TESTNET } from "config/chains";
 import {
   arbitrumReferralsGraphClient,
   avalancheReferralsGraphClient,
   fantomReferralsGraphClient,
+  taikoTestnetReferralsGraphClient,
 } from "lib/subgraph/clients";
 import { callContract, contractFetcher } from "lib/contracts";
 import { helperToast } from "lib/helperToast";
@@ -19,7 +20,7 @@ import { REFERRAL_CODE_KEY } from "config/localStorage";
 import { getProvider } from "lib/rpc";
 import { bigNumberify } from "lib/numbers";
 
-const ACTIVE_CHAINS = [TAIKO_MAINNET];
+const ACTIVE_CHAINS = [TAIKO_MAINNET, TAIKO_TESTNET];
 const DISTRIBUTION_TYPE_REBATES = "1";
 const DISTRIBUTION_TYPE_DISCOUNT = "2";
 
@@ -30,6 +31,8 @@ function getGraphClient(chainId) {
     return avalancheReferralsGraphClient;
   } else if (chainId === TAIKO_MAINNET) {
     return fantomReferralsGraphClient;
+  } else if (chainId === TAIKO_TESTNET) {
+    return taikoTestnetReferralsGraphClient;
   }
   throw new Error(`Unsupported chain ${chainId}`);
 }

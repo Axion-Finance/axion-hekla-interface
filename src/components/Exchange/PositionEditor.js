@@ -498,7 +498,7 @@ export default function PositionEditor(props) {
                             setFromValue(maxAmountFormattedFree);
                           }}
                         >
-                          <Trans>MAX</Trans>
+                          {/* <Trans>MAX</Trans> */}
                         </div>
                       )}
                     </div>

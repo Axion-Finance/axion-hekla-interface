@@ -14,6 +14,8 @@ import {
   NETWORK_METADATA,
   SUPPORTED_CHAIN_IDS,
   getChainName,
+  TAIKO_TESTNET,
+  TAIKO_TESTNET_RPC_PROVIDERS,
 } from "config/chains";
 import {
   CURRENT_PROVIDER_LOCALSTORAGE_KEY,
@@ -94,6 +96,7 @@ export const getWalletConnectConnector = () => {
       // [AVALANCHE]: AVALANCHE_RPC_PROVIDERS[0],
       // [ARBITRUM]: ARBITRUM_RPC_PROVIDERS[0],
       [TAIKO_MAINNET]: TAIKO_MAINNET_RPC_PROVIDERS[0],
+      [TAIKO_TESTNET]: TAIKO_TESTNET_RPC_PROVIDERS[0],
       // [ARBITRUM_TESTNET]: "https://rinkeby.arbitrum.io/rpc",
     },
     qrcode: true,

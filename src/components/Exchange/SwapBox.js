@@ -535,6 +535,7 @@ export default function SwapBox(props) {
           );
 
           const nextToValue = formatAmountFree(nextToAmount, toToken.decimals, toToken.decimals);
+          console.log("nextToValue : ", nextToValue);
           setToValue(nextToValue);
         }
         return;

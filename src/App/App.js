@@ -66,7 +66,7 @@ import { I18nProvider } from "@lingui/react";
 import ExternalLink from "components/ExternalLink/ExternalLink";
 import Footer from "components/Footer/Footer";
 import { Header } from "components/Header/Header";
-import { ARBITRUM, getExplorerUrl, TAIKO_MAINNET } from "config/chains";
+import { ARBITRUM, getExplorerUrl, TAIKO_MAINNET, TAIKO_TESTNET } from "config/chains";
 import {
   CURRENT_PROVIDER_LOCALSTORAGE_KEY,
   DISABLE_ORDER_VALIDATION_KEY,
@@ -119,6 +119,7 @@ const Zoom = cssTransition({
 // const avaxWsProvider = new ethers.providers.JsonRpcProvider("https://api.avax.network/ext/bc/C/rpc");
 // avaxWsProvider.pollingInterval = 2000;
 const modeTestnetWsProvider = new ethers.providers.JsonRpcProvider("https://rpc.mainnet.taiko.xyz");
+const taikoTestnetWsProvider = new ethers.providers.JsonRpcProvider("https://rpc.hekla.taiko.xyz");
 
 function getWsProvider(active, chainId) {
   if (!active) {
@@ -130,6 +131,8 @@ function getWsProvider(active, chainId) {
 
   if (chainId === TAIKO_MAINNET) {
     return modeTestnetWsProvider;
+  } else if (chainId === TAIKO_TESTNET) {
+    return taikoTestnetWsProvider;
   }
 }
 

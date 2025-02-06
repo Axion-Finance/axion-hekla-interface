@@ -7,7 +7,7 @@ import { HeaderLink } from "./HeaderLink";
 
 import { Trans } from "@lingui/macro";
 import cx from "classnames";
-import { TAIKO_MAINNET, getChainName } from "config/chains";
+import { TAIKO_MAINNET, TAIKO_TESTNET, getChainName } from "config/chains";
 import { useChainId } from "lib/chains";
 import { getAccountUrl, isDevelopment } from "lib/legacy";
 import { switchNetwork } from "lib/wallets";
@@ -44,6 +44,12 @@ export function AppHeaderUser({
     {
       label: getChainName(TAIKO_MAINNET),
       value: TAIKO_MAINNET,
+      icon: "167000.png",
+      color: "#264f79",
+    },
+    {
+      label: getChainName(TAIKO_TESTNET),
+      value: TAIKO_TESTNET,
       icon: "167000.png",
       color: "#264f79",
     },

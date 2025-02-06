@@ -1,6 +1,6 @@
 import { createClient } from "./utils";
 import { SUBGRAPH_URLS } from "config/subgraph";
-import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, TAIKO_MAINNET } from "config/chains";
+import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, TAIKO_MAINNET, TAIKO_TESTNET } from "config/chains";
 
 export const chainlinkClient = createClient(SUBGRAPH_URLS.common.chainLink);
 
@@ -13,6 +13,8 @@ export const avalancheReferralsGraphClient = createClient(SUBGRAPH_URLS[AVALANCH
 
 export const modeTestnetGraphClient = createClient(SUBGRAPH_URLS[TAIKO_MAINNET].stats);
 export const fantomReferralsGraphClient = createClient(SUBGRAPH_URLS[TAIKO_MAINNET].referrals);
+export const taikoTestnetGraphClient = createClient(SUBGRAPH_URLS[TAIKO_TESTNET].stats);
+export const taikoTestnetReferralsGraphClient = createClient(SUBGRAPH_URLS[TAIKO_TESTNET].referrals);
 
 export function getLiqGraphClient(chainId: number) {
   if (chainId === ARBITRUM) {
@@ -21,6 +23,8 @@ export function getLiqGraphClient(chainId: number) {
     return avalancheGraphClient;
   } else if (chainId === TAIKO_MAINNET) {
     return modeTestnetGraphClient;
+  } else if (chainId === TAIKO_TESTNET) {
+    return taikoTestnetGraphClient;
   } else if (chainId === ARBITRUM_TESTNET) {
     return null;
   }
