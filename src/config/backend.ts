@@ -14,7 +14,7 @@ const BACKEND_URLS = {
   [ARBITRUM]: "https://axion-server-mainnet.uw.r.appspot.com",
   [AVALANCHE]: "https://axion-avax-server.uc.r.appspot.com",
   [TAIKO_MAINNET]: "https://api.axion.finance",
-  [TAIKO_TESTNET]: "https://api.axion.finance",
+  [TAIKO_TESTNET]: "https://api-hekla.axion.finance",
 };
 
 export function getServerBaseUrl(chainId: number) {
