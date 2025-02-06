@@ -73,7 +73,7 @@ export default function TokenCard({ showRedirectModal, redirectPopupTimestamp })
           <div className="Home-token-card-option-action">
             <div className="buy">
               {isLanding ? (
-                <ExternalLink href="https://axion.finance/#/liquidity" className="default-btn read-more">
+                <ExternalLink href="https://testnet.axion.finance/#/liquidity" className="default-btn read-more">
                   <Trans>Buy</Trans>
                 </ExternalLink>
               ) : (

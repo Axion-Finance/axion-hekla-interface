@@ -533,7 +533,7 @@ export default function DashboardV2() {
                 {chainName} Total Stats start from {totalStatsStartDate}.<br /> For detailed stats:
               </Trans>{" "}
               {chainId === TAIKO_MAINNET && (
-                <ExternalLink href="https://stats.axion.finance">https://stats.axion.finance</ExternalLink>
+                <ExternalLink href="https://stats-hekla.axion.finance">https://stats-hekla.axion.finance</ExternalLink>
               )}
               .
             </div>

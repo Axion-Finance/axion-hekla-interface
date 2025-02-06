@@ -1,13 +1,13 @@
 import { ARBITRUM, ARBITRUM_TESTNET, AVALANCHE, MAINNET, TAIKO_MAINNET, TAIKO_TESTNET } from "./chains";
 
 export const LIQ_STATS_API_URL = {
-  default: "https://stats.axion.finance/api",
-  [TAIKO_MAINNET]: "https://stats.axion.finance/api",
-  [TAIKO_TESTNET]: "https://stats.axion.finance/api",
+  default: "https://stats-hekla.axion.finance/api",
+  [TAIKO_MAINNET]: "https://stats-hekla.axion.finance/api",
+  [TAIKO_TESTNET]: "https://stats-hekla.axion.finance/api",
 };
 
 const BACKEND_URLS = {
-  default: "https://api.axion.finance",
+  default: "https://api-hekla.axion.finance",
 
   [MAINNET]: "https://gambit-server-staging.uc.r.appspot.com",
   [ARBITRUM_TESTNET]: "https://gambit-server-devnet.uc.r.appspot.com",

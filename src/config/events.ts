@@ -94,7 +94,7 @@ export const appEventsData: EventData[] = [
   //     },
   //     {
   //       text: "Trade Now",
-  //       link: "https://axion.finance/trade",
+  //       link: "https://testnet.axion.finance/trade",
   //     },
   //   ],
   // },
@@ -107,7 +107,7 @@ export const appEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Trade Now",
-  //       link: "https://axion.finance/trade",
+  //       link: "https://testnet.axion.finance/trade",
   //     },
   //   ],
   // },
@@ -134,11 +134,11 @@ export const appEventsData: EventData[] = [
   //   buttons: [
   //     {
   //       text: "Read More",
-  //       link: "https://axion.finance/referrals",
+  //       link: "https://testnet.axion.finance/referrals",
   //     },
   //     {
   //       text: "Join Now",
-  //       link: "https://axion.finance/referrals",
+  //       link: "https://testnet.axion.finance/referrals",
   //     },
   //   ],
   // },

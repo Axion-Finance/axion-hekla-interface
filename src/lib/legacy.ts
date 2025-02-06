@@ -1408,7 +1408,7 @@ export function getAppBaseUrl() {
     return "http://localhost:3011/#";
   }
 
-  return "https://axion.finance/#";
+  return "https://testnet.axion.finance/#";
 }
 
 export function getRootShareApiUrl() {
@@ -1424,7 +1424,7 @@ export function getTradePageUrl() {
     return "http://localhost:3011/#/trade";
   }
 
-  return "https://axion.finance/#/trade";
+  return "https://testnet.axion.finance/#/trade";
 }
 
 export function importImage(name) {
