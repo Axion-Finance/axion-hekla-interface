@@ -65,11 +65,11 @@
     "react-error-overlay": "6.0.9"
   },
   "scripts": {
-    "start": "react-scripts  start",
+    "start": "NODE_OPTIONS=--openssl-legacy-provider react-scripts  start",
     "start-home": "yarn lingui:prepare && PORT=3010 env-cmd -e development-home react-scripts start",
     "start-app": "yarn lingui:prepare && PORT=3011 env-cmd -e development-app react-scripts start",
     "start-win": "set PORT=3010&react-scripts start",
-    "build": "INLINE_RUNTIME_CHUNK=false GENERATE_SOURCEMAP=false react-scripts build",
+    "build": "NODE_OPTIONS=--openssl-legacy-provider INLINE_RUNTIME_CHUNK=false GENERATE_SOURCEMAP=false react-scripts build",
     "build-home": "NODE_OPTIONS=--openssl-legacy-provider INLINE_RUNTIME_CHUNK=false GENERATE_SOURCEMAP=false env-cmd -e production-home react-scripts  --openssl-legacy-provider build",
     "build-app": "NODE_OPTIONS=--openssl-legacy-provider INLINE_RUNTIME_CHUNK=false GENERATE_SOURCEMAP=false env-cmd -e production-app react-scripts  build",
     "test": "react-scripts test",
