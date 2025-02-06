@@ -41,12 +41,12 @@ export function AppHeaderUser({
   const showConnectionOptions = !isLanding;
 
   const networkOptions = [
-    {
-      label: getChainName(TAIKO_MAINNET),
-      value: TAIKO_MAINNET,
-      icon: "167000.png",
-      color: "#264f79",
-    },
+    // {
+    //   label: getChainName(TAIKO_MAINNET),
+    //   value: TAIKO_MAINNET,
+    //   icon: "167000.png",
+    //   color: "#264f79",
+    // },
     {
       label: getChainName(TAIKO_TESTNET),
       value: TAIKO_TESTNET,

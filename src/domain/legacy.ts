@@ -482,7 +482,7 @@ export function useHasOutdatedUi() {
   return { data: hasOutdatedUi };
 }
 export function useLIQLIQnfo() {
-  const url = "https://api.axion.finance/api/tokens/info?symbols=AXIONAXION&chain=TAIKO_MAINNET";
+  const url = "https://api-hekla.axion.finance/api/tokens/info?symbols=AXIONAXION&chain=TAIKO_MAINNET";
   const { data } = useSWR([url], {
     // @ts-ignore
     fetcher: (...args) => fetch(...args).then((res) => res.json()),
